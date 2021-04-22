@@ -4,16 +4,18 @@ templateClass: tmpl-post
 ---
 <h1>{{ title }}</h1>
 
-<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+<time datetime="{{ page.date | htmlDateString }}">👨‍💻 By Adam Tuttle on {{ page.date | readableDate }}</time>
+<div class="tags">
 {%- for tag in tags | filterTagList -%}
 {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
 <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
 {%- endfor %}
+</div>
 
 {{ content | safe }}
 
-{%- set nextPost = collections.posts | getNextCollectionItem(page) %}
-{%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+{%- set nextPost = collections.blog | getNextCollectionItem(page) %}
+{%- set previousPost = collections.blog | getPreviousCollectionItem(page) %}
 {%- if nextPost or previousPost %}
 <hr>
 <ul>
@@ -21,3 +23,18 @@ templateClass: tmpl-post
   {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
 </ul>
 {%- endif %}
+<section id="comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = '{{data.page.url}}';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '{{commentsPostId}}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://adam-tuttle-codes.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+  </script>
+</section>
