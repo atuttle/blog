@@ -23,16 +23,6 @@
     </header>
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-
-      <!-- Delete this message -->
-      <div class="warning">
-        <p>Please pardon my mess while I am in the progress of refactoring my website.</p>
-        <p>The old gatsby blog was ... fine. But the version I was using had some annoying limitations and I didn't want to
-        invest a bunch of time into upgrading knowing that builds would <em>still be slow.</em> So I'm moving to
-        <a href="https://www.11ty.dev">Eleventy</a>.</p>
-      </div>
-      <!-- Stop deleting -->
-
       {{ content | safe }}
     </main>
 

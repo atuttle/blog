@@ -4,11 +4,56 @@ eleventyNavigation:
   key: Home
   order: 1
 ---
-{% set maxPosts = collections.blog.length | min(3) %}
-<h1>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h1>
 
-{% set postslist = collections.blog | head(-3) %}
+<h1>👋 Hey. I'm Adam.</h1>
+<p>I write code, jump out of airplanes, make stuff from wood, and write about all of that stuff here.
+Mostly the code, though.</p>
+
+<p>I'm the CTO of <a href="https://www.alumniq.com">AlumnIQ</a>, but we're a pretty small company so I
+wear many hats: coder, humane interface designer, and technical debt herder to name a few.
+I used to blog more often, but that was before I fell in love with both woodworking
+and skydiving. I identify as Philadelphian, but I live in the suburbs.</p>
+
+{% set maxPosts = collections.blog.length | min(5) %}
+<h2>Latest {% if maxPosts == 1 %}Article{% else %}{{ maxPosts }} Articles{% endif %}</h2>
+
+{% set postslist = collections.blog | head(-5) %}
 {% set postslistCounter = collections.blog | length %}
 {% include "postslist.njk" %}
 
-<p><a href="{{ '/blog/' | url }}">View the list of all blog articles</a>.</p>
+<p><a href="{{ '/blog/' | url }}" class="btn">View all of my articles</a></p>
+
+<h2>More about me</h2>
+
+<p>Socially, I'm most active on <a href="https://twitter.com/adamtuttle">Twitter</a>. I use
+<a href="https://github.com/atuttle">GitHub</a> daily, but mostly for work these days. Still, I can be
+found putzing around in open source as needed and as my interests motivate. I have two Instagram accounts,
+for <a href="https://www.instagram.com/alteregowoodworks/">woodworking</a>, and
+<a href="https://www.instagram.com/adamtuttle/">skydiving</a>). When  time allows, I also like to read,
+so you can see what I've been reading over on <a href="https://www.goodreads.com/author/show/7514385.Adam_Tuttle">GoodReads</a>.
+I am a devout believer in the oxford comma.</p>
+
+<p>I joined <a href="https://alumniq.com/">AlumnIQ</a> as employee #2 in 2012, where I have become the CTO and
+Lead developer, shaping and building technology that aims to revolutionize Higher Education Advancement, and
+Alumni Relations. In my time here, I've helped grow the company from two people to five.</p>
+
+<p>I work from home on a geographically distributed, 100% remote team, which means that on most days I get the
+privilege of making breakfast and lunch for my two children. I have a strange addiction to collecting board games
+even though we don't play them as much as I'd like.</p>
+
+<p>In more recent years I've found that I love woodworking, so when I'm not coding or falling out of various
+aircraft you'll most often find me in my basement turning wood into things.</p>
+
+<p>I love traveling, whether it be for work, to attend or speak at an event, or vacationing. I've lived on all
+three Continental American coasts, and <a href="https://www.google.com/maps/@38.6903073,-27.9664891,8.98z">The Azores</a>.
+My dog is named after a character from Futurama. I've called 911 in two different emergency situations. One of
+them was for my brother. I swam a mile, camped in deep snow, hiked some parts of the Appalachain Trail and
+different parts of Redwood National and State Parks. I've never been to the Grand Canyon. I remember attending
+six different schools up to and including high school, but it might have been more. I can tie a bowline knot
+with one hand. My favorite author is Bill Bryson, but my favorite book genre is hard science fiction.
+Space operas are my jam.</p>
+
+<p>Speaking of books, I wrote and self-published a book: <a href="https://restassuredbook.com">REST Assured</a>—
+and I did it over the course of two weeks, after work. If you use or build APIs, it might interest you.</p>
+
+<p>Want to chat? <a href="https://twitter.com/adamtuttle">Tweet at me</a>. 🐦</p>

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Ubuntu:ital,wght@0,500;1,500&display=swap");
 /* Colors */
 :root {
 	--lightgray: #e0e0e0;
@@ -17,9 +18,28 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: -apple-system, system-ui, sans-serif;
+	font-family: "Open Sans", -apple-system, system-ui, sans-serif;
+	font-weight: 400;
 	color: var(--darkgray);
 	background-color: var(--white);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: "Ubuntu", sans-serif;
+	font-weight: 500;
+}
+strong {
+	font-weight: 600;
 }
 p:last-child {
 	margin-bottom: 0;
@@ -32,6 +52,10 @@ p,
 .tmpl-post li {
 	line-height: 1.45;
 }
+p code {
+	color: #000;
+	background-color: #dedede;
+}
 a[href] {
 	color: var(--green);
 }
@@ -41,6 +65,17 @@ a[href]:visited {
 a[href]:hover {
 	color: white;
 	background-color: var(--green);
+}
+a.btn,
+a.btn:visited {
+	background-color: var(--green);
+	color: white;
+	padding: 0.25em;
+	font-size: 1.1875em;
+	font-weight: bold;
+}
+a.btn:hover {
+	background-color: var(--darkGreen);
 }
 main {
 	padding: 1rem;
