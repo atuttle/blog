@@ -20,13 +20,15 @@ I have a bunch of experience writing Next apps, and I certainly find a lot to li
 
 - A healthy testing ecosystem: lots of tools to choose from, tests (can) run fast
 - File-system based routing, which I think helps keep the code organized
-- Turn-key bundling and code-splitting, and other similar optimizations
+- Turn-key bundling and code-splitting, and other similar optimizations (don't make me configure webpack, but let me tweak it if I want to)
 - Good integration options for GraphQL
 - Fast application startup time
 
 There are other things that we'll get from other aspects of the stack, like: Automated zero-downtime deploys with support for fast rollbacks, which we'll get from ECS Fargate, but I'm scoping this article to the programming language/platform/framework.
 
 That's all I can think of for the moment, and I think that most of those boxes are easily checked by JavaScript and Next.js, which is why I said it seemed like an obvious choice. While it does have file-system based routing, one issue that I still struggle with in Next applications is organizing files.
+
+## Organizing large Next.js apps
 
 Next apps have a `pages/` directory where each route ("page") is defined.
 

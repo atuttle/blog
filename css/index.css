@@ -59,6 +59,7 @@ p code,
 li code {
 	color: #000;
 	background-color: #dedede;
+	white-space: nowrap;
 }
 a[href] {
 	color: var(--green);
