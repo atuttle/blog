@@ -6,6 +6,8 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const dev = (global.dev = process.env.ELEVENTY_ENV === "development");
+const now = new Date();
 
 module.exports = function (eleventyConfig) {
 	// Add plugins
@@ -63,6 +65,7 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addCollection("postsByYear", (collection) => {
 		return _.chain(collection.getAllSorted())
+			.filter((p) => dev || (!p.data.draft && p.date <= now))
 			.filter((post) => {
 				// console.log(`checking ${post.inputPath}`);
 				return (
