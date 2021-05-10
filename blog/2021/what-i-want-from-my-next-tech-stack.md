@@ -1,6 +1,6 @@
 ---
 title: What I Want From My Next Tech Stack
-date: 2021-05-01
+date: 2021-05-13
 tags:
   - my next tech stack
 commentsPostId: my-next-tech-stack-2021
