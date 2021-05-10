@@ -21,7 +21,10 @@ and skydiving. I identify as Philadelphian, but I live in the suburbs.</p>
 {% set postslistCounter = collections.blog | length %}
 {% include "postslist.njk" %}
 
-<p><a href="{{ '/blog/' | url }}" class="btn">View all of my articles</a></p>
+<p>
+<a href="{{ '/blog/' | url }}" class="btn">View all of my articles</a>
+<a href="/feed/feed.xml">RSS</a> (<a href="/feed/feed.json">JSON</a>)
+</p>
 
 <h2>More about me</h2>
 
