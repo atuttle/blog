@@ -220,6 +220,7 @@ code {
 }
 .postlist-date {
 	word-spacing: -0.5px;
+	margin-right: 0.7em;
 }
 .postlist-link {
 	padding-left: 0.25em;
