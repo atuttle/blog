@@ -6,20 +6,19 @@ eleventyNavigation:
 ---
 
 <h1>👋 Hey. I'm Adam.</h1>
-<p>I write code, jump out of airplanes, make stuff from wood, and write about all of that stuff here.
-Mostly the code, though.</p>
+<p>I write code, jump out of airplanes, make stuff from wood, <a href="https://workingcode.dev">podcast</a>,
+and write about all of that stuff here. Mostly the code, though.</p>
 
 <p>I'm the CTO of <a href="https://www.alumniq.com">AlumnIQ</a>, but we're a pretty small company so I
-wear many hats: coder, humane interface designer, and technical debt herder to name a few.
-I used to blog more often, but that was before I fell in love with both woodworking
-and skydiving. I identify as Philadelphian, but I live in the suburbs.</p>
+wear many hats: coder, humane interface designer, and technical debt herder to name a few. I identify
+as Philadelphian, but I live in the suburbs.</p>
 
 {% set maxPosts = collections.blog.length | min(5) %}
 <h2>Latest {% if maxPosts == 1 %}Article{% else %}{{ maxPosts }} Articles{% endif %}</h2>
 
 {% set postslist = collections.blog | head(-5) %}
 {% set postslistCounter = collections.blog | length %}
-{% include "postslist.njk" %}
+{% include "rootpostslist.njk" %}
 
 <p>
 <a href="{{ '/blog/' | url }}" class="btn">View all of my articles</a>
@@ -30,9 +29,9 @@ and skydiving. I identify as Philadelphian, but I live in the suburbs.</p>
 
 <p>Socially, I'm most active on <a href="https://twitter.com/adamtuttle">Twitter</a>. I use
 <a href="https://github.com/atuttle">GitHub</a> daily, but mostly for work these days. Still, I can be
-found putzing around in open source as needed and as my interests motivate. I have two Instagram accounts,
+found putzing around in open source as needed and as my interests motivate. I have two Instagram accounts:
 for <a href="https://www.instagram.com/alteregowoodworks/">woodworking</a>, and
-<a href="https://www.instagram.com/adamtuttle/">skydiving</a>). When  time allows, I also like to read,
+<a href="https://www.instagram.com/adamtuttle/">skydiving</a>. When  time allows, I also like to read,
 so you can see what I've been reading over on <a href="https://www.goodreads.com/author/show/7514385.Adam_Tuttle">GoodReads</a>.
 I am a devout believer in the oxford comma.</p>
 
