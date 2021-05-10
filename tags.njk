@@ -16,7 +16,7 @@ eleventyComputed:
 permalink: /tags/{{ tag | slug }}/
 ---
 <h1>Articles Tagged `{{ tag }}`</h1>
-<p><a href="{{ '/tags/' | url }}">View all tags here</a>.</p>
+<p><a class="btn" href="{{ '/tags/' | url }}">All tags</a></p>
 
-{% set postslist = collections[ tag ] %}
-{% include "postslist.njk" %}
+{% set filteredTag = tag %}
+{% include "filteredpostslist.njk" %}

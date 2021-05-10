@@ -1,3 +1,4 @@
+const _ = require("lodash");
 const { DateTime } = require("luxon");
 const fs = require("fs");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
@@ -58,6 +59,22 @@ module.exports = function (eleventyConfig) {
 		});
 
 		return [...tagSet];
+	});
+
+	eleventyConfig.addCollection("postsByYear", (collection) => {
+		return _.chain(collection.getAllSorted())
+			.filter((post) => {
+				// console.log(`checking ${post.inputPath}`);
+				return (
+					post.inputPath !== "./tags-list.njk" &&
+					post.inputPath !== "./archive.njk" &&
+					post.inputPath !== "./index.njk"
+				);
+			})
+			.groupBy((post) => post.date.getFullYear())
+			.toPairs()
+			.reverse()
+			.value();
 	});
 
 	// Copy the `img` and `css` folders to the output
