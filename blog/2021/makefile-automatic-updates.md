@@ -1,7 +1,8 @@
 ---
 title: Revisiting Makefile Automatic Updates
 date: 2021-03-26
-tags: automation
+tags:
+  - automation
 commentsPostId: revisiting-makefile-automatic-updates
 ---
 

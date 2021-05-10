@@ -1,23 +1,34 @@
-<ol reversed class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
+{% set postCount = 0 %}
+{% for year, yearPosts in collections.postsByYear %}
+  {% for post in yearPosts | reverse %}
+    {% for tag in post.data.tags %}
+      {% if tag == filteredTag %}
+        {% set postCount = postCount + 1 %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+{% endfor %}
+
+<ol reversed class="postlist" style="counter-reset: start-from {{ postCount+1 }}">
 {% for year, yearPosts in collections.postsByYear %}
   <h2>{{ year }}</h2>
   {% for post in yearPosts | reverse %}
-	{% set inc = false %}
-	{% for tag in post.data.tags %}
-		{% if tag == filteredTag %}
-			{% set inc = true %}
-		{% endif %}
-	{% endfor %}
-	{% if inc %}
-    <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-      <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-      <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-      {% for tag in post.data.tags | filterTagList %}
-        {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-        <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-      {% endfor %}
-    </li>
-	 {% endif %}
+    {% set inc = false %}
+    {% for tag in post.data.tags %}
+      {% if tag == filteredTag %}
+        {% set inc = true %}
+      {% endif %}
+    {% endfor %}
+    {% if inc %}
+      <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+        <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+        <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+        {% for tag in post.data.tags | filterTagList %}
+          {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+          <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+        {% endfor %}
+      </li>
+    {% endif %}
   {% endfor %}
 {% endfor %}
 </ol>

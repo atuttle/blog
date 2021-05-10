@@ -3,7 +3,7 @@ title: Faster Error Navigation From Lucee Stack Traces
 date: 2021-01-29
 tags:
  - automation
- - Lucee
+ - lucee
 commentsPostId: automate-everything
 ---
 

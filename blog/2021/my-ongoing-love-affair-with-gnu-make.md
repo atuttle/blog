@@ -1,7 +1,8 @@
 ---
 title: My Ongoing Love Affair With GNU Make
 date: 2021-03-19
-tags: automation
+tags:
+  - automation
 commentsPostId: gnu-make-love-affair
 ---
 
@@ -82,7 +83,7 @@ foo:
 
 If you run `$ make foo` then you can see here that it works, but you get some unsightly warnings:
 
-```
+```bash
 Makefile:4: warning: overriding commands for target `foo'
 base.Makefile:2: warning: ignoring old commands for target `foo'
 child-foo
@@ -130,7 +131,7 @@ bar:
 
 And now, you can run all three of these targets (`foo`, `bar`, and `baz`) with no warnings. Note that `baz` is NOT overridden, and only exists with the `-super` prefix, but I can still run it with the command `make baz`
 
-```
+```bash
 $ make foo
 child-foo
 

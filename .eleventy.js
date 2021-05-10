@@ -58,7 +58,7 @@ module.exports = function (eleventyConfig) {
 			(item.data.tags || []).forEach((tag) => tagSet.add(tag));
 		});
 
-		return [...tagSet];
+		return [...tagSet].sort((l, r) => (l > r ? 1 : -1));
 	});
 
 	eleventyConfig.addCollection("postsByYear", (collection) => {

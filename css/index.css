@@ -52,7 +52,11 @@ p,
 .tmpl-post li {
 	line-height: 1.45;
 }
-p code {
+p img {
+	max-width: 100%;
+}
+p code,
+li code {
 	color: #000;
 	background-color: #dedede;
 }
@@ -129,6 +133,9 @@ pre {
 }
 pre:hover {
 	max-width: 100%;
+}
+pre {
+	overflow: hidden;
 }
 code {
 	word-break: break-all;
