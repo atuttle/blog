@@ -1,6 +1,6 @@
 ---
 title: What I Want From My Next Tech Stack
-date: 2021-05-13
+date: 2021-05-11
 tags:
   - my next tech stack
 commentsPostId: my-next-tech-stack-2021
@@ -74,13 +74,13 @@ import MessageGrid from 'marketing-components/messages/grid.js';
 
 This is undeniably an improvement, but is it good enough? I don't know.
 
-If the listing above was my entire application, then maybe. But it's not. My application is a Monolith with [a few microservices refactored out](https://workingcode.dev/episodes/005-monoliths-vs-microservices/) when it made sense to do so, and that monolith has over a thousand actions that can be executed; with somewhere around half of them having views (think 600 views and 600 form-submit handlers; that'll get you close enough).
+If the listing above was my entire application, then maybe. But it's not. My application is a Monolith with [a few microservices refactored out](https://workingcode.dev/episodes/005-monoliths-vs-microservices/) when it made sense to do so, and that monolith has over a thousand actions that can be executed; with somewhere around half of them having views (think 800 screens with views and another 400 form-submit handlers; that'll get you close enough).
 
 Hopefully it's obvious why I'm a little uneasy about this organizational structure, now? With so much functionality wrapped up into our application, colocation of our components next to the pages that use them —when specific to that portion of the application— will greatly increase maintainability. Hunting down a component location is no fun; but let's be realistic: JavaScript tooling is good enough now that you won't have to hunt for an existing component. Option+Click (or I guess Ctrl+Click for Windows devs) on it in VSCode and it will open the file for you. I'm not sure if this is true with the Next.js aliasing thing, though. 🤔
 
 The other side of this same coin: Option+Click can't help you find the right folder in which to create the new component you need for the page you're working on. Colocation would be ideal. And all of this is to say nothing of the tests. My preference would be to colocate the tests with the pages, too.
 
-Is this a solved problem? The first thing that comes to my mind is a file naming convention. For example, it's common to see `foo.spec.js` for a file that runs tests on the `foo.js` component. Perhaps there's something like `gridview.comp.js` that tells Next that the file is not a Page, even though it lives nested somewhere inside the `pages/` directory. There's a lot of really smart people at Vercel and they seem to work at a relentless pace, so I won't be surprised if/when they come up with something better than that.
+Is this a solved problem? Just like there's no egghead content on the subject, there is [a curious lack of content on the Next.js discussion forum, too](https://github.com/vercel/next.js/discussions?discussions_q=organize). The first thing that comes to my mind is a file naming convention. For example, it's common to see `foo.spec.js` for a file that runs tests on the `foo.js` component. Perhaps there's something like `gridview.comp.js` that tells Next that the file is not a Page, even though it lives nested somewhere inside the `pages/` directory. There's a lot of really smart people at Vercel and they seem to work at a relentless pace, so I won't be surprised if/when they come up with something better than that.
 
 ## Looking at it from another angle
 
