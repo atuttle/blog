@@ -86,7 +86,7 @@ Is this a solved problem? Just like there's no egghead content on the subject, t
 
 Another question I'm asking myself is if I'm looking at this the wrong way. Yes, my current monolith envelops all of its "modules" (mail, marketing, merch, membership, and that's just the M's...) because that makes sense on its current tech stack, but in a Next.js future, does it make more sense to break them up into separate apps for each module and run each one individually?
 
-I can see some benefits: Being able to work on and deploy them individually reduces opportunities for developers to get in each other's way, merge conflicts, and the like. And on the rare occasion that a catastrophic bug crashes the app, it's only the one module. But I can also see some drawbacks: Each module would need to have its own ECS cluster, and our total minimum number of running containers, even with absolutely zero traffic, is the number of modules; versus the monolith that could theoretically scale down to a single instance.
+I can see some benefits: Being able to work on and deploy them individually reduces opportunities for developers to get in each other's way, merge conflicts, and the like. And on the rare occasion that a catastrophic bug crashes the app, it's only the one module. But I can also see some drawbacks: Each module would need to have its own ECS service, and our total minimum number of running containers, even with absolutely zero traffic, would be one for each module; versus the monolith that could theoretically scale down to a single instance.
 
 ## This is only the beginning
 
