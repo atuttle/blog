@@ -11,7 +11,7 @@ For years now we've been lecturing each other that the arguments over tabs vs. s
 
 ![tabs rule, spaces drool. change my mind.](/img/2021/tabs-rule.jpg)
 
-Having [recently read Clean Code by Robert Martin](https://workingcode.dev/episodes/022-book-club-1-clean-code-by-uncle-bob-martin-pt1/), I find myself more put off by trivially-unclean code that I find in a code review than I was previously. Not that I am upset with my teammates for imperfect code&mdash;far from it!
+Having [recently read Clean Code by Robert Martin](https://workingcode.dev/episodes/022-book-club-1-clean-code-by-uncle-bob-martin-pt1/), I find myself more put off by trivially-unclean code in a code review than I was previously. Not that I am upset with my teammates for imperfect code&mdash;far from it!
 
 But.
 
