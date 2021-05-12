@@ -23,10 +23,6 @@ Now multiply that by every pull request. Over 10 years. 20. Not just tabs-vs-spa
 
 This project is now a mess and **harder to work on**.
 
-Sweating the small stuff today is an investment in reducing future stress for yourself, your team, and the countless developers that will inherit your code after you're long gone.
-
-Sweat the small stuff.
-
 I'm not going to go through every code review with a fine-tooth comb and make sure everybody's opening and closing HTML tags are indented to matching levels, but if I notice a problem then I'm going to reject it.
 
 For some languages, things like linters and code formatters can help automate this work for you. **Use them!** And for the love of everything holy... Turn on whitespace characters in your editor so that you can spot the inconsistencies before you submit your code review!
@@ -38,3 +34,7 @@ Here's how you find the setting in VS Code:
 And here's what your editor could look like with the setting enabled:
 
 ![What whitespace characters look like in VS Code](/img/2021/having-whitespace-characters-enabled.png)
+
+Sweating the small stuff today is an investment in reducing future stress for yourself, your team, and the countless developers that will inherit your code after you're long gone.
+
+Sweat the small stuff.
