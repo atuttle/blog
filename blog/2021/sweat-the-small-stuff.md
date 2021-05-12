@@ -23,7 +23,7 @@ Now multiply that by every pull request. Over 10 years. 20. Not just tabs-vs-spa
 
 This project is now a mess and **harder to work on**.
 
-Sweating the small stuff today is an investment in reducing future stress for yourself, your team, and the countless developers that will inheret your code after you're long gone.
+Sweating the small stuff today is an investment in reducing future stress for yourself, your team, and the countless developers that will inherit your code after you're long gone.
 
 Sweat the small stuff.
 
