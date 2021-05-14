@@ -48,21 +48,21 @@ Given a struct created using _ANY_ method; not necessarily the implicit object n
 
 ```js
 data = {
-	a: 1,
-	b: 1
+	A: 1,
+	B: 1
 };
 ```
 
 If your `serializeJson()` implementation _always_ returns this json, then it is deterministic:
 
 ```json
-{"a":1,"b":1}
+{"A":1,"B":1}
 ```
 
 Likewise, it is also deterministic if if _always_ returns this json:
 
 ```json
-{"b":1,"a":1}
+{"B":1,"A":1}
 ```
 
 Determinism isn't about the value created, it's about the consistency of that value. If the output depends on whether the struct was created using implicit object notation vs other methods (structNew, deserializeJson, etc), then it is not deterministic. A non-deterministic implementation might return the first version in some situations, and the second in others.
@@ -96,6 +96,12 @@ And here we are. We've reached the crux of this article. This is so "chaotic goo
 Adam's idea was to **sort the characters in the JSON output string.** That's it. It's that simple.
 
 Since the resulting JSON output characters (just not the order in which they appear) is deterministic, sorting the string makes it deterministic. And since I don't need the ability to deserialize back to primitives, it's totally fine.
+
+Going back to the original two examples of nondeterministic JSON, after sorting they both look like this:
+
+```txt
+     ,::""""{}11AB
+```
 
 Adam, you are truly an evil genius.
 
