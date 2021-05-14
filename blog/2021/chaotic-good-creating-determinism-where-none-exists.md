@@ -99,7 +99,7 @@ Since the resulting JSON output characters (just not the order in which they app
 
 Going back to the original two examples of nondeterministic JSON, after sorting they both look like this:
 
-```txt
+```
      ,::""""{}11AB
 ```
 
