@@ -91,7 +91,7 @@ This is where Adam Cameron's brilliance comes in.
 
 ## How do you add determinism where none exists?
 
-And here we are. We've reached the crux of this article. This is so "chaotic good" and I absolutely love it.
+And here we are. We've reached the crux of this article. This is so ["chaotic good"][alignment] and I absolutely love it.
 
 Adam's idea was to **sort the characters in the JSON output string.** That's it. It's that simple.
 
@@ -109,3 +109,4 @@ I'm looking forward to sharing more about this open source project in the near f
 
 [adamcameron]: https://blog.adamcameron.me
 [workingcode]: https://workingcode.dev
+[alignment]: https://www.gamersdecide.com/articles/dnd-alignments-explained
