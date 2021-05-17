@@ -79,9 +79,9 @@ In my case, I'm using JSON as a waypoint in a chain of operations to take any hy
 checksum({ foo: 'bar', baz: 'yo' }); //returns numeric between 0-1
 ```
 
-My implementation _must_ be deterministic in order to be useful. It's not all that dissimilar from calculating an MD5 hash of something, except my value is numeric and MD5 only works on string inputs.
+My implementation _must_ be deterministic in order to be useful. It's not all that dissimilar from calculating an MD5 hash of something, except my output is numeric and MD5 is alpha-numeric, and MD5 only accepts string inputs.
 
-In fact, that is my algorithm: Convert the struct to a string, MD5 hash it, and then remove the characters leaving only digits behind. How do you turn a given random struct to a string in CFML? There are a few ways: JSON, WDDX, or XML all immediately spring to mind. I happen to use JSON daily so it's my go-to in a situation like this.
+In fact, that is my algorithm: Convert the struct to a string, MD5 hash that string, and remove the alpha-characters, leaving only digits behind. How do you turn a given random struct to a string in CFML? There are a few ways: JSON, WDDX, or XML all immediately spring to mind. I happen to use JSON daily so it's my go-to in a situation like this.
 
 MD5 is deterministic. This is one of the reasons it has been used for so long for password hashing. It wouldn't be useful in a password hashing algorithm if it weren't deterministic, because logins using the correct password would fail at random.
 
@@ -100,7 +100,7 @@ Since the resulting JSON output characters (just not the order in which they app
 Going back to the original two examples of nondeterministic JSON, after sorting they both look like this:
 
 ```
-     ,::""""{}11AB
+,::""""{}11AB
 ```
 
 Adam, you are truly an evil genius.
