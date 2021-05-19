@@ -120,7 +120,7 @@ Here's what Semaphore is expecting you to call to check a flag status:
 ```js
 if (
 	semaphore.checkForUser(
-		flagId: 'myFlag',
+		flagId: 'myFeature',
 		userAttributes: {
 			userId: 42,
 			roles: ['beta-tester','admin','plebe'],
@@ -139,7 +139,7 @@ The value for userAttributes should be the same for each user every time they lo
 ```js
 if (
 	semaphore.checkForUser(
-		flagId: 'myFlag',
+		flagId: 'myFeature',
 		userAttributes: session.userAttributes
 	)
 ){
@@ -152,7 +152,7 @@ if (
 By wrapping it in a service, I can have the service proxy the call to checkForUser and take over responsibility of including the user attributes argument:
 
 ```js
-if ( featureFlagService.flagIsOn('myFlag') ){
+if ( featureFlagService.flagIsOn('myFeature') ){
 	theNewImplementation();
 } else {
 	theOldImplementation();
