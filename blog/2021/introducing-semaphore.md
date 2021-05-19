@@ -122,6 +122,8 @@ if (
 	semaphore.checkForUser(
 		flagId: 'myFeature',
 		userAttributes: {
+			// the data here is not significant
+			// it's included only to give you an idea of what you might want
 			userId: 42,
 			roles: ['beta-tester','admin','plebe'],
 			...
