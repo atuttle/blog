@@ -161,7 +161,7 @@ if ( featureFlagService.flagIsOn('myFeature') ){
 }
 ```
 
-**Nice.**
+_**Nice.**_
 
 Semaphore is [available on GitHub][github] and near as I can tell it's feature-complete and well tested. I haven't had time to use it in my application YET, so I can't vouch for it. But... SOON. Thanks to Ben and the podcast I am pretty eager to give it a go.
 
