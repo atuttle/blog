@@ -151,6 +151,8 @@ if (
 }
 ```
 
+**Nice.**
+
 By wrapping it in a service, I can have the service proxy the call to checkForUser and take over responsibility of including the user attributes argument:
 
 ```js
