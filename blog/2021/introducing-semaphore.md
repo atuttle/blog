@@ -151,8 +151,6 @@ if (
 }
 ```
 
-**Nice.**
-
 By wrapping it in a service, I can have the service proxy the call to checkForUser and take over responsibility of including the user attributes argument:
 
 ```js
@@ -162,6 +160,8 @@ if ( featureFlagService.flagIsOn('myFeature') ){
 	theOldImplementation();
 }
 ```
+
+**Nice.**
 
 Semaphore is [available on GitHub][github] and near as I can tell it's feature-complete and well tested. I haven't had time to use it in my application YET, so I can't vouch for it. But... SOON. Thanks to Ben and the podcast I am pretty eager to give it a go.
 
