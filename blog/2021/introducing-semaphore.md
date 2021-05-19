@@ -10,7 +10,7 @@ commentsPostId: introducing-semaphore
 
 Today I'm excited to tell you about a new open source project I've been working on, called [Semaphore][github].<sup>1</sup>
 
-It's a minimalist feature flags engine for CFML applications. What's **not** included? Persistence of flag data, a UI for flag management, and pretty much anything else.
+It's a minimalist feature flags engine for CFML applications. What's **not** included? Persistence of flag data, and a UI for flag management.
 
 If you're not familiar with what **feature flags** are, I would encourage you to listen to [Working Code episode 18: "Feature Flags (Finally!)"][wcff], or read [Ben Nadel's article explaining how his team uses them][benblog]. Or both.
 
