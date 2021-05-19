@@ -38,6 +38,13 @@ h6,
 	font-family: "Ubuntu", sans-serif;
 	font-weight: 500;
 }
+acronym[title] {
+	text-decoration: none;
+	border-bottom: 1px solid #00d827;
+	background-color: #c0ffc5;
+	cursor: help;
+	padding: 0 2px;
+}
 strong {
 	font-weight: 600;
 }
