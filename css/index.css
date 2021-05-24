@@ -91,6 +91,7 @@ a.btn:hover {
 }
 main {
 	padding: 1rem;
+	padding-bottom: 0;
 }
 main :first-child {
 	margin-top: 0;
@@ -307,4 +308,18 @@ a[href].direct-link:focus:visited,
 :hover > a[href].direct-link,
 :hover > a[href].direct-link:visited {
 	color: #aaa;
+}
+#articleFooter {
+	background-color: var(--green);
+	color: var(--white);
+	margin: 0 -16px;
+	padding: 16px;
+}
+#articleFooter a {
+	color: #0eff00;
+}
+#comments {
+	background-color: rgb(36, 36, 36);
+	margin: 0 -16px;
+	padding: 16px;
 }
