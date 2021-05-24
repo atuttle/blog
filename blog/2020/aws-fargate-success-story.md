@@ -8,8 +8,6 @@ tags:
 commentsPostId: fargate-1
 ---
 
-import { TwitterTweetEmbed } from 'react-twitter-embed';
-
 You guys. AWS Fargate is amazing! #notsponsored
 
 I started writing this article back in August of 2019, but ended up setting it aside because I didn't know where I wanted to take it. The story that I'm about to tell you ended fantastically for us, and we've since gone on to have even more success with Fargate, so I am happy to sing its praises from the mountaintop.
@@ -20,7 +18,7 @@ We took some code that was designed to run on AWS Beanstalk, and redeployed it o
 
 Sounds pretty major, right? I figured it would take a week of tweaking knobs and reading overly enterprise-y documentation to find the right incantation to make things work the way we needed. It didn't. We were on our feet in just a few hours. Things went so well that we got scared. _What are we forgetting or missing? When will the other shoe drop?_
 
-<TwitterTweetEmbed tweetId={`1162118705909850112`} />
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">When a major paradigm shift for your code seems to work with minimal changes, and you&#39;re waiting for the other shoe to drop... <a href="https://t.co/d9EKGx5nEz">pic.twitter.com/d9EKGx5nEz</a></p>&mdash; 0xADAM (@AdamTuttle) <a href="https://twitter.com/AdamTuttle/status/1162118705909850112?ref_src=twsrc%5Etfw">August 15, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ### Our Beanstalk app, and why we had to change solutions
 
@@ -42,7 +40,7 @@ Beanstalk currently supports two "tiers", one for workers which is intended to c
 
 If you didn't already know, IPv4 addresses are kinda scarce... Not as urgently terrifying as Y2k was in 1999, but scarce enough that each AWS account gets an initial limit of 5. When we hit that limit after a year or so of creating these Beanstalk apps as needed, we figured we'd find a better way later, and asked AWS to grant us a few more IP addresses. Thankfully they obliged. But of course...
 
-<TwitterTweetEmbed tweetId={`1162342494711033856`} />
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">&quot;Later equals never.&quot;- Le Blanc&#39;s law</p>&mdash; Programming Wisdom (@CodeWisdom) <a href="https://twitter.com/CodeWisdom/status/1162342494711033856?ref_src=twsrc%5Etfw">August 16, 2019</a></blockquote>
 
 We completely forgot about the problem until we ran out of IP addresses again. And of course this time there was no time to waste. It was time to deal with this problem head-on.
 

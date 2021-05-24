@@ -6,8 +6,6 @@ tags:
 commentsPostId: february-goals-checkin
 ---
 
-import { TwitterTweetEmbed } from 'react-twitter-embed';
-
 At the end of 2019 [I posted a couple of goals for 2020](/blog/2019/my-smart-goals-for-2020/). It's been two months and I'm at the checkpoint for my first milestone, so I thought I would check in on how I've been doing.
 
 ## Goal 1: Body fat reduction

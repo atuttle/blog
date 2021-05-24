@@ -9,8 +9,6 @@ tags:
 commentsPostId: from-coldfusion-to-lucee
 ---
 
-import { TwitterTweetEmbed } from 'react-twitter-embed';
-
 My team has made the decision to migrate our application from Adobe ColdFusion 11 ("ACF") to Lucee 5, and the time has come to pull the trigger. I spent a couple of days this week trying to get the app on its feet running on Lucee, and now that I seem to have solved all of the initial challenges, I thought I'd write about what problems I had and how I resolved them while it's still mostly fresh in my mind.
 
 Plus I still have my git commits all neatly organized in a branch for easy reference.

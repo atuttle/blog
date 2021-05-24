@@ -8,8 +8,6 @@ tags:
 commentsPostId: firefox_osx_settings
 ---
 
-import { TwitterTweetEmbed } from 'react-twitter-embed';
-
 Yep, it's kind of a click-bait title. Sorry about that. To make up for it, here's the information you're after, right up front:
 
 ```
