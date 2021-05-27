@@ -10,7 +10,7 @@ commentsPostId: lip-writing-testable-nodejs-code
 
 Yesterday I was trying to <acronym title="Test Driven Development">TDD</acronym> some Node.js code, and I got stuck. I asked for help on the [KCD Discord][kcdd]\* but I guess my explanation of the problem wasn't great, so I promised I would follow up with a repro case. Meanwhile I am also trying to do better at [learning in public][lip], so I'm going to write about it here, too. So here we go.
 
-I am working on an AWS Lambda service that will run on a schedule and process some data. It will be written in Node.js. Node Lambda functions define a starting point file that exports an object containing a function. I think the convention is `index.js` and `{ handler: () => {} }`, but it's configurable. I'll stick with the convention. Also, Lambdas can either report that they are done via a callback or a promise. I'm a big fan of async/await, so I'm going to go with that.
+I am working on an AWS Lambda service that will run on a schedule and process some data. It will be written in Node.js. Node Lambda functions define a starting point file that exports an object containing a function. I think the convention is `index.js` and `{ handler: () => {} }`, but it's configurable. I'll stick with the convention. Also, Lambdas can either report that they are complete via a callback or a promise. I'm a big fan of async/await, so I'm going to go with that.
 
 In order to make my module more testable I thought I would start by creating a module that the handler calls, so the index.js is quite simple:
 
