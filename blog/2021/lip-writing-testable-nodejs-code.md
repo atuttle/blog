@@ -49,7 +49,7 @@ Seems like a good enough place to start. In theory the first two tests were easy
 
 ```js
 	it('loads batch size from ENV vars', () => {
-		const testVal = parseInt(Math.random() * 1000);
+		const testVal = (Math.random() * 1000).toFixed(0);
 		process.env.BATCH_SIZE = testVal;
 		// todo: where are we getting the getBatchSize() method?
 		const actual = getBatchSize();
