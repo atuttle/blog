@@ -8,12 +8,14 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const dev = (global.dev = process.env.ELEVENTY_ENV === "development");
 const now = new Date();
+const metagen = require("eleventy-plugin-metagen");
 
 module.exports = function (eleventyConfig) {
 	// Add plugins
 	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addPlugin(pluginSyntaxHighlight);
 	eleventyConfig.addPlugin(pluginNavigation);
+	eleventyConfig.addPlugin(metagen);
 
 	// https://www.11ty.dev/docs/data-deep-merge/
 	eleventyConfig.setDataDeepMerge(true);
