@@ -309,6 +309,10 @@ a[href].direct-link:focus:visited,
 :hover > a[href].direct-link:visited {
 	color: #aaa;
 }
+.tmpl-post hr {
+	max-width: 37.5em;
+	margin: 0;
+}
 #articleFooter {
 	background-color: var(--green);
 	color: var(--white);

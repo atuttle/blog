@@ -6,7 +6,7 @@
 		"build": "eleventy",
 		"watch": "eleventy --watch",
 		"serve": "eleventy --serve",
-		"start": "eleventy --serve",
+		"start": "open http://localhost:8080 && eleventy --serve",
 		"debug": "DEBUG=* eleventy"
 	},
 	"repository": {
