@@ -1,7 +1,7 @@
 ---
 title: 'TDD: Getting Out of My Own Way'
 summary: 'I was stuck on TDD because I wouldn''t let myself do the obvious thing.'
-img: /img/2021/stuck.jpg
+img: https://adamtuttle.codes/img/2021/stuck.jpg
 date: 2021-05-27
 tags:
   - learning in public
