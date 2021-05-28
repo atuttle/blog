@@ -5,7 +5,8 @@
       name="Adam Tuttle",
       title=title or metadata.title,
       desc=summary or metadata.description,
-      url=metadata.url + page.url
+      url=metadata.url + page.url,
+      img=img or null
     %}
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
