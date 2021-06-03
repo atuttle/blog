@@ -73,6 +73,7 @@ module.exports = function (eleventyConfig) {
 				return (
 					post.inputPath !== "./tags-list.njk" &&
 					post.inputPath !== "./archive.njk" &&
+					post.inputPath !== "./rest-assured-opt-out.njk" &&
 					post.inputPath !== "./index.njk"
 				);
 			})
