@@ -54,7 +54,7 @@ Since I wasn't awaiting that promise, `thingDoer` returned early and I was runni
 
 Making my test async and awaiting `thingDoer` solved it.
 
-```js/3
+```js/2
 const thingDoer = require('./thingDoer');
 it('does the thing', async () => {
   await thingDoer();
