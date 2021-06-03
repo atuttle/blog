@@ -63,3 +63,5 @@ it('does the thing', async () => {
 ```
 
 Hopefully this helps someone else out there going nuts because things that they can see happening aren't in the list of things that happened. But let's be realistic. It'll be me referring to this article again in 9 months. 🤷‍♂️
+
+[jest]: https://jestjs.io
