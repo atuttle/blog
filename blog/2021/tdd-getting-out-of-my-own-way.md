@@ -6,6 +6,7 @@ date: 2021-05-27
 tags:
   - learning in public
   - javascript
+  - testing
   - tdd
 commentsPostId: tdd-getting-out-of-my-own-way
 ---
