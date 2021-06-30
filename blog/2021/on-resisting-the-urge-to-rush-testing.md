@@ -1,6 +1,6 @@
 ---
 title: On Resisting the Urge to Rush Testing
-summary: Adam figures some shit out as he's writing
+summary: Moving slow and methodically can be really hard if you've been training for years to move fast and break stuff.
 img: https://adamtuttle.codes/img/2021/race.jpg
 date: 2021-06-30
 tags:
