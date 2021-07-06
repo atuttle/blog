@@ -7,7 +7,7 @@ tags:
   - learning in public
   - testing
   - tdd
-commentsPostId: shrug
+commentsPostId: on-resisting-the-urge-to-rush-testing
 ---
 
 I am very much in favor of automated testing. I understand the benefits and I need them in my life. But if I'm being honest, I know that the confidence of a passing test suite is only as good as the _effort_ that went into writing it. So then it stands to reason that one of the most important tenets of the testing ethos should be something like, "Slower is better if you identify more test cases."
