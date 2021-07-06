@@ -53,7 +53,7 @@ p:last-child {
 }
 p,
 .tmpl-post li {
-	max-width: 37.5em; /* 600px /16 */
+	max-width: 100%;
 }
 p,
 .tmpl-post li {
@@ -92,6 +92,8 @@ a.btn:hover {
 main {
 	padding: 1rem;
 	padding-bottom: 0;
+	margin: 0 auto;
+	max-width: 45em;
 }
 main :first-child {
 	margin-top: 0;
@@ -138,9 +140,6 @@ pre {
 	padding: 1em;
 	margin: 0.5em 0;
 	background-color: #f6f6f6;
-	max-width: 42em;
-}
-pre:hover {
 	max-width: 100%;
 }
 pre {
