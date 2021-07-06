@@ -85,7 +85,7 @@ In local development, when the dev server shuts down, npm has been waiting to sp
 I know that I can make the `npm run dev` portion of `prestart` exit with a nonzero code and that this would stop npm from running the `start` script, but it does then return an error:
 
 ```json
-"prestart": "node -e 'process.env.NODE_ENV === \"production\" || process.exit(1);' || npm run dev && exit 1"
+"prestart": "node -e 'process.env.NODE_ENV === \"production\" || process.exit(1);' || (npm run dev && exit 1)"
 ```
 
 I'm not sure if that's trading one bad thing for another, nor whether or not it's a good trade to make.
