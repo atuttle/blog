@@ -27,11 +27,7 @@
       </ul>
     </header>
 
-    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-      {{ content | safe }}
-    </main>
-
-    <footer></footer>
+    {{ content | safe }}
 
     <!-- Current page: {{ page.url | url }} -->
   </body>

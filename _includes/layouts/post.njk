@@ -2,21 +2,26 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
-<h1>{{ title }}</h1>
 
-<time datetime="{{ page.date | htmlDateString }}">👨‍💻 By Adam Tuttle on {{ page.date | readableDate }}</time>
-<div class="tags">
-{%- for tag in tags | filterTagList -%}
-{%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
-<a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-{%- endfor %}
-</div>
+<main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+  <h1>{{ title }}</h1>
 
-{{ content | safe }}
+  <time datetime="{{ page.date | htmlDateString }}">👨‍💻 By Adam Tuttle on {{ page.date | readableDate }}</time>
+  <div class="tags">
+  {%- for tag in tags | filterTagList -%}
+  {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
+  <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+  {%- endfor %}
+  </div>
 
+  {{ content | safe }}
+</main>
+
+<footer>
 {%- set nextPost = collections.blog | getNextCollectionItem(page) %}
 {%- set previousPost = collections.blog | getPreviousCollectionItem(page) %}
 <section id="articleFooter">
+  <div class="footerSection">
   {%- if nextPost or previousPost %}
     <ul>
       {%- if nextPost %}<li>Next Entry: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
@@ -24,9 +29,11 @@ templateClass: tmpl-post
     </ul>
   {%- endif %}
   {% include "./subscribe.njk" %}
+  </div>
 </section>
 
 <section id="comments">
+  <div class="footerSection">
   <div id="disqus_thread"></div>
   <script type="text/javascript">
       var disqus_config = function () {
@@ -40,4 +47,6 @@ templateClass: tmpl-post
       (d.head || d.body).appendChild(s);
       })();
   </script>
+  </div>
 </section>
+</footer>
