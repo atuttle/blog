@@ -17,7 +17,7 @@ But.
 
 Imagine the codebase _is perfect_. I know, I know. Suspend your disbelief for a moment. Now, you're doing a code review and the file is consistently indented with tabs but the changed line is indented with spaces. Functionally, the change is flawless. Do you reject the pull request and ask the developer to change it? _It's just one line!_
 
-You could approve the PR and merge it with the intention of coming back to clean it up "some day" but as we all know, "some day" is never.
+You could approve the PR and merge it with the intention of coming back to clean it up "some day" but as we all know, "some day" is the same thing as "never."
 
 Now multiply that by every pull request. Over 10 years. 20. Not just tabs-vs-spaces indentation, but other little inconsistencies, too. HTML closing tags that don't get indented to the same level as their opening tag. Lazy variable names. Outdated comments. And so on. Now remember that the code wasn't perfect to begin with.
 

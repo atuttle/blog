@@ -6,8 +6,6 @@ tags:
 commentsPostId: slow_is_smooth_is_fast
 ---
 
-import YT from '../../../components/FluidYouTube';
-
 In skydiving we have a saying: Slow is smooth, and smooth is fast.
 
 When you get out of an airplane at 14,000 feet in the air, you have somewhere between 40 and 60 seconds to play before you need to do the important work of saving your life by opening your parachute. (The timing depends on what exactly you're doing while you fall.)
@@ -18,7 +16,7 @@ Once you get beyond the concept that it's possible to get out of an airplane in 
 
 This has actually turned into a sport with a lot of different disciplines within it. For example, here's the 2019 performance of this year's national champion team, Rythm:
 
-<YT id="etTZSNgIm-A" />
+<iframe width="560" height="315" src="https://www.youtube.com/embed/etTZSNgIm-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Like most other sports, the goal here is to get the most "points." In formation skydiving a point is a completed formation, possibly following a compulsory movement. Basically, turn a certain way and be holding onto each other in the right spots.
 
