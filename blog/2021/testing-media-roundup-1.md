@@ -1,5 +1,5 @@
 ---
-title: 'Testing Media Roundup #1'
+title: "Testing Media Roundup #1"
 summary: Sharing some of the articles I've been reading, and videos I've been watching, specific to testing.
 img: https://adamtuttle.codes/img/2021/herd.jpg
 date: 2021-06-11
@@ -30,7 +30,7 @@ At the end of the day, does it matter if we disagree on what makes something an 
 
 ## I got the book
 
-<a href="https://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530?crid=1D8X147Q3MS5G&dchild=1&keywords=tdd+by+example&qid=1623418032&sprefix=tdd+by+example%2Caps%2C136&sr=8-3&linkCode=li3&tag=tuttl-20&linkId=f4d8afaabf721a86be63f5b8d30c708a&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0321146530&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=tuttl-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tuttl-20&language=en_US&l=li3&o=1&a=0321146530" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a href="https://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530?crid=1D8X147Q3MS5G&dchild=1&keywords=tdd+by+example&qid=1623418032&sprefix=tdd+by+example%2Caps%2C136&sr=8-3&linkCode=li3&tag=tuttl-20&linkId=f4d8afaabf721a86be63f5b8d30c708a&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="/img/2021/tdd-by-example-cover.jpg" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=tuttl-20&language=en_US&l=li3&o=1&a=0321146530" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
 From what I understand, if TDD has a Bible it is [Test-Driven Development By Example, by Kent Beck][tddex]. So I bought myself a copy. I haven't even cracked the cover open yet, but I'm trying to take this aspect of my professional development seriously so I'm quite looking forward to better understanding TDD. I don't know about you, but I have a really bad habit of hearing a few people talk about a concept &mdash;like TDD&mdash; and then fooling myself into believing that I understand it enough to do it, without any sort of training formal or otherwise.
 
