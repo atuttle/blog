@@ -7,23 +7,34 @@ eleventyNavigation:
 
 <h1>👋 Hey. I'm Adam.</h1>
 <p>I write code, jump out of airplanes, make stuff from wood, <a href="https://workingcode.dev">podcast</a>,
-and write about all of that stuff here. Mostly the code, though.</p>
+and write about all of that stuff here. Mostly about code, though.</p>
 
-<p>I'm the CTO of <a href="https://www.alumniq.com">AlumnIQ</a>, but we're a pretty small company so I
+<p>I'm the CTO of <a href="https://www.alumniq.com">AlumnIQ</a>. We're a pretty small company so I
 wear many hats: coder, humane interface designer, and technical debt herder to name a few. I identify
 as Philadelphian, but I live in the suburbs.</p>
 
-{% set maxPosts = collections.blog.length | min(5) %}
-<h2>Latest {% if maxPosts == 1 %}Article{% else %}{{ maxPosts }} Articles{% endif %}</h2>
+<p>This is my <a href="/blog/2021/no-longer-a-blog-now-a-digital-garden/">digital garden</a>: a place for me to plant seeds of thought, and to cultivate them
+over time. Sometimes I help them grow, and sometimes they help me grow. Not everything you read here is a
+"finished" piece. <em>What does "finished" even mean, anyway?</em></p>
 
-{% set postslist = collections.blog | head(-5) %}
-{% set postslistCounter = collections.blog | length %}
-{% include "rootpostslist.njk" %}
+<h2>My Favorites</h2>
+<p>Here are some of the things I've written over the years that I'm most proud of.</p>
+<ul>
+  <li><a href="/blog/2020/time-is-all-you-have/">Time Is All You Have</a></li>
+  <li><a href="/blog/2021/the-flywheel-of-testing/">The Flywheel of Testing</a></li>
+  <li><a href="/blog/2019/is-imposter-syndrome-actually-good-for-you/">Is Impostor Snydrome Actually Good for You?</a></li>
+  <li><a href="/blog/2021/testing-untestable-cfml/">Testing Untestable CFML</a></li>
+  <li><a href="/blog/2021/chaotic-good-creating-determinism-where-none-exists/">Chaotic Good: Creating Determinism Where None Exists</a></li>
+  <li><a href="/blog/2021/sweat-the-small-stuff/">Sweat the Small Stuff</a></li>
+  <li><a href="/blog/2020/getting-started-with-taffy-2020/">Getting Started with Taffy: 2020 Edition</a></li>
+  <li><a href="/blog/2020/challenge-breeds-stability/">Challenge Breeds Stability</a></li>
+  <li><a href="/blog/2019/slow-is-smooth-smooth-is-fast/">Slow is Smooth, Smooth is Fast</a></li>
+  <li><a href="/blog/2016/the-cost-of-abstraction/">The Cost of Abstraction</a></li>
+  <li><a href="/blog/2016/cobblers-children-syndrome/">Cobbler's Children Syndrome</a> &ndash; my backups are better now, but I still haven't restored all of my old content! 😵</li>
+</ul>
 
-<p>
-<a href="{{ '/blog/' | url }}" class="btn">View all of my articles</a>
-<a href="/feed/feed.xml">RSS</a> (<a href="/feed/feed.json">JSON</a>)
-</p>
+<p>Or, <a href="{{ '/blog/' | url }}">browse all articles chronologically</a>.
+Also available as <a href="/feed/feed.xml">RSS</a> and <a href="/feed/feed.json">JSON</a>.</p>
 
 <h2>More about me</h2>
 
@@ -58,4 +69,15 @@ Space operas are my jam.</p>
 <p>Speaking of books, I wrote and self-published a book: <a href="https://restassuredbook.com">REST Assured</a>—
 and I did it over the course of two weeks, after work. If you use or build APIs, it might interest you.</p>
 
-<p>Want to chat? <a href="https://twitter.com/adamtuttle">Tweet at me</a>. 🐦</p>
+<p>Want to chat? <a href="https://twitter.com/intent/tweet?text=@adamtuttle%20my%20favorite%20bridge%20is">Tweet at me</a>. 🐦</p>
+
+<hr/>
+
+<p>Every once in a while I send out emails to my email list. I do have a few things that I sell, and I also
+use it to raise awareness for other new projects, like my podcast <a href="https://workingcode.dev">Working Code</a>.
+If that sounds like something you might be interested in, have I got the form for you!</p>
+
+<p>Emails are infrequent, I do my best to respect your inbox by giving you the opportunity to opt out of specific
+topics, I don't share or sell your contact information, and you can unsubscribe at any time.</p>
+
+<script async data-uid="02c5dc9bec" src="https://adam-tuttle.ck.page/02c5dc9bec/index.js"></script>
