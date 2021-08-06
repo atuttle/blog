@@ -19,9 +19,11 @@ The way that people consume content on the internet has changed. Gone are the da
 
 Most of the stuff you read online you probably found via a link on social media, or perhaps from a search engine. Then what is the value in presenting it chronologically? It's rare that there is a long series of related entries and viewing them one after the other adds value. We can probably agree that tagging is more useful than chronology when it comes to helping readers find additional content they might want to read.
 
-In some ways I'm trying to organize my digial garden to cater to that aspect of **your reading journey**. I have always made an effort to link between my articles where relevant opportunities present themselves in the prose. I've got some ideas brewing about using my [tags][tags] to help surface related content, but that's just my coder's brain doing what coder brain's do: enumerating solutions whether or not I want it to.
+In some ways I'm trying to organize my digial garden to cater to that aspect of **your reading journey**. I have always made an effort to link between my articles where relevant opportunities present themselves in the prose. If something like that doesn't happen naturally, I'm going to make an effort to call out relevant articles at the bottom of each one.
 
-If you land here from a social media link and find the article interesting, your next step is probably to proceed to [the homepage][atc] in search of more. While things I've written recently could be somewhat relevant, you would probably get more value from a curated list of my favorite articles. For that reason I'll be keeping exactly that list &mdash;my favorites&mdash; on the root page.
+On second thought, that presents its own challenge. The more articles I write, the more potential there is for cross-linking, and a greater need for updating old articles. That might not scale well. We'll have to wait and see.
+
+I've got some ideas brewing about using my [tags][tags] to help surface related content, but that's just my coder's brain doing what coder brain's do: enumerating solutions whether or not I want it to.
 
 ## For Me
 
@@ -35,7 +37,9 @@ One of the things I mentioned on the podcast was that just like a real garden, a
 
 It's like going to the gym on a regular schedule, but instead of toning my muscles I'll be organizing my thoughts.
 
-In addition to the **personal growth** aspect and the **organizational** aspect, I also really like the idea of stepping away from "performative" blogging. Much of what I wrote on my blog from 2007 to 2011 accomplished what I wanted at the time &mdash; even though I didn't realize that's what I was doing. It built a sort of personal brand, which served as a vehicle for career growth and community recognition. People started to know my name and that helped me get better jobs. As weird as it is to think this way, my career perspective now is closer to "late stage." I'm happy where I am and there's every reason to believe I could be here until I retire. Community awareness / personal brand could help me get selected to speak at conferences, and that's something I enjoy, but that's not a goal I'm actively pursuing right now.
+In addition to the **personal growth** aspect and the **organizational** aspect, I also really like the idea of stepping away from "performative" blogging. Much of what I wrote on my blog from 2007 to 2011 accomplished what I was hoping for at the time &mdash; even though I didn't realize that's what I was doing. It built a sort of personal brand, which served as a vehicle for career growth and community recognition. People started to know my name and that helped me get better jobs. As weird as it is to think this way, my career perspective now is closer to "late stage." I'm happy where I am and there's every reason to believe I could be here until I retire. I wouldn't mind getting paid to make conference presentations, but that's not the target I'm aiming for.
+
+Like Joel, I also intend to curate my favorite entries onto the [root of my site][atc]. Why should it be beholden to things I've written _lately_? The Greatest Hits are the Greatest Hits for a reason, right?
 
 I hope that this format shift helps me feel freer to experiment with writing topics. I want to go back and present a concise summary of my thoughts on [Clean Code][cc], and I want to take the time to read [TDD By Example][tdd] (and write about it).
 
