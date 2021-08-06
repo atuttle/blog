@@ -256,6 +256,16 @@ code {
 .tags {
 	margin-top: 0.8em;
 }
+.tmpl-post .tags {
+	padding-top: 20px;
+	margin-top: 20px;
+	border-top: 3px solid #6a6a6a;
+}
+.tags-list .post-tag,
+.tmpl-post .tags .post-tag {
+	padding: 10px;
+	font-size: 1em;
+}
 .post-tag {
 	display: inline-flex;
 	align-items: center;
