@@ -280,6 +280,26 @@ code {
 	text-decoration: none;
 	line-height: 1.8;
 }
+.meta {
+	background-color: lightgray;
+}
+.meta p {
+	padding: 1rem;
+	margin: 0 auto;
+	max-width: 45em;
+	text-align: right;
+}
+.meta p a,
+.meta p a:visited,
+.meta p a:hover,
+.meta p a:link {
+	color: #4a4a4a;
+	font-weight: 600;
+}
+.meta p a:hover {
+	background-color: #4a4a4a;
+	color: lightgray;
+}
 a[href].post-tag,
 a[href].post-tag:visited {
 	color: inherit;

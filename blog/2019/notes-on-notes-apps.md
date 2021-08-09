@@ -1,5 +1,5 @@
 ---
-title: Notes on notes apps
+title: Notes on Notes Apps
 date: 2019-11-26
 tags:
   - productivity

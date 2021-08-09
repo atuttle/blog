@@ -10,13 +10,23 @@ templateClass: tmpl-post
   {{ content | safe }}
 
   <div class="tags">
-    <p>✋ 🤩  Woah! You've reached the end of this article. Hungry for more? Explore related topics:</p>
+    <p>✋ 🤩  High five! You've reached the end. Hungry for more? Explore these related topics:</p>
     {%- for tag in tags | filterTagList -%}
     {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
     <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }} ({{collections[tag].length}})</a>
     {%- endfor %}
   </div>
 </main>
+
+<section class="meta">
+  <p>
+    <a href="https://twitter.com/search?q=https://adamtuttle.codes{{page.url}}">Discuss on Twitter</a>
+    &bull;
+    <a href="https://github.com/atuttle/blog/edit/main{{page.filePathStem}}.md">Edit post on GitHub</a>
+    &bull;
+    <a href="https://github.com/atuttle/blog/commits/main{{page.filePathStem}}.md">Contributions</a>
+  </p>
+</section>
 
 <footer>
 {%- set nextPost = collections.blog | getNextCollectionItem(page) %}
