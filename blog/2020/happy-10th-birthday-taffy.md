@@ -1,5 +1,5 @@
 ---
-title: Happy 10th Birthday, Taffy!
+title: "Happy 10th Birthday, Taffy!"
 date: 2020-08-24
 tags:
   - taffy
@@ -15,7 +15,7 @@ It now represents a ton of personal growth and success for me, successful collab
 
 # Happy Birthday Taffy!
 
-To celebrate Taffy's 10 year birthday, I finally got around to restoring the database backup from my last website so that I can resurrect articles from it! I think I've found and restored every post about Taffy from the last 10 years, from [the original announcement in 2010](/blog/2010/Taffy-A-Restful-Framework-for-ColdFusion/) through [Taffy 3.1.0-RC1](http://iq.localhost.tools:8000/blog/2015/Taffy-3-1-0-RC1/) in 2015. I guess I never posted after [the final 3.1.0 release](https://github.com/atuttle/Taffy/releases/tag/v3.1.0) or for [3.2.0](https://github.com/atuttle/Taffy/releases/tag/v3.2.0). 🤷‍♂️
+To celebrate Taffy's 10 year birthday, I finally got around to restoring the database backup from my last website so that I can resurrect articles from it! I think I've found and restored every post about Taffy from the last 10 years, from [the original announcement in 2010](/blog/2010/Taffy-A-Restful-Framework-for-ColdFusion/) through [Taffy 3.1.0-RC1](/blog/2015/Taffy-3-1-0-RC1/) in 2015. I guess I never posted after [the final 3.1.0 release](https://github.com/atuttle/Taffy/releases/tag/v3.1.0) or for [3.2.0](https://github.com/atuttle/Taffy/releases/tag/v3.2.0). 🤷‍♂️
 
 All of those old posts are now listed on [the full blog index](/blog), and now's a good time to look for them because the early years don't have much more than Taffy content at the moment. I'll get around to restoring the other old posts too, but with limited time and the birthday and all, it seemed like a good way to narrow the scope for phase 1 of the restoration project. (I started blogging in 2007 and wrote 48 entries that year! 😬)
 
@@ -43,7 +43,7 @@ The dashboard got [a ground-up rewrite in 2013](https://github.com/atuttle/Taffy
 
 ## Documentation
 
-I'm super proud of everything about Taffy, and that extends equally to [our documentation](http://docs.taffy.io). It's not perfect (what docs are?), but we've tried really hard to make sure that everything is explained and that it's reasonably well organized. We even keep [documentation for older versions](http://docs.taffy.io/2.0.0) still available and usable! That's more than I can say for a lot of open source projects that just burn it all down and start over with new documentation when they start a new major version of the library.
+I'm super proud of everything about Taffy, and that extends equally to [our documentation](http://docs.taffy.io). It's not perfect (what docs are?), but we've tried really hard to make sure that everything is explained and that it's reasonably well organized. We even keep [documentation for older versions](https://docs.taffy.io/#/2.0.0) still available and usable! That's more than I can say for a lot of open source projects that just burn it all down and start over with new documentation when they start a new major version of the library.
 
 Combined between all versions, we currently have more than 16,400 lines of markdown documentation. There is some repetition when things don't change between versions, but I still think this is a wonderful thing because it maintains what's relevant to any given user no matter what version of Taffy they're using.
 
@@ -61,7 +61,7 @@ Thank you!! 🥳 🤗 🍾
 
 ## Methodology, or, Where did these numbers come from?
 
-While they aren't perfect, I was able to extract something close by using `git blame` to get the date that each line of each file was last modified. I combined this with some *nix CLI tools to get counts by date:
+While they aren't perfect, I was able to extract something close by using `git blame` to get the date that each line of each file was last modified. I combined this with some \*nix CLI tools to get counts by date:
 
 ```bash
 $ git blame dashboard.cfm | awk '{print $4}' | sort | uniq -c
