@@ -1,5 +1,6 @@
 ---
 title: TDD By Example, by Kent Beck
+summary: My thoughts, review, and notes on the Bible of TDD
 date: 2021-09-06
 tags:
   - testing
