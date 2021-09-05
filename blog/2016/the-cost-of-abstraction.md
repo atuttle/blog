@@ -1,6 +1,6 @@
 ---
-title: 'The Cost of Abstraction'
-summary: 'Adam responds to a blog post about the half-life of career-knowledge'
+title: "The Cost of Abstraction"
+summary: "Adam responds to a blog post about the half-life of career-knowledge"
 date: 2016-10-07 11:00:00
 tags:
   - coding
@@ -23,9 +23,9 @@ Ben asserts that doctors (probably) don't find themselves constantly dealing wit
 
 > The doctor at 40 doesn't seem to be worried about discovering that all his knowledge of the vascular system is about to evaporate in favor of some new organizing theory. The same goes for the lawyer, the plumber, the accountant, or the english teacher.
 
-While there is a nugget of truth in this quote (more on that in a moment), I would assert in response that Ben probably doesn't know too many doctors, lawyers, plumbers, accountants, or teachers. Or at least he doesn't ask them about their Continuing Learning Efforts.
+While there is a nugget of truth in this quote (more on that in a moment), I would assert in response that Ben probably doesn't know too many doctors, lawyers, plumbers, accountants, or teachers. Or at least he doesn't ask them about their Continuing Learning Efforts (CLE's).
 
-Your family doctor probably attends at least once conference a year, and very likely _regularly_ attends lunch-and-learn sessions paid for by pharmaceutical companies where she gets free lunch in exchange for learning about the company's new drugs: How they work, what they do, and what off-label uses they might be good for, to name just a few things. I have friends that were pharma reps and friends that are doctors, and I'm speaking from first-hand conversations with them.
+Your family doctor probably attends at least one conference a year, and very likely _regularly_ attends lunch-and-learn sessions paid for by pharmaceutical companies where she gets free lunch in exchange for learning about the company's new drugs: How they work, what they do, and what off-label uses they might be good for, to name just a few things. I have friends that were pharma reps and friends that are doctors, and I'm speaking from first-hand conversations with them.
 
 Anyone remember "New Math"? Ben's parents were probably complaining about it when he was in 6th-10th grade, if my math is correct. Teachers were learning and applying new techniques for helping kids to understand mathematical concepts. The same is probably true for reading, writing, and other concepts too. And we're going through it again now: What people often refer to as "common core" (which I support) &ndash;which is actually just a new program put in place to _satisfy_ common core&ndash; is an updated approach to teaching based on scientific research on the subject.
 
@@ -41,7 +41,7 @@ This part is right, though. The vascular system is well understood and documente
 
 There are certain concepts in any field, which I'll refer to as "core concepts," that have a half life of much longer than the average human lifespan, if not effectively infinite.
 
-Looping, Branching, Recursion: These are all programming core concepts that you will not likely find yourself abandoning for new approaches in our lifetime. Not unless there are major breakthroughs in Quantum Computing, followed by mass market production of quantum computers to make them as common as PCs are today. These are the vascular and nervous systems of the computer: You're speaking using concepts born at a lower level of abstraction, even if you're using a 4th or 5th generation language.
+Looping, Branching, Recursion: These are all programming core concepts that you will not likely find yourself abandoning for new approaches in our lifetime. Not unless there are major breakthroughs in Quantum Computing, followed by mass market production of quantum computers to make them as common as PCs are today. These are the vascular and nervous systems of the computer: You're using concepts born at a lower level of abstraction, even if you're using a 4th or 5th generation language.
 
 In the beginning there were 1st generation languages: byte code punched into cards. Then there were 2nd generation languages that abstracted a collection of bytecode commands into a single command that could be written with letters and numbers in a text file, i.e. Assembly. 3rd generation languages like C abstract collections of 2GL commands into a single line of code. And repeat for 4th and 5th generation languages.
 

@@ -15,7 +15,9 @@ Having [recently read Clean Code by Robert Martin](https://workingcode.dev/episo
 
 But.
 
-Imagine the codebase _is perfect_. I know, I know. Suspend your disbelief for a moment. Now, you're doing a code review and the file is consistently indented with tabs but the changed line is indented with spaces. Functionally, the change is flawless. Do you reject the pull request and ask the developer to change it? _It's just one line!_
+Imagine the codebase _is perfect_. I know, I know. Suspend your disbelief for a moment.
+
+Now... you're doing a code review and the file is consistently indented with tabs but the changed line is indented with spaces. Functionally, the change is flawless. Do you reject the pull request and ask the developer to change it? _It's just one line!_
 
 You could approve the PR and merge it with the intention of coming back to clean it up "some day" but as we all know, "some day" is the same thing as "never."
 
