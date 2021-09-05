@@ -315,7 +315,6 @@ a[href].direct-link:focus:visited,
 #articleFooter {
 	background-color: var(--green);
 	color: var(--white);
-	margin: 0 -16px;
 	padding: 16px;
 }
 #articleFooter a {
@@ -323,7 +322,6 @@ a[href].direct-link:focus:visited,
 }
 #comments {
 	background-color: rgb(36, 36, 36);
-	margin: 0 -16px;
 	padding: 16px;
 }
 .footerSection {
