@@ -359,3 +359,8 @@ a[href].direct-link:focus:visited,
 	margin: 0 auto;
 	max-width: 45em;
 }
+.footnotes {
+	background-color: #eaeaea;
+	padding: 10px;
+	font-size: 0.85em;
+}
