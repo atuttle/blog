@@ -26,7 +26,7 @@ The preface is skippable if you really want to cut corners, but if you think you
 
 After reading the first chapter, which I'll discuss next, I was astonished by how short it was. Only 8 pages, two of which contain 3/4-page height screen shots of the desktop application GUI for JUnit. I quickly thumbed through the first half of the book and found that every chapter appears to follow pretty much the same format. Just a few pages. I probably should have seen it coming, since TDD is all about breaking things down into the smallest possible useful segments. It was a pleasant surprise, and has contributed greatly to my motivation to keep reading.
 
-There are 36 chapters, if you include the preface and introduction and two apendices &ndash; all of which are just as short as the chapters, some even being reduced to just a page or three. If you set out to read one chapter per day &mdash;a very attainable goal!&mdash; then you would probably find you had finished the entire book in less than a month, because there are likely to be days where you finish 1 chapter and feel eager to keep going.
+There are 36 chapters, if you include the preface and introduction and two appendices &ndash; all of which are just as short as the chapters, some even being reduced to just a page or three. If you set out to read one chapter per day &mdash;a very attainable goal!&mdash; then you would probably find you had finished the entire book in less than a month, because there are likely to be days where you finish 1 chapter and feel eager to keep going.
 
 So that's what I'm going to do. Starting today, I'm planning to read one chapter per day, and I'll take notes about what I read here. I'll be updating this article each time I have more to add.
 
@@ -74,7 +74,7 @@ In addition to red/green/refactor, you'll also commonly see these as the steps o
 1. Run the tests and succeed
 1. Refactor to remove duplication
 
-Upon first encountering this list, I couldn't fathom what sort of duplication might exist. The whole point of this process is to test so fervantly-tiny a component, how could we possibly have duplicated anything?
+Upon first encountering this list, I couldn't fathom what sort of duplication might exist. The whole point of this process is to test so fervently-tiny a component, how could we possibly have duplicated anything?
 
 By this time, the test has been left as previously written, but the application code has started to come together as:
 
