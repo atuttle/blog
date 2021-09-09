@@ -2,6 +2,7 @@
 title: The Mistake that Every TDD Tutorial Makes
 summary: "Adam Tuttle explains what's wrong with most TDD tutorials"
 date: 2021-09-09
+img: https://adamtuttle.codes/img/2021/rage.jpg
 tags:
   - testing
   - tdd
