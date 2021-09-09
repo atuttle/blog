@@ -32,39 +32,15 @@ So that's what I'm going to do. Starting today, I'm planning to read one chapter
 
 With the stage sufficiently set, let's jump into the first chapter.
 
-## First things first: I have a chip on my shoulder
+[buy]: https://amzn.to/35hV6X3
+[jhdg]: https://joelhooks.com/digital-garden
+[wycash]: http://c2.com/doc/oopsla92.html
 
-I am coming in to this book a little bit apprehensive. I am 100% of the opinion that "automated tests are good" and that there are good ways and bad ways to test things, and that there is significant value in using the correct approach. E.g. test the feature, not the implementation. I also believe that TDD _might_ be a useful tool to ensure that you've written tests to cover every feature.
+## Chapter 1: Multi-Currency Money
 
-That said, _every_ TDD tutorial I've encountered to date has gone out of its way to "test" such small details _of the testing-setup itself_ that I can't help but feel that, as my English friends would say, they're "taking the piss." That is, they're going to the extreme, perhaps to make a point, but also in a manner that is so unbelievably inefficient as to perhaps get in the way of making their point.
+Unfortunately, **TDD By Example** leads off with the same premise that every other TDD guide does: The premise that the reader is relatively new to coding. [This is a pet-peeve of mine][mistake]. I've tried on several occasions to learn TDD and been chased away by just how inane and inefficient it's made to look by starting from first principles. _If you wish to write tests with TDD, you must first invent the universe._
 
-Do you really, for _every_ project, _really_ start by writing a test that won't even _compile_? And then once you've written enough code to make it compile, writing the first test in _such a naïve manner_ that nobody would actually look at it and think it's actually a useful test?
-
-TDD By Example, Chapter 1, does this too. We start by defining a set of constraints (a portion of what I would consider to be the software spec), and then writing a test that would maybe sort of demonstrate that we understand the concept of how to implement that algorithm in our heads for one set of possible inputs.
-
-```java
-public void testMultiplication(){
-	Dollar five = new Dollar(5);
-	five.times(2);
-	assertEquals(10, five.amount);
-}
-```
-
-Obviously this code isn't going to compile because the `Dollar` class hasn't been defined (among other problems). I'm not a Java developer so I'm not going to get into all of the intricacies of the various errors. But here's what my brain trips over:
-
-**DUH! Of course this isn't going to compile.** Even I, with only 1 semester of Java experience in college (many, many years ago) can look at that and name three of the four errors that the book points out and leads us through fixing so that the test will compile and we can see it fail. I will stop short of being "offended" by such a notion, but it rubs me the wrong way.
-
-The counter argument will be that I _am_ attempting to compile it, just in my head; and that not everyone has that ability. Ok, sure. That's a fair point. When you first learn how to do addition in primary school you have to write it out long-form, and eventually you get to a place where you can do it in your head. I will concede that, for someone new to programming, this may be a useful process.
-
-But in school, eventually, it is accepted that you can do some basic math in your head and the teacher no longer asks you to "show your work" for simple addition as part of showing your work for integral calculus. I do hope that this book eventually makes it to that level.
-
-Most of what I've written so far has had a bit of a negative attitude, but while reading this chapter I was in a very positive mood and it did not actually upset me. This chip on my shoulder comes from being constantly chased-away from learning TDD by people who insist that we have to make the most mundane, boring, obviously-wrong errors, and go through a checklist of steps to fix them, before we can get on with the process of learning how to actually behave in a professional coding scenario. When someone already knows trigonometry you shouldn't make them waste their time showing the long-form steps of simple addition.
-
-Thanks for indulging me.
-
-## Chapter 1
-
-Obviously-failing-tests-failing-obviously aside, I did actually learn something from the first chapter.
+Obviously-failing-tests-failing-obviously aside (confused? read my rant on [the mistake that every TDD tutorial makes][mistake]), I did actually learn something from the first chapter.
 
 In addition to red/green/refactor, you'll also commonly see these as the steps of TDD (copied here from chapter 1):
 
@@ -76,31 +52,23 @@ In addition to red/green/refactor, you'll also commonly see these as the steps o
 
 Upon first encountering this list, I couldn't fathom what sort of duplication might exist. The whole point of this process is to test so fervently-tiny a component, how could we possibly have duplicated anything?
 
-By this time, the test has been left as previously written, but the application code has started to come together as:
-
-```java
-class Dollar {
-	int amount = 5 * 2;
-	Dollar(int amount){}
-	void times(int multiplier){}
-}
-```
-
-As it turns out, the duplication in question &mdash;at least for the purposes of chapter 1&mdash; is between the (naïve) test and the (naïve) implementation. The refactoring proposed is to remove the `5*2` from the implementation. The book updates the implementation to the following:
+As it turns out, the duplication in question &mdash;at least for the purposes of chapter 1&mdash; is between the (naïve) implementation and the (naïve) test. Duplication between the test and the implementation is an indicator that the implementation is incomplete. Something is hard-coded. The book updates the implementation to the following:
 
 ```java
 class Dollar {
 	int amount;
+
 	Dollar(int amount){
 		this.amount = amount;
 	}
+
 	void times(int multiplier){
 		amount *= multiplier;
 	}
 }
 ```
 
-At this point the test passes and the code resembles the 133 characters I probably would have started with in the first place before ever running the first test. And when I did write that test, I would, less-naïvely, have included two different math assertions to prove that the tests weren't passing because of any hard-coded values.
+At this point the test passes and the implementation code resembles the 124 characters I probably would have started with in the first place before ever running the first test. And when I did write that test, I would, less-naïvely, have included two different math assertions to prove that the tests weren't passing because of any hard-coded values.
 
 ```java
 public void testMultiplication(){
@@ -112,15 +80,29 @@ public void testMultiplication(){
 }
 ```
 
-I suppose the point of all of this is to illustrate the steps that you should follow when the problem is not one that you can do in your head.
+This raises the question of immutability, but I'm sure we'll get to that.
 
-1. First make a test that, when it passes, will prove that your feature works as expected. This is part of what upsets me about the initial test case: only testing 1 set of inputs doesn't fully prove the feature works.
-1. Then iterate on the application to make the test pass, committing whatever sins of ["Clean Code"][cleancode] are necessary to get there
+I suppose the point of all of this is to illustrate the steps that you should follow **when the problem is one that you can't solve in your head**.
+
+1. First make a test that, when it passes, will prove that your feature works as expected. This is part of what upsets me about the initial test case: only testing 1 set of inputs doesn't fully prove the feature works; only that you are capable of understanding how the test works.
+1. Then iterate on the application to make the test pass, committing whatever sins of ["Clean Code"][cleancode] are necessary to get there.
 1. Once you're satisfied that the code actually works and the test actually proves the code works, refactor the code to be "Clean" while still passing the entire suite of tests to prove that you haven't broken anything else in the process.
 
-I'm going to call it quits here. I'll be sure to check back in again soon when I've finished another chapter or three and have more thoughts to share.
-
-[buy]: https://amzn.to/35hV6X3
-[jhdg]: https://joelhooks.com/digital-garden
-[wycash]: http://c2.com/doc/oopsla92.html
 [cleancode]: https://workingcode.dev/episodes/022-book-club-1-clean-code-by-uncle-bob-martin-pt1/
+[mistake]: /blog/2021/the-mistake-every-tdd-tutorial-makes/
+
+## Chapter 2: Degenerate Objects
+
+Chapter 2 identifies and resolves another code smell: the immutability concern I raised near the end of my notes on Chapter 1. We're seeing the refactoring process at work, but there's not much going on here. We're still in the neighborhood of obviousness.
+
+But it also validates my complaints about chapter 1 and about TDD guides in general: If there's an obvious implementation, use it!
+
+> "When I use TDD in practice, I commonly shift between these two modes of implementation [Fake it vs. Use Obvious Implementation]. When everything is going smoothly and I know what to type, I put in Obvious Implementation after Obvious Implementation."
+
+It's nice to see this somewhat early in the book, but considering that the preface and introduction are both strongly recommended reading and both full-chapter-length, this is basically in chapter 4.
+
+## Chapter 3: Equality for All
+
+Here we're starting to see the todo list in action as we add both `equals()` and `hashCode()` as items to come back to, and then we start writing a test for the former. I would have sworn there was a note somewhere early on (introduction? preface? chapter 1?) about some helpful tips coming for the todo list, but so far I'm not seeing anything aside from "use one." For lack of a better place, I mentally picture it as a comment at the top of the tests file with a heading of "TODO."
+
+"Triangulation" is presented as a technique of adding multiple assertions to help clarify what the right implementation should be if you're unsure. Sound familiar? That's what I was suggesting in my chapter 1 notes as table-stakes for all tests. I think if you're only doing 1 assertion per test you can't be sure that the code _actually works_ can you? Ah well, at least this was a familiar technique.
