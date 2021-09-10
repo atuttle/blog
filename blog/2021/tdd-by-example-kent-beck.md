@@ -38,7 +38,7 @@ With the stage sufficiently set, let's jump into the first chapter.
 
 ## Chapter 1: Multi-Currency Money
 
-Unfortunately, **TDD By Example** leads off with the same premise that every other TDD guide does: The premise that the reader is relatively new to coding. [This is a pet-peeve of mine][mistake]. I've tried on several occasions to learn TDD and been chased away by just how inane and inefficient it's made to look by starting from first principles. _If you wish to write tests with TDD, you must first invent the universe._
+Unfortunately, **TDD By Example** leads off with the same premise that every other TDD guide does: The premise that the reader is relatively new to coding. [This is a pet-peeve of mine][mistake]. I've tried on several occasions to learn TDD and been chased away by just how inane and inefficient it's made to look by starting from first principles. _If you wish to write software with TDD, you must first invent the universe._
 
 Obviously-failing-tests-failing-obviously aside (confused? read my rant on [the mistake that every TDD tutorial makes][mistake]), I did actually learn something from the first chapter.
 

@@ -15,7 +15,7 @@ I hold the opinion that "automated tests are good" and that there are good ways 
 
 But _every_ TDD tutorial I've encountered to date has gone out of its way to "test" such inane details _of the testing-setup itself_ that I can't help but feel that, as my English friends would say, they're "taking the piss." They're going to the extreme, perhaps to make a point, but also in a manner that is so unbelievably inefficient and annoying as to get in the way of making that point!
 
-> _**If you wish to write tests with TDD, you must first invent the universe.**_
+> _**If you wish to write software with TDD, you must first invent the universe.**_
 
 Do you really, for _every_ project, _**really**_ start by writing a test that won't even _compile_? And then once you've written enough code to make it compile, writing the first test in _such a naïve manner_ that nobody would actually look at it and think it's actually a useful test?
 
