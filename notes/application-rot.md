@@ -11,7 +11,7 @@ start with car metaphor.
 
 then say that linting and testing are SO "table stakes" that they're used as the example material to now claim that other things are on equal table-stakes ground: https://twitter.com/brianleroux/status/1432709953584828416
 
-Old people<sup>1</sup> are annoyed at the pace of change in the JavaScript ecosystem. Modules get updates at a seemingly breakneck continuous pace, and it can feel impossible to keep up with them.
+Old people[^1] are annoyed at the pace of change in the JavaScript ecosystem. Modules get updates at a seemingly breakneck continuous pace, and it can feel impossible to keep up with them.
 
 I think that this is because they are still applying the old patterns and approaches to modern tools, and the modern tools operate from a different set of assumptions.
 
@@ -27,6 +27,4 @@ the modern frameworks get a bad rap from people who are stuck in the old ways: n
 
 your car will break down if you never change the oil and put electrical tape over the check engine light. modern apps require modern approaches. good tests, tools that notify you of updates, and as much automation as possible.
 
----
-
-<small>1: If not physically old, or not _that_ physically old, then mentally old: stuck in "the old way" of doing things.</small>
+[^1]: If not physically old, or not _that_ physically old, then mentally old: stuck in "the old way" of doing things.
