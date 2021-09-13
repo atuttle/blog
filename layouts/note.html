@@ -1,7 +1,19 @@
 ---
 layout: default
 ---
+
 <article>
-    {{content}}
+	<h1>{{title}}</h1>
+	{{content}}
 </article>
+<section class="andThen">
+	<p>
+		{% if discuss %}
+		<a href="https://twitter.com/search?q=https://adamtuttle.codes{{page.url}}">Discuss on Twitter</a>
+		&bull; {% endif %}
+		<a href="https://github.com/atuttle/garden/edit/main{{page.filePathStem}}.md">Edit on GitHub</a>
+		&bull;
+		<a href="https://github.com/atuttle/garden/commits/main{{page.filePathStem}}.md">Contributions</a>
+	</p>
+</section>
 {% include backlinks.html %}

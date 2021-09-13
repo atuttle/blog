@@ -1,11 +1,10 @@
-Content Copyright (c) 2021 Adam Tuttle
-
-Design & Functionality based on <https://github.com/binyamin/eleventy-garden>
-and released under the MIT License below.
-
 MIT License
 
-Copyright (c) 2020 Binyamin Aron Green
+Based on <https://github.com/binyamin/eleventy-garden>
+With many modifications by Adam Tuttle
+
+Modifications Copyright (c) 2021 Adam Tuttle
+Original Code Copyright (c) 2020 Binyamin Aron Green
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

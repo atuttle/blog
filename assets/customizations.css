@@ -1,0 +1,16 @@
+nav a {
+	font-size: 1.2em;
+}
+.headshot {
+	float: right;
+	margin: 0 0 10px 10px;
+	border-radius: 100px;
+}
+
+article img {
+	max-width: 100%;
+}
+
+article > pre {
+	overflow-x: scroll;
+}

@@ -7,28 +7,20 @@ type == "note" %} {% assign metatype = "article" %} {% endif %}
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<link
-	rel="shortcut icon"
-	href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🦎</text></svg>"
-/>
-
 <title>{{- metatitle -}}</title>
 
 <meta name="description" content="{{- metadesc -}}" />
-
 <meta property="og:title" content="{{-metatitle-}}" />
 <meta property="og:type" content="{{-metatype-}}" />
 <meta property="og:url" content="{{ page.url | prepend: site.baseurl }}" />
-<!-- <meta property="og:image" content="/assets/avatar.png" /> -->
+<meta property="og:image" content="/assets/avatar.png" />
 <meta property="og:description" content="{{- metadesc -}}" />
 
+<link rel="icon" href="https://fav.farm/🤘" />
 <link rel="canonical" href="{{ page.url | prepend: site.baseurl }}" />
-
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap" />
-
 <link rel="preconnect" href="https://cdnjs.cloudflare.com/" crossorigin />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-
-<link rel="stylesheet" href="/css/style.css" />
-<link rel="stylesheet" href="/css/customizations.css" />
+<link rel="stylesheet" href="/assets/style.css" />
+<link rel="stylesheet" href="/assets/customizations.css" />

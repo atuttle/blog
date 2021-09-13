@@ -1,24 +1,21 @@
 {
-  "name": "atuttle-garden",
+  "name": "atcodes-garden",
   "version": "1.0.0",
-  "description": "The digital garden of Adam Tuttle",
+  "description": "The digital blog of Adam Tuttle. Based on <https://github.com/binyamin/eleventy-garden>.",
   "scripts": {
-    "start": "open http://localhost:8080 && eleventy --serve --quiet",
+    "start": "eleventy --serve --quiet",
     "compile": "eleventy"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/atuttle/blog.git"
+    "url": "git+https://github.com/binyamin/eleventy-garden.git"
   },
-  "author": {
-    "name": "Adam Tuttle",
-    "url": "https://adamtuttle.codes/",
-    "basedOn": "https://github.com/binyamin/eleventy-garden"
-  },
-  "keywords": [
-    "digital-garden"
-  ],
+  "keywords": [],
+  "author": "Adam Tuttle",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/atuttle/garden/issues"
+  },
   "homepage": "https://adamtuttle.codes",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0-canary.23",
@@ -26,5 +23,8 @@
     "markdown-it-attrs": "^4.0.0",
     "markdown-it-footnote": "^3.0.3",
     "title-case": "^3.0.3"
+  },
+  "dependencies": {
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.2"
   }
 }
