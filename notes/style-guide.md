@@ -1,6 +1,7 @@
 ---
 layout: default
 eleventyExcludeFromCollections: true
+discuss: false
 ---
 
 # Style Guide

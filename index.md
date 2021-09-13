@@ -1,6 +1,7 @@
 ---
 layout: default
 eleventyExcludeFromCollections: true
+discuss: false
 ---
 
 # Yo! I'm Adam
@@ -29,7 +30,7 @@ The last 3 things I've written:
 
 1. ~~redirects from old blog urls~~
 1. ~~display most recent entries on homepage~~
-1. make sure twitter discussion, edit on github, and contrib links are working
+1. ~~make sure twitter discussion, edit on github, and contrib links are working~~
 1. searchable db of entries
 1. make sure social image embeds (and other open-graph tags) are working correctly
 1. copy over all current blog content
