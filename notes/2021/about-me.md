@@ -34,6 +34,13 @@ I love to read, and I share my book list on [GoodReads][goodreads]. Science fict
 
 I don't drink much alcohol, but when I do I love trying new beers &ndash; especially IPA's. I track those [on untappd][untappd].
 
+[![My Twitter account](/assets/icons8-twitter-50.png)][twitter]
+[![My GitHub account](/assets/icons8-github-50.png)][github]
+[![My TikTok account](/assets/icons8-tiktok-50.png)][tiktok]
+[![My YouTube account](/assets/icons8-youtube-49.png)][youtube]
+[![My Instagram account](/assets/icons8-instagram-old-50.png)][insta]
+[![My GoodReads account](/assets/icons8-bookshelf-60.png){width="50"}][goodreads]
+
 [gravatar]: https://www.gravatar.com/avatar/c9e260373387e72ce020928a3a546ec5?rating=G&size=200&default=mm
 [iq]: https://www.alumniq.com
 [portmanteau]: https://www.merriam-webster.com/dictionary/portmanteau
@@ -42,6 +49,8 @@ I don't drink much alcohol, but when I do I love trying new beers &ndash; especi
 [twitter]: https://twitter.com/adamtuttle
 [tiktok]: https://tiktok.com/@planespooppeople
 [insta]: https://www.instagram.com/alteregowoodworks/
+[youtube]: https://www.youtube.com/c/AdamTuttle/videos
+[github]: https://github.com/atuttle
 [goodreads]: https://www.goodreads.com/author/show/7514385.Adam_Tuttle
 [phm]: https://amzn.to/3EbB6pu
 [untappd]: https://untappd.com/user/atcodes
