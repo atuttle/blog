@@ -1,3 +1,8 @@
+---
+title: Where I Stand
+eleventyExcludeFromCollections: true
+---
+
 **My pronouns are he / him / his.** Everyone should be allowed to choose how they want to be addressed.
 
 **Black lives matter.** I was blind to the system that benefitted me for so long, and I'm on a journey to better understand the world and to do my part to make it better for everyone.

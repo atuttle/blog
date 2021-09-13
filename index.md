@@ -1,5 +1,6 @@
 ---
 layout: default
+eleventyExcludeFromCollections: true
 ---
 
 # Yo! I'm Adam
@@ -12,9 +13,11 @@ In addition to tech, I have a variety of other interests including skydiving, wo
 
 The last 3 things I've written:
 
-- (todo)
-- (todo)
-- (todo)
+<ul>
+{%- for page in collections.recent -%}
+<li><a href="{{ page.url }}">{{page.data.title}}</a></li>
+{%- endfor -%}
+</ul>
 
 [![My Twitter account](/assets/icons8-twitter-50.png)][twitter]
 [![My GitHub account](/assets/icons8-github-50.png)][github]
@@ -24,8 +27,8 @@ The last 3 things I've written:
 
 ### Digital Garden TODO list:
 
-1. redirects from old blog urls
-1. display most recent entries on homepage
+1. ~~redirects from old blog urls~~
+1. ~~display most recent entries on homepage~~
 1. make sure twitter discussion, edit on github, and contrib links are working
 1. searchable db of entries
 1. make sure social image embeds (and other open-graph tags) are working correctly

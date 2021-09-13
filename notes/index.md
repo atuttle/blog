@@ -1,5 +1,6 @@
 ---
 title: Content Directory
+eleventyExcludeFromCollections: true
 ---
 
 # My Favorites

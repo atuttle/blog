@@ -1,6 +1,7 @@
 ---
 title: Adam Tuttle
 discuss: false
+eleventyExcludeFromCollections: true
 ---
 
 ![Photo of Adam Tuttle][gravatar]{style="float:right; margin-left: 10px"}

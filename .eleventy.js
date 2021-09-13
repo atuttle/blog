@@ -1,4 +1,5 @@
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const { now } = require('lodash');
 
 module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(pluginSyntaxHighlight);
@@ -33,6 +34,23 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addCollection('notes', function (collection) {
 		return collection.getFilteredByGlob(['notes/**/*.md', 'index.md']);
+	});
+
+	eleventyConfig.addCollection('recent', function (collection) {
+		return (
+			collection
+				.getFilteredByGlob(['notes/**/*.md'])
+				//only include content with a date <= now
+				.filter((post) => post.data.page.date <= new Date())
+				//get the most recent first
+				.sort((L, R) => {
+					const Ldate = L.data.page.date;
+					const Rdate = R.data.page.date;
+					return Ldate < Rdate ? 1 : Ldate > Rdate ? -1 : 0;
+				})
+				//we only want 3 of em
+				.slice(0, 3)
+		);
 	});
 
 	eleventyConfig.addPassthroughCopy('assets');
