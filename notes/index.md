@@ -19,8 +19,27 @@ discuss: false
 - [The Cost of Abstraction](/notes/2016/the-cost-of-abstraction/)
 - [Cobbler's Children Syndrome](/notes/2016/cobblers-children-syndrome/) &ndash; my backups are better now, but I still haven't restored all of my old content! 😵
 
-## Coming Soonish: Search
+<button data-highlight="articles">Articles</button>
+<button data-highlight="videos">Videos</button>
 
-I'm planning to implement some sort of search or filter tool similar to what swyx uses [here][swyx], but I haven't gotten around to that yet.
-
-[swyx]: https://www.swyx.io/ideas/
+<section id="index">
+{%- for page in collections.all -%}
+{%- if page.data.title -%}
+<article buckets="{{page.data.buckets}}">
+	<h5>
+		{%- if page.data.favorite -%}
+			<img src="/assets/icons8-star-48.png" class="favorite" alt="This article is one of my favorites" title="This article is one of my favorites" />
+		{%- endif -%}
+		<strong><a href="{{page.url}}">{{page.data.title}}</a></strong>
+	</h5>
+	<span class="timestamp">{{page.date | asPostDate}}</span>
+	<span class="bucket">{{page.data.buckets}}</span>
+	<span class="tags">
+		{%- for tag in page.data.tags -%}
+			<a class="contentTag" href="javascript:alert('todo');">{{tag}}</a>
+		{%- endfor -%}
+	</span>
+</article>
+{%- endif -%}
+{%- endfor -%}
+</section>

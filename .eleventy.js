@@ -1,7 +1,13 @@
+const { DateTime } = require('luxon');
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(pluginSyntaxHighlight);
+
+	// https://www.alpower.com/tutorials/formatting-dates-in-eleventy/
+	eleventyConfig.addFilter('asPostDate', (dateObj) => {
+		return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+	});
 
 	const markdownIt = require('markdown-it');
 	const markdownItOptions = {

@@ -14,3 +14,31 @@ article img {
 article > pre {
 	overflow-x: scroll;
 }
+
+#index article {
+	padding: 10px;
+	margin: 10px 0;
+	background-color: rgb(242, 242, 242);
+	border-radius: 3px;
+}
+#index article h5 {
+	margin: 0;
+}
+#index article .favorite {
+	max-height: 25px;
+	float: right;
+}
+
+.tags {
+	display: block;
+}
+.tags .contentTag {
+	color: rgb(53, 53, 53);
+	text-transform: lowercase;
+	display: inline-block;
+	margin-right: 10px;
+}
+.contentTag::before {
+	content: '#';
+	color: rgb(53, 53, 53);
+}

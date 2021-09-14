@@ -8,7 +8,7 @@ Digitgal Garden codebase based on [Eleventy Garden by Binyamin][og], with many m
 
 Netlify-Eleventy redirect magic (to preserve what little SEO rankings I have) from [Aleksandr Hovhannisyan][redirects].
 
-Social icons from [Icons8][icons].
+Icons from [Icons8][icons].
 
 [og]: https://github.com/binyamin/eleventy-garden
 [mycopy]: https://github.com/atuttle/garden
