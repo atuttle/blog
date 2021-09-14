@@ -104,3 +104,17 @@ It's nice to see this somewhat early in the book, but considering that the prefa
 Here we're starting to see the todo list in action as we add both `equals()` and `hashCode()` as items to come back to, and then we start writing a test for the former. I would have sworn there was a note somewhere early on (introduction? preface? chapter 1?) about some helpful tips coming for the todo list, but so far I'm not seeing anything aside from "use one." For lack of a better place, I mentally picture it as a comment at the top of the tests file with a heading of "TODO."
 
 "Triangulation" is presented as a technique of adding multiple assertions to help clarify what the right implementation should be if you're unsure. Sound familiar? That's what I was suggesting in my chapter 1 notes as table-stakes for all tests. I think if you're only doing 1 assertion per test you can't be sure that the code _actually works_ can you? Ah well, at least this was a familiar technique.
+
+## Chapter 4: Privacy
+
+This chapter was about restoring some "cleanliness" to the code and the tests. We made the instance `amount` variable private, and refactored the tests to be more "expressive." Instead of a series of steps that ends with an assertion, the test we refactored starts to look more like what passes for conversational among coders. (BDD syntax would be even nicer, but that seems out of scope.)
+
+Also this is where we're introduced to the idea that if a bug were to slip past our tests into production, it should be used as an opportunity to learn what test we should have written. What's not expressly said (to the detriment of the book) is that in this scenario you should write the test that shows the code is broken by failing, and then make it pass by fixing the bug.
+
+## Chapter 5: Franc-ly Speaking
+
+Now we've arrived at the part of the story where we have some functionality for dollars and we want to make that same functionality work for Francs. Of course, since this book is all about ~~living out your wildest fantasies~~ committing sins in the name of getting green tests as fast as possible, we simply copy/paste/rename the class and the tests from Dollars to Francs.
+
+From here I've got more questions. Are we creating duplicate tests that will become obsolete and possibly even deleted later on when we refactor the code?
+
+Again, I'm willing to suspend my disbelief for the duration of the book under the premise that we're learning a technique with over-simplified examples. If this were real code we'd start with the obvious inheritence implementation and tests that expect it, right? I guess we'll see.
