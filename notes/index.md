@@ -1,5 +1,5 @@
 ---
-title: Writings Index
+title: All the Things
 eleventyExcludeFromCollections: true
 discuss: false
 ---
@@ -30,7 +30,7 @@ discuss: false
 <article buckets="{{page.data.buckets}}">
 	<h5>
 		{%- if page.data.favorite -%}
-			<img src="/assets/icons8-star-48.png" class="favorite" alt="This article is one of my favorites" title="This article is one of my favorites" />
+			<img src="/assets/icons8-star-48.png" class="favorite" alt="My favorites" title="My favorites" />
 		{%- endif -%}
 		<strong><a href="{{page.url}}">{{page.data.title}}</a></strong>
 	</h5>
