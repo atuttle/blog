@@ -37,6 +37,8 @@ article > pre {
 	text-transform: lowercase;
 	display: inline-block;
 	margin-right: 10px;
+	font-style: italic;
+	text-decoration: none;
 }
 .contentTag::before {
 	content: '#';
