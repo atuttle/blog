@@ -1,9 +1,10 @@
 ---
-title: Content Directory
+title: Writings Index
 eleventyExcludeFromCollections: true
 discuss: false
 ---
 
+<!--
 # My Favorites
 
 - [Test Driven Development By Example, by Kent Beck](/notes/2021/tdd-by-example-kent-beck/) 📚
@@ -18,6 +19,7 @@ discuss: false
 - [Slow is Smooth, Smooth is Fast](/notes/2019/slow-is-smooth-smooth-is-fast/)
 - [The Cost of Abstraction](/notes/2016/the-cost-of-abstraction/)
 - [Cobbler's Children Syndrome](/notes/2016/cobblers-children-syndrome/) &ndash; my backups are better now, but I still haven't restored all of my old content! 😵
+-->
 
 <button data-highlight="articles">Articles</button>
 <button data-highlight="videos">Videos</button>
