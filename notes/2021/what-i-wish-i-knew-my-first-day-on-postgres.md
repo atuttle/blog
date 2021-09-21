@@ -9,7 +9,7 @@ commentsPostId: my-first-day-on-postgres
 ---
 
 ![An elephant sprays itself with mud](/img/2021/andrew-rice-xYO4F6HoxOQ-unsplash.jpg)
-Photo by [Andrew Rice](https://unsplash.com/@andrewricegolf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/elephant?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+_Photo by [Andrew Rice](https://unsplash.com/@andrewricegolf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/elephant?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)_
 
 I have only just started using PostgreSQL for a new application; and I'm coming from a MySQL background. That affords me a pretty nifty advantage: _The eye of the newbie!_ So I thought I would share the things that were important to me as I begin my PGSQL journey, in hopes that they can save you some time as you start yours.
 
