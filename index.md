@@ -14,9 +14,9 @@ You've found yourself at the root node of my [digital garden](/notes). I am a li
 
 In addition to tech, I have a variety of other interests including skydiving, woodworking, and podcasting. [For the curious, I've obliged with some detail about myself here](/notes/2021/about-me/).
 
-### Writing
+### Where's the Content?
 
-Everything I write is [listed in the index][index].
+Looking for something specific? Looking for something to catch your eye? All of my content is [listed in the index][index], with some helpful tools for discovering what you're looking for.
 
 [index]: /notes
 
