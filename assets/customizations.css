@@ -1,3 +1,6 @@
+* {
+	box-sizing: border-box !important;
+}
 nav a {
 	font-size: 1.2em;
 }
@@ -43,4 +46,23 @@ article > pre {
 .contentTag::before {
 	content: '#';
 	color: rgb(53, 53, 53);
+}
+#filters label {
+	display: block;
+}
+#filters #filterText {
+	padding: 8px;
+	font-size: 1.2em;
+	width: 100%;
+	margin: 0 10px 0 0;
+}
+@media not speech {
+	.sr-only {
+		display: none !important;
+	}
+}
+@media only speech {
+	.sr-only {
+		display: initial;
+	}
 }

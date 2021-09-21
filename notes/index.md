@@ -21,8 +21,13 @@ discuss: false
 - [Cobbler's Children Syndrome](/notes/2016/cobblers-children-syndrome/) &ndash; my backups are better now, but I still haven't restored all of my old content! 😵
 -->
 
-<button data-highlight="articles">Articles</button>
-<button data-highlight="videos">Videos</button>
+<section id="filters">
+	<label class="sr-only" for="filterText">Search for something...</label>
+	<input type="text" id="filterText" name="filterText" placeholder="Search for something..." />
+	<label><input type="checkbox" data-highlight="articles" checked /> Include Articles</label>
+	<label><input type="checkbox" data-highlight="videos" checked /> Include Videos</label>
+	<img src="/assets/icons8-star-48.png" class="favorite" alt="My favorites" title="My favorites" height="18" /> Items with a star are my favorites.
+</section>
 
 <section id="index">
 {%- for page in collections.all -%}
