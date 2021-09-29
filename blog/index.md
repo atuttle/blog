@@ -60,4 +60,7 @@ discuss: false
 {%- endfor -%}
 </section>
 
+<script>
+	window.tagData = {{ collections.tags | json }}
+</script>
 <script type="text/javascript" src="/assets/search.js"></script>

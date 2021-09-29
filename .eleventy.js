@@ -47,21 +47,20 @@ module.exports = function (eleventyConfig) {
 		return collection.getFilteredByGlob(['blog/**/*.md', 'index.md']);
 	});
 
-	eleventyConfig.addCollection('recent', function (collection) {
-		return (
-			collection
-				.getFilteredByGlob(['blog/**/*.md'])
-				//only include content with a date <= now
-				.filter((post) => post.data.page.date <= new Date())
-				//get the most recent first
-				.sort((L, R) => {
-					const Ldate = L.data.page.date;
-					const Rdate = R.data.page.date;
-					return Ldate < Rdate ? 1 : Ldate > Rdate ? -1 : 0;
-				})
-				//we only want 3 of em
-				.slice(0, 3)
-		);
+	eleventyConfig.addCollection('tags', function (collection) {
+		const articles = collection.getFilteredByGlob(['blog/**/*.md']);
+		const tags = articles.reduce((agg, article) => {
+			const articleTags = article.data.tags;
+			articleTags.forEach((t) => {
+				if (!(t in agg)) {
+					agg[t] = 0;
+				}
+				agg[t]++;
+			});
+			return agg;
+		}, {});
+		// console.log(tags);
+		return tags;
 	});
 
 	eleventyConfig.addPassthroughCopy('assets');
