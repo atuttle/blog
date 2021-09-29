@@ -24,15 +24,17 @@ discuss: false
 <section id="filters">
 	<label class="sr-only" for="filterText">Search for something...</label>
 	<input type="text" id="filterText" name="filterText" placeholder="Search for something..." />
+	<!--
 	<label><input type="checkbox" data-highlight="articles" checked /> Include Articles</label>
 	<label><input type="checkbox" data-highlight="videos" checked /> Include Videos</label>
+	-->
 	<img src="/assets/icons8-star-48.png" class="favorite" alt="My favorites" title="My favorites" height="18" /> Items with a star are my favorites.
 </section>
 
 <section id="index">
 {%- for page in collections.blog reversed -%}
 {%- if page.data.title -%}
-<article data-buckets="{{page.data.buckets}}">
+<article data-buckets="{{page.data.buckets}}" data-title="{{page.data.title | lcase}}">
 	{%- if page.data.img -%}
 		<div class="thumbnail" style="background-image: url({{page.data.img}});"></div>
 	{%- endif -%}
@@ -43,7 +45,7 @@ discuss: false
 		<strong><a href="{{page.url}}">{{page.data.title}}</a></strong>
 	</h5>
 	<span class="timestamp">{{page.date | asPostDate}}</span>
-	<span class="bucket">{{page.data.buckets}}</span>
+	<!-- <span class="bucket">{{page.data.buckets}}</span> -->
 	<span class="tags">
 		{%- for tag in page.data.tags -%}
 			<a class="contentTag" href="javascript:alert('todo');">{{tag}}</a>
@@ -54,3 +56,5 @@ discuss: false
 {%- endif -%}
 {%- endfor -%}
 </section>
+
+<script type="text/javascript" src="/assets/search.js"></script>

@@ -11,6 +11,10 @@ module.exports = function (eleventyConfig) {
 		return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
 	});
 
+	eleventyConfig.addFilter('lcase', (str) => {
+		return str.toLowerCase();
+	});
+
 	const markdownIt = require('markdown-it');
 	const markdownItOptions = {
 		html: true,
