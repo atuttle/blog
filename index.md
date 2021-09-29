@@ -10,15 +10,15 @@ discuss: false
 
 ![Photo of Adam Tuttle][gravatar]{class="headshot"} I make stuff on the internet, but as you can tell from... _\*gestures broadly\*_ ... I am not a designer.
 
-You've found yourself at the root node of my [digital garden](/notes). I am a life-long-learner and I believe that sharing what you learn is a great way to crystalize the lessons for yourself, so I write about my learnings here. I fancy myself a decent writer, and these electrons are being terribly inconvenienced to prop up that fantasy.
+You've found yourself at the root node of my [digital garden](/blog). I am a life-long-learner and I believe that sharing what you learn is a great way to crystalize the lessons for yourself, so I write about my learnings here. I fancy myself a decent writer, and these electrons are being terribly inconvenienced to prop up that fantasy.
 
-In addition to tech, I have a variety of other interests including skydiving, woodworking, and podcasting. [For the curious, I've obliged with some detail about myself here](/notes/2021/about-me/).
+In addition to tech, I have a variety of other interests including skydiving, woodworking, and podcasting. [For the curious, I've obliged with some detail about myself here](/blog/2021/about-me/).
 
 ### Where's the Content?
 
 Looking for something specific? Looking for something to catch your eye? All of my content is [listed in the index][index], with some helpful tools for discovering what you're looking for.
 
-[index]: /notes
+[index]: /blog
 
 ### Working Code Podcast
 
@@ -28,4 +28,4 @@ One of my (many) hobbies is podcasting. I co-host the [Working Code Podcast][wcp
 
 [wcp]: https://workingcode.dev
 [gravatar]: https://www.gravatar.com/avatar/c9e260373387e72ce020928a3a546ec5?rating=G&size=200&default=mm
-[garden]: /notes/digital-garden
+[garden]: /blog/digital-garden

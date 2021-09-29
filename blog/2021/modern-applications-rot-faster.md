@@ -1,6 +1,7 @@
 ---
 title: Modern Applications Rot Much Faster, and Maybe that's a Good Thing
 date: 2021-10-10
+desc: An argument for updating how we think about long term application maintenance as compared to how we think about application development. Modernizing the latter without the former can have agonizing consequences.
 img: https://adamtuttle.codes/img/2021/error-420-4CdIv6SZkck-unsplash.jpg
 tags:
   - javascript

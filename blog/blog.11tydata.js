@@ -16,8 +16,8 @@ module.exports = {
 	eleventyComputed: {
 		title: (data) => titleCase(data.title || data.page.fileSlug),
 		backlinks: (data) => {
-			const notes = data.collections.notes;
-			const currentFileSlug = data.page.filePathStem.replace('/notes/', '');
+			const notes = data.collections.blog;
+			const currentFileSlug = data.page.filePathStem.replace('/blog/', '');
 
 			let backlinks = [];
 
