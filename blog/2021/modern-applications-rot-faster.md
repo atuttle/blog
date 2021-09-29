@@ -15,7 +15,7 @@ tags:
 
 Your car will break down if you never change the oil and put electrical tape over the check engine light. Will you be surprised when you're stuck on the side of the road?
 
-Modern web applications are no different. Good tests, tools that notify you of dependency updates, and a significant amount of automation **are table stakes, now**. If you don't have them, you're behind.
+Modern web applications are no different. Good tests, tools that notify you of dependency updates, and a significant amount of automation **are [table stakes][], now**. If you don't have them, you're behind.
 
 That's not to imply you're destined to fail, but you're going to have to work harder than the people that do have them.
 
@@ -74,6 +74,7 @@ Work on what will save you the most time, first. Don't agonize over which big wi
 [^1]: If not physically old, or not _that_ physically old, then mentally old: stuck in "the old way" of doing things. If you don't get annoyed: congratulations, you're (at least mentally?) young.
 [^2]: See also: This entire article.
 
+[table stakes]: https://brandmarketingblog.com/articles/branding-definitions/table-stakes-business/
 [dependabot]: https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/enabling-and-disabling-version-updates#enabling-dependabot-version-updates
 [jest]: https://jestjs.io/
 [testing-library]: https://testing-library.com/
