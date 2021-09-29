@@ -1,7 +1,7 @@
 ---
 title: The Flywheel of Testing
 summary: Learning how to test well takes a lot of time and mental energy up front, but once you build up momentum it starts to pay off.
-img: https://adamtuttle.codes/img/2021/flywheel.jpg
+img: /img/2021/flywheel.jpg
 date: 2021-06-04
 tags:
   - learning in public

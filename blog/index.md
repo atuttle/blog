@@ -30,9 +30,12 @@ discuss: false
 </section>
 
 <section id="index">
-{%- for page in collections.all -%}
+{%- for page in collections.blog reversed -%}
 {%- if page.data.title -%}
-<article buckets="{{page.data.buckets}}">
+<article data-buckets="{{page.data.buckets}}">
+	{%- if page.data.img -%}
+	<div class="thumbnail" style="background-image: url({{page.data.img}});"></div>
+	{%- endif -%}
 	<h5>
 		{%- if page.data.favorite -%}
 			<img src="/assets/icons8-star-48.png" class="favorite" alt="My favorites" title="My favorites" />
@@ -46,6 +49,7 @@ discuss: false
 			<a class="contentTag" href="javascript:alert('todo');">{{tag}}</a>
 		{%- endfor -%}
 	</span>
+	<span class="clearfix"></span>
 </article>
 {%- endif -%}
 {%- endfor -%}
