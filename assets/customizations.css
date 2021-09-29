@@ -18,6 +18,16 @@ article > pre {
 	overflow-x: scroll;
 }
 
+p code {
+	background-color: #f9f2f4;
+	color: #c7254e;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+	padding: 2px 4px 2px 4px;
+	font-size: 0.9em;
+}
+
 #index article {
 	padding: 10px;
 	margin: 10px 0;

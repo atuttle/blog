@@ -1,8 +1,10 @@
 const { DateTime } = require('luxon');
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const embedTwitter = require('eleventy-plugin-embed-twitter');
 
 module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(pluginSyntaxHighlight);
+	eleventyConfig.addPlugin(embedTwitter);
 
 	// https://www.alpower.com/tutorials/formatting-dates-in-eleventy/
 	eleventyConfig.addFilter('asPostDate', (dateObj) => {
