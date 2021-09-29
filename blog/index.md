@@ -51,6 +51,9 @@ discuss: false
 			<a class="contentTag" href="javascript:alert('todo');">{{tag}}</a>
 		{%- endfor -%}
 	</span>
+	{%- if page.data.desc -%}
+		<span class="summary">{{ page.data.desc }}</span>
+	{%- endif -%}
 	<span class="clearfix"></span>
 </article>
 {%- endif -%}
