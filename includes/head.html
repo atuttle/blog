@@ -14,7 +14,7 @@ type == "note" %} {% assign metatype = "article" %} {% endif %}
 <meta property="og:type" content="{{-metatype-}}" />
 <meta property="og:url" content="{{ page.url | prepend: site.baseurl }}" />
 <meta property="og:description" content="{{- metadesc -}}" />
-{% if img %}<meta property="og:image" content="{{ img }}" />{% endif %}
+{% if img %}<meta property="og:image" content="https://adamtuttle.codes{{ img }}" />{% endif %}
 
 <link rel="icon" href="https://fav.farm/🌱" />
 <link rel="canonical" href="{{ page.url | prepend: site.baseurl }}" />
