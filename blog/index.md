@@ -34,7 +34,7 @@ discuss: false
 {%- if page.data.title -%}
 <article data-buckets="{{page.data.buckets}}">
 	{%- if page.data.img -%}
-	<div class="thumbnail" style="background-image: url({{page.data.img}});"></div>
+		<div class="thumbnail" style="background-image: url({{page.data.img}});"></div>
 	{%- endif -%}
 	<h5>
 		{%- if page.data.favorite -%}
