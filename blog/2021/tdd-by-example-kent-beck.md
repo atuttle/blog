@@ -1,9 +1,8 @@
 ---
 title: Notes on TDD By Example, by Kent Beck
-summary: My thoughts, review, and notes on the Bible of TDD
-date: 2021-09-06
+desc: My thoughts, review, and notes on the Bible of TDD
 img: /img/2021/tdd-by-example-cover.jpg
-redirect_from: /blog/2021/tdd-by-example-kent-beck
+date: 2021-09-06
 favorite: true
 tags:
   - testing

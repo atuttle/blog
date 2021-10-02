@@ -1,7 +1,7 @@
 ---
 title: What I Wish I Knew for My First Day on PostgreSQL
 date: 2021-09-20
-summary: 'Everything I had to research on my first day using Postgres, coming from MySQL'
+desc: 'Everything I had to research on my first day using Postgres, coming from MySQL'
 img: /img/2021/andrew-rice-xYO4F6HoxOQ-unsplash.jpg
 tags:
   - postgresql

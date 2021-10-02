@@ -1,8 +1,8 @@
 ---
 title: The Mistake that Every TDD Tutorial Makes
-summary: "Adam Tuttle explains what's wrong with most TDD tutorials"
-date: 2021-09-09
+desc: "Most TDD tutorials assume it's your first day behind the keyboard"
 img: /img/2021/rage.jpg
+date: 2021-09-09
 tags:
   - testing
   - tdd
