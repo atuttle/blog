@@ -1,7 +1,7 @@
 ---
 title: What I Want From My Next Tech Stack
 desc: What is the ideal tech stack in 2021? Thoughts on goals and options.
-img: /img/2021/
+img: /img/2021/alex-andrew-eowPn9R8Pt0-unsplash.jpg
 date: 2021-05-11
 tags:
   - my next tech stack
