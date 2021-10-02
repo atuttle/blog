@@ -1,5 +1,7 @@
 ---
 title: Time Is All You Have
+desc: Reflections on prioritization
+img: /img/2020/nathan-dumlao-5Hl5reICevY-unsplash.jpg
 date: 2020-02-18
 tags:
   - life

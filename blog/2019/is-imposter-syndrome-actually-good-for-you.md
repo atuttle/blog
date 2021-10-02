@@ -1,11 +1,15 @@
 ---
 title: Is Imposter Syndrome Actually Good for You?
+desc: A different perspective on impostor syndrome.
+img: /img/2019/two-kids-in-a-trench-coat.jpg
 date: 2019-10-15
 tags:
   - imposter syndrome
   - personal growth
 commentsPostId: imposter-syndrome-good-for-you
 ---
+
+![Two kids in a trech coat](/img/2019/two-kids-in-a-trench-coat.jpg)
 
 Given my blog-pivot to my evolution into management, it feels right to open things up by shining a light on the concept of starting new things. I want to look at how I felt on my first day as a newly minted CTO. The elephant in the room is **Imposter Syndrome**.
 
