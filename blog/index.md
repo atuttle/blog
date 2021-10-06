@@ -37,6 +37,7 @@ discuss: false
 <article data-buckets="{{page.data.buckets}}" data-title="{{page.data.title | lcase}}">
 	{%- if page.data.img -%}
 		<div class="thumbnail" style="background-image: url({{page.data.img}});"></div>
+		<div class="wrapper">
 	{%- endif -%}
 	<h5>
 		{%- if page.data.favorite -%}
@@ -55,6 +56,9 @@ discuss: false
 		<span class="summary">{{ page.data.desc }}</span>
 	{%- endif -%}
 	<span class="clearfix"></span>
+	{%- if page.data.img -%}
+		</div>
+	{%- endif -%}
 </article>
 {%- endif -%}
 {%- endfor -%}

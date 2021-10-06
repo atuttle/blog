@@ -40,7 +40,15 @@ p code {
 	padding: 2px 4px 2px 4px;
 	font-size: 0.9em;
 }
-
+#index h5 a {
+	font-weight: 600;
+	text-decoration: none;
+	font-size: 1.5rem;
+	/* todo: come back and redo all of this with tailwind */
+}
+#index .wrapper {
+	padding-left: 135px;
+}
 #index article {
 	padding: 10px;
 	margin: 10px 0;
@@ -59,7 +67,10 @@ p code {
 	display: block;
 }
 .tags .contentTag {
-	color: rgb(53, 53, 53);
+	color: rgb(55, 55, 55);
+	background-color: rgb(227, 227, 227);
+	padding: 0 6px 0 4px;
+	border-radius: 3px;
 	text-transform: lowercase;
 	display: inline-block;
 	margin-right: 10px;
