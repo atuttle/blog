@@ -13,8 +13,7 @@ commentsPostId: jest-mock-calls-missing-data-now-what
 
 Yesterday I had an altogether too familiar experience. I spent several hours debugging, and once I believed that the answer was beyond me, I started drafting an explanation and code samples that would eventually become a Stack Overflow question. After 20 minutes of explaining the problem to my hypothetical Stack Overflow helpers, the answer came to me.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I&#39;ve said it before, I&#39;ll say it again. <a href="https://twitter.com/StackOverflow?ref_src=twsrc%5Etfw">@StackOverflow</a> is the worlds best rubber duck.<br><br>Spent 2+ hours debugging. Another 20 minutes drafting my question (6 paragraphs of explanation, a bunch of code examples) before I realized I was missing an &quot;await&quot; 😎😭</p>&mdash; 0xADAM (@AdamTuttle) <a href="https://twitter.com/AdamTuttle/status/1400201226625691652?ref_src=twsrc%5Etfw">June 2, 2021</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+https://twitter.com/AdamTuttle/status/1400201226625691652
 
 I've already spoiled the solution above, but what was the problem, and how can I share that knowledge in a way to help others who might run into the same situation?
 

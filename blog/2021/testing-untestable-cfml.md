@@ -109,14 +109,14 @@ Now, when you write your tests for `postService`, you can inject the appropriate
 I'm not going to show how to do the mocking details, just enough to paint the picture of what your tests should look like:
 
 ```js
-describe("postService", function(){
-	it("writes to the database", function(){
+describe('postService', function () {
+	it('writes to the database', function () {
 		//this next line is mostly just hand-waving...
 		var postDAOMock = createPostDAOMock();
 
 		var postService = beanFactory.getBean('postService');
-		postService.setPostDAO( postDAOMock );
-		postService.save( /* ... */ );
+		postService.setPostDAO(postDAOMock);
+		postService.save(/* ... */);
 
 		// use expectations to assert that postDAOMock.upsert was called
 		// with certain arguments, or other valuable assertions
@@ -126,7 +126,7 @@ describe("postService", function(){
 
 As I alluded to in a recent twitter thread, I wasn't raised in a house that made flossing a priority, and likewise many of my early jobs placed near-zero priority on automated testing, and I've found a bunch of parallels between the two.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Testing your code is like flossing. A thread. 🧵</p>&mdash; 0xADAM (@AdamTuttle) <a href="https://twitter.com/AdamTuttle/status/1395750563078365188?ref_src=twsrc%5Etfw">May 21, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+https://twitter.com/AdamTuttle/status/1395750563078365188
 
 Obviously I still have a lot to learn in the world of testing. I'll be sure to continue sharing what I learn here.
 
