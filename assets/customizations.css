@@ -63,6 +63,10 @@ p code {
 	float: right;
 }
 
+article video {
+	max-width: 100%;
+}
+
 .tags {
 	display: block;
 }
