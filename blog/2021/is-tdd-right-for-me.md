@@ -40,11 +40,11 @@ Because I have 20 years of experience in developing software from minimal specif
 - Name the methods
 - Define the method signatures (what arguments do they take and what do they return?)
 - Implement the body of those methods, recursing as necessary to refactor out complex or reusable bits of code
-- Display the results in a way that's meaninful to the humans that will be using it
+- Display the results in a way that's meaningful to the humans that will be using it
 
 That sounds an awful lot like what I'd expect to see in a specification document, if I ever got one of those. You might think I should take a few moments to put those thoughts down in writing before I begin, and boom, there's your spec. But therein lies the rub.
 
-I always dive in and start coding with some assumptions about what the method signature should be (what I would have written down in the spec), and often as I'm writing the implementation I realize that I hadn't thought about certain parts of the problem fully, and as a result I need to add another argument, or change the type of an existing argument. I traverse up and down the stack from view to controller to service and DAO and back again, continuously, rapidly evolving the functionality, method signatures, view contents, etc. Usually my physical ability to navigate the code and type the changes is the limiting factor &mdash; I can think the changes a heck of a lot faster than I can make them.
+I always dive in and start coding with some assumptions about what the method signature should be (what I would have written down in the spec), and often as I'm writing the implementation I realize that I hadn't thought about certain parts of the problem fully, and as a result I need to add another argument, or change the type of an existing argument. I traverse up and down the stack from view to controller to service and DAO and back again, continuously, rapidly evolving the functionality, method signatures, view contents, etc. Usually my physical ability to navigate the code and type the changes is the limiting factor &mdash; I can think of the changes a heck of a lot faster than I can make them.
 
 The code often evolves so much duing this process that it barely resembles the original (mental) specification at all by the end.
 
