@@ -10,13 +10,15 @@ discuss: false
 
 ![Photo of Adam Tuttle][gravatar]{class="headshot"} I make stuff on the internet, but as you can tell from... _\*gestures broadly\*_ ... I am not a designer.
 
-I am a life-long-learner and I believe that sharing what you learn is a great way to crystalize the lessons for yourself, so I write about my learnings here. I fancy myself a decent writer, and have decided to inconvenience _these specific electrons_ to prop up that fantasy.
+I am a life-long-learner and I believe that sharing what you learn is a great way to crystalize the lessons for yourself, so I write about mine here. I fancy myself a decent writer, and have decided to inconvenience _these specific electrons_ to prop up that fantasy.
 
 My passion for learning drives me to dabble in many hobbies. In addition to tech, my other interests including skydiving, woodworking, and podcasting.<br/>[For the curious, I've obliged with some detail about myself here](/blog/2021/about-me/).
 
-### Where's the Content?
+### Recently Inconvenienced Electrons
 
-Looking for something specific? Looking for something to catch your eye? All of my content is [listed in the index][index], with some helpful tools for discovering what you're looking for.
+Most recently I wrote {% for recent in collections.blogLatest %}<a href="{{ recent.url }}">{{ recent.data.title }}</a>. {{recent.data.desc}} {% endfor %}
+
+I also have a [full index of all {{collections.blog.length}} articles][index].
 
 [index]: /blog
 

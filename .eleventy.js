@@ -47,6 +47,10 @@ module.exports = function (eleventyConfig) {
 		return collection.getFilteredByGlob(['blog/**/*.md', 'index.md']);
 	});
 
+	eleventyConfig.addCollection('blogLatest', function (collection) {
+		return collection.getFilteredByGlob(['blog/**/*.md', 'index.md']).slice(-1);
+	});
+
 	eleventyConfig.addCollection('tags', function (collection) {
 		const articles = collection.getFilteredByGlob(['blog/**/*.md']);
 		const tags = articles.reduce((agg, article) => {

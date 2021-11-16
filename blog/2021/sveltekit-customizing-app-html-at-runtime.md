@@ -1,6 +1,6 @@
 ---
 title: 'SvelteKit: Customizing app.html at Runtime'
-desc: It's not a common use case, but if you ever need to this is a really handy trick.
+desc: It's not a common use case, but if you ever need it then this is a really handy trick.
 img: /img/2021/split.jpg
 date: 2021-11-16
 tags:
