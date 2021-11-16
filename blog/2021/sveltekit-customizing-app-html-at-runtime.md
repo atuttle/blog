@@ -66,7 +66,7 @@ Let's assume the skin can be determined from the domain name and URL string; bec
 import getSkin from '$lib/getSkin';
 
 export async function handle({ request, resolve }) {
-	const skinHTML = getSkin( request.host, request.path );
+	const skinHTML = await getSkin( request.host, request.path );
 	const response = await resolve(request);
 	return response;
 }
@@ -178,7 +178,7 @@ I started by modifying app.html to add some tokens indicating locations for my a
 </html>
 ```
 
-The `%svelte.head%` token was already there and is used by SvelteKit to inject the content you specify with `<svelte:head>`; so I built on that format to add my tokens.
+The `%svelte.head%` token was already there and is used by SvelteKit to inject the content you specify with `<svelte:head>`; so I built on that format to add my tokens. You could instead do the same with HTML comments, if you like that approach better: `<!-- TPL.HEAD -->`. It's just a string that will appear in the response buffer after SvelteKit does its SSR that you're going to replace &ndash; so do make it pretty unique and unlikely to appear in the app body.
 
 Now doing the string replace becomes trivial:
 
