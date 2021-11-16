@@ -24,13 +24,13 @@ I wrote and self-published a book, [📘 REST Assured][rest], about authoring RE
 
 I make a weekly podcast with 3 of my closest tech friends, called [Working Code][wc]. We aim to be a language-agnostic, web-developer-centric, celebration of the everyday triumphs and failures of working as a coder. We want to make your coding career more enjoyable.
 
-I am most active on [my Twitter account][twitter]. This is mostly tech stuff, too.
+I am most active [on Twitter][twitter]. This is mostly tech stuff, too.
 
-When I've got some free time, the thing I most want to do is usually to go skydiving. I have over 500 jumps and I am an instructor and an FAA certificated parachute rigger. I post skydiving videos [on my TikTok account][tiktok].
+When I've got some free time, the thing I most want to do is usually to go skydiving. I have over 500 jumps and I am an instructor and an FAA certificated parachute rigger. I post skydiving videos [on TikTok][tiktok].
 
-Unfortunately, skydiving is a fair-weather sport and the weather isn't always fair. When I can't jump out of airplanes, I can often be found in my basement workshop making furniture out of wood. I document those exploits, to some extent, on [my Instagram account][insta].
+Unfortunately, skydiving is a fair-weather sport and the weather isn't always fair. When I can't jump out of airplanes, I can often be found in my basement workshop making furniture out of wood. I document those exploits, to some extent, [on Instagram][insta].
 
-I love to read, and I share my book list on [GoodReads][goodreads]. Science fiction is my genre, and Space Operas are my jam. My current favorite book is [Project Hail Mary][phm] by Andy Weir. I've talked no less than 5 people into reading it and they all reported back that it was so good that they couldn't put it down.
+I love to read, and I share my book list [on GoodReads][goodreads]. Science fiction is my genre, and Space Operas are my jam. My current favorite book is [Project Hail Mary][phm] by Andy Weir. I've talked no less than 5 people into reading it and they all reported back that it was so good that they couldn't put it down.
 
 I don't drink much alcohol, but when I do I love trying new beers &ndash; especially IPA's. I track those [on untappd][untappd].
 
