@@ -50,13 +50,15 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addCollection('tags', function (collection) {
 		const articles = collection.getFilteredByGlob(['blog/**/*.md']);
 		const tags = articles.reduce((agg, article) => {
-			const articleTags = article.data.tags;
-			articleTags.forEach((t) => {
-				if (!(t in agg)) {
-					agg[t] = 0;
-				}
-				agg[t]++;
-			});
+			if (article.data.tags) {
+				const articleTags = article.data.tags;
+				articleTags.forEach((t) => {
+					if (!(t in agg)) {
+						agg[t] = 0;
+					}
+					agg[t]++;
+				});
+			}
 			return agg;
 		}, {});
 		// console.log(tags);
