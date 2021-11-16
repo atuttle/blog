@@ -32,8 +32,8 @@ section#index .thumbnail {
 }
 
 p code {
-	background-color: #f9f2f4;
-	color: #c7254e;
+	background-color: #ffece0;
+	color: #ff6000;
 	border-radius: 4px;
 	box-sizing: border-box;
 	font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
