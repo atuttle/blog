@@ -24,9 +24,15 @@ I also have a [full index of all {{collections.blog.length}} articles][index].
 
 ### Working Code Podcast
 
-I co-host the [Working Code Podcast][wcp], a language-agnostic web-development focused podcast with the goal of celebrating the triumphs and fails of a career in software, and making your coding career more enjoyable. We publish new episodes every Wednesday.
+I created and co-host the [Working Code Podcast][wcp], a language-agnostic web-development focused podcast with the goal of celebrating the triumphs and fails of a career in software, and making your coding career more enjoyable. We publish new episodes every Wednesday.
 
 <iframe allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/us/podcast/working-code/id1544142288"></iframe>
+
+### Let's Stay In Touch
+
+A few times each year I send out some emails. It's something I usually reserve for when I'm doing something big, like when I started the podcast or when I [made my book available in paperback](https://restassuredbook.com). I work hard to make the emails worth getting (like discounts on stuff I sell), I never sell or share your contact details, and you can unsubscribe at any time.
+
+<script async data-uid="02c5dc9bec" src="https://adam-tuttle.ck.page/02c5dc9bec/index.js"></script>
 
 [wcp]: https://workingcode.dev
 [gravatar]: https://www.gravatar.com/avatar/c9e260373387e72ce020928a3a546ec5?rating=G&size=200&default=mm
