@@ -119,6 +119,8 @@ article video {
 	--panelfg: #000;
 	--paneltagbg: #e3e3e3;
 	--paneltagfg: #373737;
+	--codebg: #ffece0;
+	--codefg: #ff6000;
 }
 @media (prefers-color-scheme: dark) {
 	:root {
@@ -128,6 +130,8 @@ article video {
 		--panelfg: #d3d3d3;
 		--paneltagbg: #333;
 		--paneltagfg: #808080;
+		--codebg: #dbb39b;
+		--codefg: #c44a00;
 	}
 }
 body {
