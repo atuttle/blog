@@ -34,8 +34,8 @@ section#index .thumbnail {
 p code,
 ol code,
 ul code {
-	background-color: #ffece0;
-	color: #ff6000;
+	background-color: var(--codebg);
+	color: var(--codefg);
 	border-radius: 4px;
 	box-sizing: border-box;
 	font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
