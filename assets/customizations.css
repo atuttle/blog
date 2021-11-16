@@ -54,7 +54,8 @@ ul code {
 #index article {
 	padding: 10px;
 	margin: 10px 0;
-	background-color: rgb(242, 242, 242);
+	background-color: var(--panelbg);
+	color: var(--panelfg);
 	border-radius: 3px;
 }
 #index article h5 {
@@ -73,8 +74,8 @@ article video {
 	display: block;
 }
 .tags .contentTag {
-	color: rgb(55, 55, 55);
-	background-color: rgb(227, 227, 227);
+	color: var(--paneltagfg);
+	background-color: var(--paneltagbg);
 	padding: 0 6px 0 4px;
 	border-radius: 3px;
 	text-transform: lowercase;
@@ -85,7 +86,7 @@ article video {
 }
 .contentTag::before {
 	content: '#';
-	color: rgb(53, 53, 53);
+	color: var(--paneltagfg);
 }
 #filters label {
 	display: block;
@@ -110,4 +111,29 @@ article video {
 	.sr-only {
 		display: initial;
 	}
+}
+:root {
+	--bg: #fff;
+	--fg: #000;
+	--panelbg: #f2f2f2;
+	--panelfg: #000;
+	--paneltagbg: #e3e3e3;
+	--paneltagfg: #373737;
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #111;
+		--fg: #ccc;
+		--panelbg: #222;
+		--panelfg: #d3d3d3;
+		--paneltagbg: #333;
+		--paneltagfg: #808080;
+	}
+}
+body {
+	background-color: var(--bg);
+	color: var(--fg);
+}
+main {
+	max-width: 70ch;
 }
