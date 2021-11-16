@@ -11,7 +11,7 @@ commentsPostId: sweat-the-small-stuff
 
 ![Tiny umbrellas at the beach](/img/2021/kevin-borrill-IEGWHoS2wY4-unsplash.jpg)
 
-Photo by <a href="https://unsplash.com/@kev2480?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kevin Borrill</a> on <a href="https://unsplash.com/s/photos/tiny?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>{style="text-align: center"}
+Photo by <a href="https://unsplash.com/@kev2480?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kevin Borrill</a> on <a href="https://unsplash.com/s/photos/tiny?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>{class="photo-byline"}
 
 It's popular right now to vehemently hate the proliferation of tiny npm utility modules. But is that a good thing? I don't think so. [And I'm far from the first person to suggest that](https://blog.sindresorhus.com/small-focused-modules-9238d977a92a).
 

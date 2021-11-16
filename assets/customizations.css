@@ -96,6 +96,11 @@ article video {
 	width: 100%;
 	margin: 0 10px 0 0;
 }
+.photo-byline {
+	text-align: center;
+	font-size: 0.8em;
+	margin-top: -20px;
+}
 @media not speech {
 	.sr-only {
 		display: none !important;
