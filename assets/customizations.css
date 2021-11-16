@@ -31,7 +31,9 @@ section#index .thumbnail {
 	background-size: cover;
 }
 
-p code {
+p code,
+ol code,
+ul code {
 	background-color: #ffece0;
 	color: #ff6000;
 	border-radius: 4px;
