@@ -6,6 +6,7 @@ date: 2020-01-14
 favorite: true
 tags:
   - soft skills
+  - work-anniversary
 commentsPostId: challenge-breeds-stability
 ---
 
