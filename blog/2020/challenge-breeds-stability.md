@@ -3,6 +3,7 @@ title: Challenge Breeds Stability
 desc: I used to change jobs every couple of years... until I found one that continually challenges me.
 img: /img/2020/waynes-world-nametags-hair-nets.jpeg
 date: 2020-01-14
+favorite: true
 tags:
   - soft skills
 commentsPostId: challenge-breeds-stability

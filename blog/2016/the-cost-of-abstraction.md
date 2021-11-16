@@ -3,6 +3,7 @@ title: 'The Cost of Abstraction'
 desc: 'Adam responds to a blog post about the half-life of career-knowledge'
 img: /img/2016/national-cancer-institute-L8tWZT4CcVQ-unsplash.jpg
 date: 2016-10-07 11:00:00
+favorite: true
 tags:
   - coding
   - learning

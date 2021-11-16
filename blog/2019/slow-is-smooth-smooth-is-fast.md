@@ -3,6 +3,7 @@ title: Slow Is Smooth, Smooth Is Fast
 desc: Taking time to move deliberately can save you from rash mistakes made when moving frantically.
 img: /img/2019/sit-fly-winter-2019.png
 date: 2019-12-10
+favorite: true
 tags:
   - productivity
 commentsPostId: slow_is_smooth_is_fast

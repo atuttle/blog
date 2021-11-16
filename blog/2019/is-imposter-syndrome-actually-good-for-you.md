@@ -3,6 +3,7 @@ title: Is Imposter Syndrome Actually Good for You?
 desc: A different perspective on impostor syndrome.
 img: /img/2019/two-kids-in-a-trench-coat.jpg
 date: 2019-10-15
+favorite: true
 tags:
   - imposter syndrome
   - personal growth
