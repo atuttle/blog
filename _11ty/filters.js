@@ -8,9 +8,19 @@ module.exports = {
 		return !mentions ? 0 : mentions.length;
 	},
 	webmentionsByType: (mentions, mentionType) => {
-		return mentions.filter((entry) => !!entry[mentionType]);
+		const types = isArray(mentionType) ? mentionType : [mentionType];
+		return mentions.filter((entry) =>
+			types.reduce((found, t) => !!entry[t] || found, false)
+		);
 	},
 	readableDateFromISO: (dateStr, formatStr = "dd LLL yyyy 'at' hh:mma") => {
 		return DateTime.fromISO(dateStr).toFormat(formatStr);
 	},
 };
+
+var toString = {}.toString;
+const isArray =
+	Array.isArray ||
+	function (arr) {
+		return toString.call(arr) === "[object Array]";
+	};
