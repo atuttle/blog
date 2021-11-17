@@ -88,6 +88,21 @@ article video {
 	content: '#';
 	color: var(--paneltagfg);
 }
+h1.tag {
+	color: var(--paneltagfg);
+	background-color: var(--paneltagbg);
+	padding: 0 6px 0 4px;
+	border-radius: 3px;
+	text-transform: lowercase;
+	display: inline-block;
+	margin-right: 10px;
+	font-style: italic;
+	text-decoration: none;
+}
+h1.tag::before {
+	content: '#';
+	color: var(--paneltagfg);
+}
 #filters label {
 	display: block;
 }

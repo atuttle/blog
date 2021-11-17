@@ -65,8 +65,45 @@ module.exports = function (eleventyConfig) {
 			}
 			return agg;
 		}, {});
-		// console.log(tags);
 		return tags;
+	});
+
+	eleventyConfig.addCollection('tagsByCount', function (collection) {
+		const articles = collection.getFilteredByGlob(['blog/**/*.md']);
+		const tags = articles.reduce((agg, article) => {
+			if (article.data.tags) {
+				const articleTags = article.data.tags;
+				articleTags.forEach((t) => {
+					let ix = agg.findIndex((i) => i.tag === t);
+					if (ix === -1) {
+						ix = agg.length;
+						agg[ix] = { tag: t, count: 0 };
+					}
+					agg[ix].count++;
+					// agg.posts.push(article);
+				});
+			}
+			return agg;
+		}, []);
+		const sorted = tags.sort((L, R) => (L.count === R.count ? (L.tag > R.tag ? 1 : -1) : L.count > R.count ? -1 : 1));
+		console.log(sorted);
+		return sorted;
+	});
+
+	eleventyConfig.addCollection('tagsAlpha', function (collection) {
+		const articles = collection.getFilteredByGlob(['blog/**/*.md']);
+		const tags = articles.reduce((agg, article) => {
+			if (article.data.tags) {
+				const articleTags = article.data.tags;
+				articleTags.forEach((t) => {
+					if (!(t in agg)) {
+						agg[t] = 0;
+					}
+				});
+			}
+			return agg;
+		}, {});
+		return Object.keys(tags);
 	});
 
 	eleventyConfig.addPassthroughCopy('assets');

@@ -21,8 +21,18 @@ Here is some content below the footnote definition; showing that you can define 
 - mediawiki-style, internal, doesn't exist - [[non-existent]]
 - [[style-guide]]
 
-```
+```js
 this = `fenced code block`;
+```
+
+here's how you highlight lines in a fenced code block:
+
+```js/1,3-4
+const foo = {
+	foo: 1,
+	bar: 2,
+	baz: 3
+};
 ```
 
 This is `an inline code block` because I use those sometimes too.
