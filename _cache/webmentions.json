@@ -1,0 +1,23 @@
+{
+  "lastFetched": "2021-11-17T21:22:34.218Z",
+  "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "ミンゴ 🦩",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/f3b873f0c26b66d5109d5bf394b7db58187b85bd6473dfa65060ed7e18ccea8e.jpg",
+        "url": "https://twitter.com/mjhagen"
+      },
+      "url": "https://twitter.com/AdamTuttle/status/1460975523589414918#favorited-by-2273461",
+      "published": null,
+      "wm-received": "2021-11-17T20:34:23Z",
+      "wm-id": 1306266,
+      "wm-source": "https://brid.gy/like/twitter/AdamTuttle/1460975523589414918/2273461",
+      "wm-target": "https://adamtuttle.codes/blog/2021/in-defense-of-tiny-modules/",
+      "like-of": "https://adamtuttle.codes/blog/2021/in-defense-of-tiny-modules/",
+      "wm-property": "like-of",
+      "wm-private": false
+    }
+  ]
+}

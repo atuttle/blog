@@ -329,3 +329,7 @@ a[href].direct-link:focus:visited,
 	margin: 0 auto;
 	max-width: 45em;
 }
+
+#webmentions h2 {
+	margin-top: 3rem;
+}

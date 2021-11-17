@@ -9,6 +9,7 @@ const markdownItAnchor = require("markdown-it-anchor");
 const dev = (global.dev = process.env.ELEVENTY_ENV === "development");
 const now = new Date();
 const metagen = require("eleventy-plugin-metagen");
+const webmentionsFilters = require("./_11ty/filters");
 
 module.exports = function (eleventyConfig) {
 	// Add plugins
@@ -27,6 +28,10 @@ module.exports = function (eleventyConfig) {
 		return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
 			"dd LLL yyyy"
 		);
+	});
+
+	Object.keys(webmentionsFilters).forEach((filterName) => {
+		eleventyConfig.addFilter(filterName, webmentionsFilters[filterName]);
 	});
 
 	eleventyConfig.addFilter("monthDay", (dateObj) => {

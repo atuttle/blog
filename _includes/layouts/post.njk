@@ -15,7 +15,14 @@ templateClass: tmpl-post
   </div>
 
   {{ content | safe }}
+
+  <section id="webmentions">
+    <h2>Webmentions</h2>
+    {% set webmentionUrl %}{{ page.url | url | absoluteUrl(site.url) }}{% endset %}
+    {% include 'layouts/webmentions.njk' %}
+  </section>
 </main>
+
 
 <footer>
 {%- set nextPost = collections.blog | getNextCollectionItem(page) %}
@@ -29,24 +36,6 @@ templateClass: tmpl-post
     </ul>
   {%- endif %}
   {% include "./subscribe.njk" %}
-  </div>
-</section>
-
-<section id="comments">
-  <div class="footerSection">
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-      var disqus_config = function () {
-        this.page.url = '{{data.page.url}}';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = '{{commentsPostId}}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-      };
-      (function() { // DON'T EDIT BELOW THIS LINE
-      var d = document, s = d.createElement('script');
-      s.src = 'https://adam-tuttle-codes.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-      })();
-  </script>
   </div>
 </section>
 </footer>
