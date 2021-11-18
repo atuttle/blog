@@ -1,9 +1,11 @@
 const { DateTime } = require('luxon');
+const pluginRss = require('@11ty/eleventy-plugin-rss');
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const embedTwitter = require('eleventy-plugin-embed-twitter');
 const webmentionsFilters = require('./_11ty/filters');
 
 module.exports = function (eleventyConfig) {
+	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addPlugin(pluginSyntaxHighlight);
 	eleventyConfig.addPlugin(embedTwitter);
 

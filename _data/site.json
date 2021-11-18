@@ -1,8 +1,22 @@
 {
 	"title": "Adam Tuttle",
 	"desc": "The digital garden of Adam Tuttle. Thoughts on technology; mostly JavaScript.",
-	"author": "Adam Tuttle",
 	"baseurl": "https://adamtuttle.codes",
 	"domain": "adamtuttle.codes",
-	"url": "https://adamtuttle.codes"
+	"url": "https://adamtuttle.codes",
+	"feed": {
+		"subtitle": "The digital garden of Adam Tuttle",
+		"filename": "feed.xml",
+		"path": "/feed/feed.xml",
+		"id": "https://adamtuttle.codes/"
+	},
+	"jsonfeed": {
+		"path": "/feed/feed.json",
+		"url": "https://adamtuttle.codes/feed/feed.json"
+	},
+	"author": {
+		"name": "Adam Tuttle",
+		"email": "adamtuttlecodes@gmail.com",
+		"url": "https://adamtuttle.codes/"
+	}
 }
