@@ -193,10 +193,10 @@ h2 .tag::before {
 	width: fit-content;
 }
 .webmentions__facepile img {
-	border-radius: 0.3rem;
+	border-radius: 50%;
 }
 .webmentions__facepile img:hover {
-	border-radius: 50%;
+	border-radius: 0.3rem;
 }
 
 .andThen p {
