@@ -1,5 +1,7 @@
 ---
-title: 'Chaotic Good: Creating Determinism Where None Exists'
+title: "Chaotic Good: Creating Determinism Where None Exists"
+desc: "Some solutions are too brilliant for their own good"
+img: /img/2021/chaotic-good.jpg
 date: 2021-05-14
 tags:
   - semaphore
@@ -18,7 +20,7 @@ Firstly, what is determinism? It's not a concept unique to programming, but it m
 A function can be said to be **deterministic** if its output can be predicted using only its input (e.g. state of the system has no effect), and repeating the same inputs always produces the same outputs. This function is deterministic:
 
 ```js
-function add( a, b ){
+function add(a, b) {
 	return a + b;
 }
 ```
@@ -26,16 +28,16 @@ function add( a, b ){
 However, this function is NOT deterministic:
 
 ```js
-function maths( a, b ){
-	return a + b + ( mouse.x * mouse.y );
+function maths(a, b) {
+	return a + b + mouse.x * mouse.y;
 }
 ```
 
 It would be easy to confuse determinism and pure functions, so while we're on the subject, what makes them different? A pure function is a deterministic function that also _produces no side-effects_. This function is deterministic but not pure:
 
 ```js
-function add( a, b ){
-	stdout.print( a + b );
+function add(a, b) {
+	stdout.print(a + b);
 	return a + b;
 }
 ```
@@ -49,20 +51,20 @@ Given a struct created using _ANY_ method; not necessarily the implicit object n
 ```js
 data = {
 	A: 1,
-	B: 1
+	B: 1,
 };
 ```
 
 If your `serializeJson()` implementation _always_ returns this json, then it is deterministic:
 
 ```json
-{"A":1,"B":1}
+{ "A": 1, "B": 1 }
 ```
 
 Likewise, it is also deterministic if if _always_ returns this json:
 
 ```json
-{"B":1,"A":1}
+{ "B": 1, "A": 1 }
 ```
 
 Determinism isn't about the value created, it's about the consistency of that value. If the output depends on whether the struct was created using implicit object notation vs other methods (structNew, deserializeJson, etc), then it is not deterministic. A non-deterministic implementation might return the first version in some situations, and the second in others.
@@ -76,7 +78,7 @@ JavaScript objects are not ordered. From [json.org](https://www.json.org): "An o
 In my case, I'm using JSON as a waypoint in a chain of operations to take any hypothetical struct and _deterministically_ convert it into a number between 0 and 1. Basically, I'm trying to implement this:
 
 ```js
-checksum({ foo: 'bar', baz: 'yo' }); //returns numeric between 0-1
+checksum({ foo: "bar", baz: "yo" }); //returns numeric between 0-1
 ```
 
 My implementation _must_ be deterministic in order to be useful. It's not all that dissimilar from calculating an MD5 hash of something, except my output is numeric and MD5 is alpha-numeric, and MD5 only accepts string inputs.
