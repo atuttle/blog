@@ -6,7 +6,7 @@
       title=title or metadata.title,
       desc=summary or metadata.description,
       url=metadata.url + page.url,
-      img=img or null
+      img=(metadata.url + img) or null
     %}
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🦎</text></svg>" />
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
