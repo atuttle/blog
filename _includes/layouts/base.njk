@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    {% if img == null %}{% set img = "/img/2019/sit-fly-winter-2019.png" %}{% endif %}
     {% metagen
       name="Adam Tuttle",
       title=title or metadata.title,
@@ -8,7 +9,7 @@
       twitter_card_type="summary_large_image",
       twitter_handle="adamtuttle",
       url=metadata.url + page.url,
-      img=(metadata.url + img) or null
+      img=(metadata.url + img) or nul
     %}
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🦎</text></svg>" />
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
