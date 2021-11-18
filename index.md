@@ -2,6 +2,7 @@
 layout: default
 eleventyExcludeFromCollections: true
 discuss: false
+img: /img/me.jpg
 ---
 
 <link rel="preconnect" href="https://embed.podcasts.apple.com" />
