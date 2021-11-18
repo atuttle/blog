@@ -4,7 +4,7 @@ discuss: false
 eleventyExcludeFromCollections: true
 ---
 
-![Photo of Adam Tuttle][gravatar]{style="float:right; margin-left: 10px"}
+![Photo of Adam Tuttle][gravatar]{style="float:right; margin-left: 10px;border-radius:0.3rem;"}
 
 Hey there. As it says at the top of the page, my name is Adam Tuttle. This website is my ~~blog~~ [digital garden](https://maggieappleton.com/garden-history).
 
