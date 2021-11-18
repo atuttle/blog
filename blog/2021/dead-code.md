@@ -6,7 +6,6 @@ img: /img/2021/malcolm-lightbody-4hhEvTB45vg-unsplash.jpg
 tags:
   - clean code
   - best practices
-commentsPostId: dead-code
 ---
 
 If you didn't already know, I have a podcast ([Working Code][podcast]), and for an upcoming episode we're all reading [Clean Code: A Handbook of Agile Software Craftsmanship][clean-code] by Robert ("Uncle Bob") Martin. That's important context for what follows, because it is having a profound effect on how I am thinking about my output right now.

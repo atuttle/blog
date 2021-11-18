@@ -8,7 +8,6 @@ tags:
   - coldfusion
   - lucee
   - retrospective
-commentsPostId: from-coldfusion-to-lucee
 ---
 
 ![Moving Day: A small dog in a moving box](/img/2019/erda-estremera-sxNt9g77PE0-unsplash.jpg)

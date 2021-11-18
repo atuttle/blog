@@ -7,7 +7,6 @@ tags:
   - apple
   - productivity
   - hackintosh
-commentsPostId: 2020-hackintosh-iii
 ---
 
 > This is part three in an ongoing series where I document my experiences building my first Hackintosh.

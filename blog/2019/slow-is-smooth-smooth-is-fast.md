@@ -6,7 +6,6 @@ date: 2019-12-10
 favorite: true
 tags:
   - productivity
-commentsPostId: slow_is_smooth_is_fast
 ---
 
 In skydiving we have a saying: Slow is smooth, and smooth is fast.

@@ -7,7 +7,6 @@ tags:
   - cloud
   - aws
   - docker
-commentsPostId: fargate-1
 ---
 
 You guys. AWS Fargate is amazing! #notsponsored

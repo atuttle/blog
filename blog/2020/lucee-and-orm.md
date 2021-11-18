@@ -6,7 +6,6 @@ date: 2020-02-19
 tags:
   - lucee
   - orm
-commentsPostId: lucee-and-orm
 ---
 
 I've written previously about how my company is in the process of [migrating our main app from Adobe ColdFusion to Lucee](https://adamtuttle.codes/blog/2019/from-coldfusion-to-lucee/). This post is an update, several months into that process.

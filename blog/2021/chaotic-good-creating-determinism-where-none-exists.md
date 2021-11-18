@@ -8,7 +8,6 @@ tags:
   - adam cameron
   - cfml
   - json
-commentsPostId: chaotic-good-creating-determinism
 ---
 
 I was having a chat with [Adam Cameron][adamcameron] yesterday and bemoaning how, ahem, _certain CFML engines_ do not serialize Structs in a deterministic way. After some back and forth, he hit me with an idea so good that I am still reeling from it the next day. I sang his praises last night while recording a new episode of [Working Code][workingcode] (that episode will publish on 5/26), and yet I still feel the need to shout his brilliance from the mountaintops more. So...
@@ -20,7 +19,7 @@ Firstly, what is determinism? It's not a concept unique to programming, but it m
 A function can be said to be **deterministic** if its output can be predicted using only its input (e.g. state of the system has no effect), and repeating the same inputs always produces the same outputs. This function is deterministic:
 
 ```js
-function add( a, b ){
+function add(a, b) {
 	return a + b;
 }
 ```
@@ -28,16 +27,16 @@ function add( a, b ){
 However, this function is NOT deterministic:
 
 ```js
-function maths( a, b ){
-	return a + b + ( mouse.x * mouse.y );
+function maths(a, b) {
+	return a + b + mouse.x * mouse.y;
 }
 ```
 
 It would be easy to confuse determinism and pure functions, so while we're on the subject, what makes them different? A pure function is a deterministic function that also _produces no side-effects_. This function is deterministic but not pure:
 
 ```js
-function add( a, b ){
-	stdout.print( a + b );
+function add(a, b) {
+	stdout.print(a + b);
 	return a + b;
 }
 ```
@@ -58,13 +57,13 @@ data = {
 If your `serializeJson()` implementation _always_ returns this json, then it is deterministic:
 
 ```json
-{"A":1,"B":1}
+{ "A": 1, "B": 1 }
 ```
 
 Likewise, it is also deterministic if if _always_ returns this json:
 
 ```json
-{"B":1,"A":1}
+{ "B": 1, "A": 1 }
 ```
 
 Determinism isn't about the value created, it's about the consistency of that value. If the output depends on whether the struct was created using implicit object notation vs other methods (structNew, deserializeJson, etc), then it is not deterministic. A non-deterministic implementation might return the first version in some situations, and the second in others.

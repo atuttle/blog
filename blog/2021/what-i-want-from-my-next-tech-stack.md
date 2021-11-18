@@ -5,7 +5,6 @@ img: /img/2021/alex-andrew-eowPn9R8Pt0-unsplash.jpg
 date: 2021-05-11
 tags:
   - my next tech stack
-commentsPostId: my-next-tech-stack-2021
 ---
 
 I've been working on the web full time since 2005, part time since 2000, and for fun since 1997, and the vast majority of that was writing CFML ("ColdFusion"). A handful of years ago I decided I was done investing my energy into CFML and that I wanted to move on to something else. Whether or not I was a "big fish," CFML is undeniably a small pond, and I felt a calling to a larger pond.

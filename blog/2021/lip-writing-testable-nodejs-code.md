@@ -1,6 +1,6 @@
 ---
 title: 'LIP: Writing Testable Node.js Code'
-desc: 'I''m stuck on a TDD JS issue, so here are the details.'
+desc: "I'm stuck on a TDD JS issue, so here are the details."
 img: /img/2021/ROAD_CLOSED_sign_on_WSMN_and_WSMR.jpg
 date: 2021-05-27
 tags:
@@ -8,7 +8,6 @@ tags:
   - javascript
   - testing
   - tdd
-commentsPostId: lip-writing-testable-nodejs-code
 ---
 
 Yesterday I was trying to <acronym title="Test Driven Development">TDD</acronym> some Node.js code, and I got stuck. I asked for help on the [KCD Discord][kcdd]\* but I guess my explanation of the problem wasn't great, so I promised I would follow up with a repro case. Meanwhile I am also trying to do better at [learning in public][lip], so I'm going to write about it here, too. So here we go.
@@ -35,7 +34,6 @@ Anyway, at this point I thought through my requirements and wrote a bunch of sto
 
 ```js
 describe('redis-click-logger', () => {
-
 	it('loads batch size from ENV vars', () => {});
 	it('loads target environment id from ENV vars', () => {});
 	it('loads config via http api', () => {});
@@ -44,20 +42,19 @@ describe('redis-click-logger', () => {
 	it('batches notification setting reads', () => {});
 	it('batches click activity writes', () => {});
 	it('only processes alerts once per message per batch', () => {});
-
 });
 ```
 
 Seems like a good enough place to start. In theory the first two tests were easy enough to write; you can just set a value into `process.env`, run the function that loads it, and then check the actual value against the expected value:
 
 ```js
-	it('loads batch size from ENV vars', () => {
-		const testVal = (Math.random() * 1000).toFixed(0);
-		process.env.BATCH_SIZE = testVal;
-		// todo: where are we getting the getBatchSize() method?
-		const actual = getBatchSize();
-		expect(actual).toEqual(testVal);
-	});
+it('loads batch size from ENV vars', () => {
+	const testVal = (Math.random() * 1000).toFixed(0);
+	process.env.BATCH_SIZE = testVal;
+	// todo: where are we getting the getBatchSize() method?
+	const actual = getBatchSize();
+	expect(actual).toEqual(testVal);
+});
 ```
 
 But this is where I've run into my first hurdle. How do I implement this in a way that is both (1) Testable, and (2) not cumbersome to the application? Sure, I can take every method that I would ever want to write and make it into its own module so that I can test it in isolation, but I can see that very quickly getting to insanity-inspiring numbers of files. There must be a better way!
@@ -73,7 +70,7 @@ module.exports = async () => {
 	// ...
 };
 
-function getBatchSize ( defaultBatchSize = 1000 ){
+function getBatchSize(defaultBatchSize = 1000) {
 	return process.env.BATCH_SIZE || defaultBatchSize;
 }
 ```

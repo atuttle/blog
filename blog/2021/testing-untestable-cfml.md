@@ -6,7 +6,6 @@ date: 2021-05-25
 tags:
   - testing
   - cfml
-commentsPostId: testing-untestable-cfml
 ---
 
 I spoke at some length about my frustrations testing CFML on the ["Testing" episode of my podcast, Working Code][wc-testing] (in February), and I've had some realizations since then, so I wanted to share what I've learned.

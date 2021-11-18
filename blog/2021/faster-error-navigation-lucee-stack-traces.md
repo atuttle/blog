@@ -4,9 +4,8 @@ desc: A code snippet to enable jumping directly from error reports to the offend
 date: 2021-01-29
 img: /img/2021/guillaume-jaillet-Nl-GCtizDHg-unsplash.jpg
 tags:
- - automation
- - lucee
-commentsPostId: automate-everything
+  - automation
+  - lucee
 ---
 
 I wrote a helpful and tiny automation that I want to share with you. If you use the [Lucee](https://www.lucee.org/) CFML application server, and a code editor that supports the same advanced "go to file" syntax as [VSCode](https://code.visualstudio.com/), it might make your life a little bit easier.
@@ -31,22 +30,24 @@ Add this to a page that includes a Lucee stack trace dump, and clicking on the b
 
 ```html
 <style type="text/css">
-	.luceeN1 { cursor: pointer; }
+	.luceeN1 {
+		cursor: pointer;
+	}
 </style>
 <script type="text/javascript">
 	$(document).on('click', '.luceeN1', (e) => {
 		try {
 			const initialText = $(e.target).html();
 			const path = initialText.split('(')[1].split(')')[0];
-			if (path[0] === '/'){
+			if (path[0] === '/') {
 				//everything after the first character
-				navigator.clipboard.writeText( path.slice(1) );
-			}else{
+				navigator.clipboard.writeText(path.slice(1));
+			} else {
 				//the whole thing
-				navigator.clipboard.writeText( path );
+				navigator.clipboard.writeText(path);
 			}
-		}catch{
-			navigator.clipboard.writeText( $(e.target).html() );
+		} catch {
+			navigator.clipboard.writeText($(e.target).html());
 		}
 	});
 </script>

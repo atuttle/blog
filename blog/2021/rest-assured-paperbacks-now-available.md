@@ -5,7 +5,6 @@ img: /img/2021/rest-assured-book-3d.png
 date: 2021-07-27
 tags:
   - rest assured
-commentsPostId: rest-assured-paperback-available
 ---
 
 The wait is finally over! I published the first edition of REST Assured (then called, imaginatively, ["REST Web API's: The Book"](https://adamtuttle.codes/blog/2014/rest-web-apis-the-book/)) in December of 2014, and immediately there were people who wanted a physical copy. _And some of them weren't my mom!_

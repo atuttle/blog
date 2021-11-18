@@ -6,7 +6,6 @@ date: 2021-08-06
 tags:
   - cfml
   - forgebox
-commentsPostId: so-long-forgebox
 ---
 
 Very quick note today. As of yesterday, [Semaphore][semaphore] has been removed from [ForgeBox][fb]. [Taffy][taffy] is not far behind.

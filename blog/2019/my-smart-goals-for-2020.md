@@ -5,7 +5,6 @@ img: /img/2019/nordwood-themes-C0sW3yscQXc-unsplash.jpg
 date: 2019-12-30
 tags:
   - goals
-commentsPostId: 2020_smart_goals
 ---
 
 I don't make resolutions, I make goals.

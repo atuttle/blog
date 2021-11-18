@@ -5,7 +5,6 @@ img: /img/2020/nathan-dumlao-5Hl5reICevY-unsplash.jpg
 date: 2020-02-18
 tags:
   - life
-commentsPostId: time-is-all-you-have
 ---
 
 To paraphrase a few things I heard on a podcast this week: time is all that you have; nobody knows how much time they'll get; and divided attention disappoints everyone involved.

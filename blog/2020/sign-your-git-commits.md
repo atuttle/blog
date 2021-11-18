@@ -6,7 +6,6 @@ date: 2020-11-05
 tags:
   - git
   - security
-commentsPostId: sign-your-git-commits
 ---
 
 ![Wax seal](/img/2020/david-nitschke-pegxjW_1YOU-unsplash.jpg)

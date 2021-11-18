@@ -5,7 +5,6 @@ img: /img/2020/ia-sb-_MMdxl-jUHo-unsplash.jpg
 date: 2020-03-03
 tags:
   - goals
-commentsPostId: february-goals-checkin
 ---
 
 At the end of 2019 [I posted a couple of goals for 2020](/blog/2019/my-smart-goals-for-2020/). It's been two months and I'm at the checkpoint for my first milestone, so I thought I would check in on how I've been doing.

@@ -1,6 +1,6 @@
 ---
 title: 'TDD: Getting Out of My Own Way'
-desc: 'I was stuck on TDD because I wouldn''t let myself do the obvious thing.'
+desc: "I was stuck on TDD because I wouldn't let myself do the obvious thing."
 img: /img/2021/stuck.jpg
 date: 2021-05-27
 tags:
@@ -8,7 +8,6 @@ tags:
   - javascript
   - testing
   - tdd
-commentsPostId: tdd-getting-out-of-my-own-way
 ---
 
 Yesterday I wrote about how I was [trying to do TDD for a JavaScript project but I got stuck][stuck]. I'm not stuck any more, thanks to a comment left by [Michael Sprague][ms].
@@ -52,7 +51,6 @@ I expect that I will get better at the "brainstorming" phase of coding as part o
 I ended yesterday's article saying that I had no choice but to set aside my TDD goals and press forward on the project &mdash; at least until I had the testing stuff figured out (running in a parallel mental thread).
 
 So I did that. And I made quite a lot of progress on my project, and now the code is pretty far ahead of the tests. And some choices I made along the way are definitely going to need to be refactored to make them more testable, and cleaner. And that's ok.
-
 
 [stuck]: https://adamtuttle.codes/blog/2021/lip-writing-testable-nodejs-code/
 [ms]: https://m5ls5e.com

@@ -5,7 +5,6 @@ img: /img/2020/kevin-ku-w7ZyuGYNpRQ-unsplash.jpg
 date: 2020-09-21
 tags:
   - automation
-commentsPostId: using-make-automate-development
 ---
 
 ![A blurry computer screen in the background, and eyeglasses in the foreground, through which the computer screen is in focus](/img/2020/kevin-ku-w7ZyuGYNpRQ-unsplash.jpg)

@@ -5,7 +5,6 @@ img: /img/2021/rest-assured-book-3d.png
 date: 2020-08-19
 tags:
   - rest assured
-commentsPostId: book-updates-and-livestreams
 ---
 
 ## 📘☝️📅 Book updates

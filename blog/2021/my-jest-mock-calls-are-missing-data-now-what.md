@@ -8,7 +8,6 @@ tags:
   - testing
   - jest
   - async
-commentsPostId: jest-mock-calls-missing-data-now-what
 ---
 
 Yesterday I had an altogether too familiar experience. I spent several hours debugging, and once I believed that the answer was beyond me, I started drafting an explanation and code samples that would eventually become a Stack Overflow question. After 20 minutes of explaining the problem to my hypothetical Stack Overflow helpers, the answer came to me.

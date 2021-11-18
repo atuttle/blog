@@ -7,7 +7,6 @@ tags:
   - apple
   - productivity
   - hackintosh
-commentsPostId: 2019-hackintosh-init
 ---
 
 > This is part one in an ongoing series where I document my experiences building my first Hackintosh.

@@ -6,7 +6,6 @@ date: 2021-11-17
 tags:
   - clean code
   - best practices
-commentsPostId: sweat-the-small-stuff
 ---
 
 ![Tiny umbrellas at the beach](/img/2021/kevin-borrill-IEGWHoS2wY4-unsplash.jpg)

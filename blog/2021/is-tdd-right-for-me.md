@@ -6,7 +6,6 @@ date: 2021-10-27
 tags:
   - testing
   - tdd
-commentsPostId: is-tdd-right-for-me
 ---
 
 ![A confused bird on a hummingbird feeder](/img/2021/joshua-j-cotten-7ZppYEoBNhQ-unsplash.jpg)

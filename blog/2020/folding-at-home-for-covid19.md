@@ -6,7 +6,6 @@ date: 2020-04-10
 tags:
   - pandemic
   - misc
-commentsPostId: folding-at-home-covid19
 ---
 
 ![Colorful origami paper cranes](/img/2020/carolina-garcia-tavizon-Ay7Nkvc49ag-unsplash.jpg)

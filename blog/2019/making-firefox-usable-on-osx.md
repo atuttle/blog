@@ -7,7 +7,6 @@ tags:
   - apple
   - google
   - firefox
-commentsPostId: firefox_osx_settings
 ---
 
 Yep, it's kind of a click-bait title. Sorry about that. To make up for it, here's the information you're after, right up front:

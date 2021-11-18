@@ -7,7 +7,6 @@ tags:
   - til
   - node.js
   - windows
-commentsPostId: til-node-windows-service
 ---
 
 Ah, legacy servers. Gotta love em, right? But just because we have some constraints to work around doesn't necessarily mean we can't have nice things.

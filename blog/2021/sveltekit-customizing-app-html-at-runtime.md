@@ -7,7 +7,6 @@ tags:
   - svelte
   - sveltekit
   - javascript
-commentsPostId: sveltekit-customizing-app-html-at-runtime
 ---
 
 SvelteKit works by starting with a static `app.html` file that (as of the time of this writing) contains a `<div id="svelte"></div>`, into which your Svelte app is hydrated during server-side rendering (SSR); and the Svelte compiler is also aware of this div (thanks to `svelte.config.js`) so that it can plan its DOM updates accordingly.

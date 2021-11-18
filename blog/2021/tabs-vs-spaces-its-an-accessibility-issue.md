@@ -1,11 +1,10 @@
 ---
-title: 'Tabs vs. Spaces: It''s an Accessibility Issue'
+title: "Tabs vs. Spaces: It's an Accessibility Issue"
 desc: Tabs cost you nothing and give your team more options. They're the more accessible choice.
 img: /img/2021/absolutvision-UudGNHJdNSo-unsplash.jpg
 date: 2021-05-24
 tags:
   - best practices
-commentsPostId: tabs-vs-spaces-accessibility
 ---
 
 I don't remember where I got my preference for Tabs over Spaces, but I've been ride-or-die Tabs for as long as I can remember. I wasn't joking when I [included that "tabs rule, spaces drool" meme in my "Sweat the Small Stuff" article](/blog/2021/sweat-the-small-stuff/). I run in Team Tabs and while I do try to have "strong opinions weakly held," I am skeptical that anyone would ever be able to change my mind.

@@ -6,7 +6,6 @@ date: 2021-09-09
 tags:
   - testing
   - tdd
-commentsPostId: tdd-chip-on-my-shoulder
 ---
 
 # The Mistake that Every TDD Tutorial Makes

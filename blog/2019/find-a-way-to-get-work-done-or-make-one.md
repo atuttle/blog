@@ -6,7 +6,6 @@ date: 2019-09-30
 tags:
   - productivity
   - automation
-commentsPostId: find-a-way-or-make-one
 ---
 
 ![A leaf-covered path through the woods](/img/2019/noel-o-shaughnessy-DAOXI14Irx8-unsplash.jpg)

@@ -5,7 +5,6 @@ img: /img/2021/charl-durand--Yu8GhTbbmc-unsplash.jpg
 date: 2021-03-19
 tags:
   - automation
-commentsPostId: gnu-make-love-affair
 ---
 
 I've written previously about [my love for Make](/blog/2020/how-I-use-make/). The longer I use it, the more complex my desires become, and the more I learn about the awesome features (and hacks) available.

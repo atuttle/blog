@@ -7,7 +7,6 @@ favorite: true
 tags:
   - testing
   - tdd
-commentsPostId: tdd-by-example
 ---
 
 To the best of my knowledge, [**TDD By Example** by Kent Beck][buy] is the _bible_ of TDD, and I want to get better at testing and stop pretending that I understand how TDD is different from just making sure you have tests, so I bought a copy. What follows is the notes I took while I was reading it. It's a mixture of the lessons in the book and my thoughts on the book, the lessons, and the teaching methods.

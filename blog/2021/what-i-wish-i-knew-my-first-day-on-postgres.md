@@ -5,7 +5,6 @@ desc: 'Everything I had to research on my first day using Postgres, coming from 
 img: /img/2021/andrew-rice-xYO4F6HoxOQ-unsplash.jpg
 tags:
   - postgresql
-commentsPostId: my-first-day-on-postgres
 ---
 
 ![An elephant sprays itself with mud](/img/2021/andrew-rice-xYO4F6HoxOQ-unsplash.jpg)

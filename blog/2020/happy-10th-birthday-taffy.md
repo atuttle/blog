@@ -6,7 +6,6 @@ date: 2020-08-24
 tags:
   - taffy
   - open source
-commentsPostId: happy-10th-birthday-taffy
 ---
 
 !["Happy Birthday" spelled out in lit candles](/img/2020/annie-spratt-M20ylqCzSZw-unsplash.jpg)

@@ -7,7 +7,6 @@ favorite: true
 tags:
   - imposter syndrome
   - personal growth
-commentsPostId: imposter-syndrome-good-for-you
 ---
 
 ![Two kids in a trech coat](/img/2019/two-kids-in-a-trench-coat.jpg)

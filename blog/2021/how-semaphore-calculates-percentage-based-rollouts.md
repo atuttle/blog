@@ -6,7 +6,6 @@ date: 2021-05-21
 tags:
   - semaphore
   - open source
-commentsPostId: semaphore-percentage-calc
 ---
 
 When I first started learning about feature flags, I found it all somewhat interesting **but predictable.** So while I was excited about the prospect of using this new tool, it didn't pose any interesting challenges. That was... until I heard about percentage based rollouts. This was a problem that didn't seem (to me, at least) to have an obvious solution, and so I couldn't stop thinking about it.

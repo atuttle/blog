@@ -7,7 +7,6 @@ favorite: true
 tags:
   - soft skills
   - work-anniversary
-commentsPostId: challenge-breeds-stability
 ---
 
 It's almost a given in the tech industry any more that you have to change jobs every few years. For one thing, getting a new job seems to be the only way to get a substantial pay raise rather than the typical yearly 1-3%. (Disclaimer: I've never worked for a Silicon Valley company so I don't know the first thing about working out there...) And the truth is, especially in the first 5-10 years of your careeer in tech, chances are pretty good that you deserve one or two 15-20% raises because if you've survived that long then you've probably progressed from a micro-managed spec-follower to someone capable of making your own design decisions and at least contributing to the plan.

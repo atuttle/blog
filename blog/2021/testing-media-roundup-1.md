@@ -1,11 +1,10 @@
 ---
-title: "Testing Media Roundup #1"
+title: 'Testing Media Roundup #1'
 desc: Sharing some of the articles I've been reading, and videos I've been watching, specific to testing.
 img: /img/2021/herd.jpg
 date: 2021-06-11
 tags:
   - testing
-commentsPostId: testing-media-roundup-1
 ---
 
 The project I was using to push myself forward on testing stuff? I wrapped that up at the end of last week. It's by no means perfect, but it's better than it would have been without tests, and it works, and it's on its way to production. I would love to get the opportunity to go back and make the tests themselves better, cleaner, and smarter. I've already learned a few things that I would do differently next time.

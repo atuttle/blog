@@ -6,7 +6,6 @@ date: 2020-09-10
 favorite: true
 tags:
   - taffy
-commentsPostId: getting-started-taffy-2020
 ---
 
 ![A hot air balloon inflating](/img/2020/will-o-GtYFwFrFbMA-unsplash.jpg)

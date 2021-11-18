@@ -5,7 +5,6 @@ img: /img/2019/nathalia-rosa-P1SdQAhcJz8-unsplash.jpg
 date: 2019-11-26
 tags:
   - productivity
-commentsPostId: notes_on_notes_apps
 ---
 
 ![Lots and lots of sticky notes stuck to a wall](nathalia-rosa-P1SdQAhcJz8-unsplash.jpg)

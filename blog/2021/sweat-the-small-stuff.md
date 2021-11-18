@@ -6,7 +6,6 @@ date: 2021-05-12
 tags:
   - clean code
   - best practices
-commentsPostId: sweat-the-small-stuff
 ---
 
 For years now we've been lecturing each other that the arguments over tabs vs. spaces and other such trivial details are meaningless bikeshedding and that we should put that behind us and get to work. In some ways I agree. In some I disagree.

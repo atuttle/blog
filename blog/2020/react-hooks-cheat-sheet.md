@@ -5,7 +5,6 @@ img: /img/2020/vishal-jadhav-xBmmFz2psKw-unsplash.jpg
 date: 2020-10-23
 tags:
   - react.js
-commentsPostId: react-hooks-cheat-sheet
 templateEngineOverride: md #avoids liquid/nunjucks parse errors in the react code samples
 ---
 

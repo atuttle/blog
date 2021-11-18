@@ -6,7 +6,6 @@ date: 2020-03-20
 tags:
   - node
   - architecture
-commentsPostId: mt-express-redis-sessions
 ---
 
 Yesterday at work we did what we usually do: Looked at a problem, came up with a solution idea, and when that didn't work we adjusted course until we reached what felt like success. But...

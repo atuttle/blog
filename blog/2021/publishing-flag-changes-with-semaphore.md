@@ -6,7 +6,6 @@ date: 2021-05-20
 tags:
   - semaphore
   - open source
-commentsPostId: publishing-flag-changes-with-semaphore
 ---
 
 In [yesterday's announcement][announce] about the release of [Semaphore][github], I wrote a little bit about how I'll be wrapping Semaphore with a service which makes it easy to evaluate flags anywhere in my application, but one thing I didn't describe was my plan for publishing new/updated flags to each application instance as they change. So let's do that.

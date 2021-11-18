@@ -7,7 +7,6 @@ tags:
   - docker
   - npm
   - javascript
-commentsPostId: nextjs-docker-single-entrypoint-for-dev-and-prod
 ---
 
 Maybe I shouldn't be as excited about this as I am, but I love it when simple things do smart things.
@@ -89,7 +88,6 @@ I know that I can make the `npm run dev` portion of `prestart` exit with a nonze
 ```
 
 I'm not sure if that's trading one bad thing for another, nor whether or not it's a good trade to make.
-
 
 [makefiles]: https://adamtuttle.codes/blog/2021/my-ongoing-love-affair-with-gnu-make/
 [npmscripts]: https://docs.npmjs.com/cli/v6/using-npm/scripts#pre--post-scripts

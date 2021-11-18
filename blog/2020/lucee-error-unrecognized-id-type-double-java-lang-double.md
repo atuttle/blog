@@ -6,7 +6,6 @@ date: 2020-02-27
 tags:
   - lucee
   - orm
-commentsPostId: some-unique-string
 ---
 
 Today's adventure in the ways in which ORM in Lucee is _a little off_ got started when I tried to use ORM to create a new record. That entity uses an identity column as its primary key.

@@ -5,7 +5,6 @@ img: /img/2019/paul-hanaoka-GkwsToy2jRk-unsplash.jpg
 date: 2019-12-18
 tags:
   - config
-commentsPostId: the_config_problem
 ---
 
 Architecture discussion time!

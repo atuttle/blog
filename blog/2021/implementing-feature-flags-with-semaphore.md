@@ -6,7 +6,6 @@ date: 2021-08-02
 tags:
   - semaphore
   - open source
-commentsPostId: implementing-feature-flags-with-semaphore
 ---
 
 Recently I wrote about [Semaphore][semaphore], a new open source cfml feature flags library I released. The library itself is simply a decision engine. You provide it a set of rules (native CFML data types arranged in a specific way), and then you can ask if any given rule is enabled for a user by providing (1) the rule name and (2) a data packet representing the user (again, native cfml data types).

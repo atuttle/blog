@@ -6,7 +6,6 @@ date: 2021-08-24
 tags:
   - taffy
   - open source
-commentsPostId: taffy-3-3-0
 ---
 
 Taffy 3.2.0 was an extremely stable release, as evidenced by the fact that it was published on November 10th 2017 (nearly 4 years ago!) and that was the last release until today.
@@ -36,13 +35,13 @@ You specify the sample response for your GET method by adding a `sampleGetRespon
 function sampleGetResponse() {
 	return [
 		{
-			indentationMethod: "tabs",
-			rating: "superior",
+			indentationMethod: 'tabs',
+			rating: 'superior'
 		},
 		{
-			indentationMethod: "spaces",
-			rating: "inferior",
-		},
+			indentationMethod: 'spaces',
+			rating: 'inferior'
+		}
 	];
 }
 ```

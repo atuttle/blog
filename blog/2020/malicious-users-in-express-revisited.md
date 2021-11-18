@@ -6,7 +6,6 @@ date: 2020-09-18
 tags:
   - node
   - express
-commentsPostId: malicious-users-in-express-revisited
 ---
 
 ![Anonymous mask](/img/2020/tarik-haiga-BxELNNMN88Y-unsplash.jpg)

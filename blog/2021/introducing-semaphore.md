@@ -6,7 +6,6 @@ date: 2021-05-19
 tags:
   - semaphore
   - open source
-commentsPostId: introducing-semaphore
 ---
 
 Today I'm excited to tell you about a new open source project I've been working on, called [Semaphore][github].<sup>1</sup>
@@ -83,7 +82,7 @@ semaphore.setAllFlags({
 				attribute: 'cohort',
 				// use "in" operator to find attribute value in comparator array
 				operator: 'in',
-				comparator: [5,7,9]
+				comparator: [5, 7, 9]
 			},
 			{
 				// ON for everybody
@@ -155,7 +154,7 @@ if (
 By wrapping it in a service, I can have the service proxy the call to checkForUser and take over responsibility of including the user attributes argument:
 
 ```js
-if ( featureFlagService.flagIsOn('myFeature') ){
+if (featureFlagService.flagIsOn('myFeature')) {
 	theNewImplementation();
 } else {
 	theOldImplementation();
@@ -167,6 +166,7 @@ _**Nice.**_
 Semaphore is [available on GitHub][github] and near as I can tell it's feature-complete and well tested. I haven't had time to use it in my application YET, so I can't vouch for it. But... SOON. Thanks to Ben and the podcast I am pretty eager to give it a go.
 
 ---
+
 <small><sup>1</sup>This is, by the way, the project I was working on when I wrote my recent entry, [Chaotic Good: Creating Determinism Where None Exists][chaotic-good].</small>
 
 [github]: https://github.com/atuttle/semaphore

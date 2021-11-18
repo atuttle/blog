@@ -6,7 +6,6 @@ date: 2021-06-04
 tags:
   - learning in public
   - testing
-commentsPostId: the-flywheel-of-testing
 ---
 
 On my continuing quest to get better at testing, I have spent quite a lot of time in the last couple of weeks reading about testing, watching tutorial videos, and practicing testing in my work. It has been a long, slow, difficult, slog. I'm not sure what made me think of it, but I was reminded of a flywheel.
