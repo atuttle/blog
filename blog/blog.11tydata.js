@@ -8,7 +8,7 @@ function caselessCompare(a, b) {
 }
 
 module.exports = {
-	layout: 'note.html',
+	layout: 'note.njk',
 	type: 'note',
 	discuss: true, //setting this to false (e.g. on the about-me page, turns off the discuss-on-twitter link)
 	favorite: false, //most things aren't favorites

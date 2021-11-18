@@ -1,6 +1,7 @@
 const { DateTime } = require('luxon');
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const embedTwitter = require('eleventy-plugin-embed-twitter');
+const webmentionsFilters = require('./_11ty/filters');
 
 module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(pluginSyntaxHighlight);
@@ -21,6 +22,12 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addFilter('sortTagsAlpha', (tagCollection) => {
 		return tagCollection.sort((L, R) => (L.tag > R.tag ? 1 : -1));
+	});
+
+	eleventyConfig.addFilter('absoluteUrl', (url) => `https://adamtuttle.codes${url}`);
+
+	Object.keys(webmentionsFilters).forEach((filterName) => {
+		eleventyConfig.addFilter(filterName, webmentionsFilters[filterName]);
 	});
 
 	const markdownIt = require('markdown-it');

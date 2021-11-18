@@ -2,5 +2,7 @@
 	"title": "Adam Tuttle",
 	"desc": "The digital garden of Adam Tuttle. Thoughts on technology; mostly JavaScript.",
 	"author": "Adam Tuttle",
-	"baseurl": "https://adamtuttle.codes"
+	"baseurl": "https://adamtuttle.codes",
+	"domain": "adamtuttle.codes",
+	"url": "https://adamtuttle.codes"
 }
