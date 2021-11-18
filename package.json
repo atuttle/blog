@@ -20,7 +20,7 @@
 		"url": "https://github.com/atuttle/garden/issues"
 	},
 	"homepage": "https://adamtuttle.codes",
-	"devDependencies": {
+	"dependencies": {
 		"@11ty/eleventy": "^1.0.0-beta.7",
 		"@11ty/eleventy-plugin-rss": "^1.1.2",
 		"@11ty/eleventy-plugin-syntaxhighlight": "^3.1.2",
