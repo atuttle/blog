@@ -11,7 +11,7 @@ img: /img/me.jpg
 
 ![Photo of Adam Tuttle][gravatar]{class="headshot"} I make stuff on the internet, but as you can tell from... _\*gestures broadly\*_ ... I am not a designer.
 
-I am a life-long-learner and I believe that sharing what you learn is a great way to crystalize the lessons for yourself, so I write about mine here. I fancy myself a decent writer, and have decided to inconvenience _these specific electrons_ to prop up that fantasy.
+I am a life-long-learner and I believe that sharing what you learn is a great way to crystalize the lessons for yourself, so I write about things I learn here. I fancy myself a decent writer, and have decided to inconvenience _these specific electrons_ to prop up that fantasy.
 
 My passion for learning drives me to dabble in many hobbies. In addition to tech, my other interests including skydiving, woodworking, and podcasting.<br/>[For the curious, I've obliged with some detail about myself here](/blog/2021/about-me/).
 

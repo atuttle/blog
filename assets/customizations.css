@@ -198,6 +198,9 @@ h2 .tag::before {
 .webmentions__facepile img:hover {
 	border-radius: 0.3rem;
 }
+.webmention__meta img {
+	border-radius: 0.2rem;
+}
 
 .andThen p {
 	text-align: right;
