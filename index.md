@@ -18,7 +18,7 @@ My passion for learning drives me to dabble in many hobbies. In addition to tech
 
 Most recently I wrote {% for recent in collections.blogLatest %}<a href="{{ recent.url }}">{{ recent.data.title }}</a>. {{recent.data.desc}} {% endfor %}
 
-I also have a [full index of all {{collections.blog.length}} articles][index].
+I also have a [full index of all {{collections.blog.length}} articles][index], or you can [browse by tag](/tags/).
 
 [index]: /blog
 

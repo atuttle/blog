@@ -4,7 +4,7 @@ desc: It's time to release an update to my book, and that's given me some though
 img: /img/2021/rest-assured-book-3d.png
 date: 2020-08-19
 tags:
-  - Rest Assured
+  - rest assured
 commentsPostId: book-updates-and-livestreams
 ---
 

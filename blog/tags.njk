@@ -1,10 +1,26 @@
 ---
-permalink: /blog/tags/
+permalink: /tags/
 layout: tag.html
 ---
 
-<ol>
-{%- for t in tagsByCount -%}
-  <li>{{t.tag}} ({{t.count}})</li>
-{%- endfor -%}
-</ol>
+<div class="tagsWrapper">
+  <section>
+    <h2>Tags By Usage</h2>
+    <ol>
+    {% for tag in collections.tagsByCount %}
+      {% set tagUrl %}/tags/{{ tag.tag | slug }}/{% endset %}
+      <li><a href="{{ tagUrl | url }}" class="post-tag">{{ tag.tag }} [{{tag.count}}]</a></li>
+    {% endfor %}
+    </ol>
+  </section>
+
+  <section>
+    <h2>Tags A-Z</h2>
+    <ol>
+    {% for tag in collections.tagsByCount | sortTagsAlpha %}
+      {% set tagUrl %}/tags/{{ tag.tag | slug }}/{% endset %}
+      <li><a href="{{ tagUrl | url }}" class="post-tag">{{ tag.tag }} [{{tag.count}}]</a></li>
+    {% endfor %}
+    </ol>
+  </section>
+</div>

@@ -15,6 +15,14 @@ module.exports = function (eleventyConfig) {
 		return str.toLowerCase();
 	});
 
+	eleventyConfig.addFilter('htmlDateString', (dateObj) => {
+		return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
+	});
+
+	eleventyConfig.addFilter('sortTagsAlpha', (tagCollection) => {
+		return tagCollection.sort((L, R) => (L.tag > R.tag ? 1 : -1));
+	});
+
 	const markdownIt = require('markdown-it');
 	const markdownItOptions = {
 		html: true,
@@ -51,23 +59,6 @@ module.exports = function (eleventyConfig) {
 		return collection.getFilteredByGlob(['blog/**/*.md', 'index.md']).slice(-1);
 	});
 
-	eleventyConfig.addCollection('tags', function (collection) {
-		const articles = collection.getFilteredByGlob(['blog/**/*.md']);
-		const tags = articles.reduce((agg, article) => {
-			if (article.data.tags) {
-				const articleTags = article.data.tags;
-				articleTags.forEach((t) => {
-					if (!(t in agg)) {
-						agg[t] = 0;
-					}
-					agg[t]++;
-				});
-			}
-			return agg;
-		}, {});
-		return tags;
-	});
-
 	eleventyConfig.addCollection('tagsByCount', function (collection) {
 		const articles = collection.getFilteredByGlob(['blog/**/*.md']);
 		const tags = articles.reduce((agg, article) => {
@@ -80,30 +71,12 @@ module.exports = function (eleventyConfig) {
 						agg[ix] = { tag: t, count: 0 };
 					}
 					agg[ix].count++;
-					// agg.posts.push(article);
 				});
 			}
 			return agg;
 		}, []);
 		const sorted = tags.sort((L, R) => (L.count === R.count ? (L.tag > R.tag ? 1 : -1) : L.count > R.count ? -1 : 1));
-		console.log(sorted);
 		return sorted;
-	});
-
-	eleventyConfig.addCollection('tagsAlpha', function (collection) {
-		const articles = collection.getFilteredByGlob(['blog/**/*.md']);
-		const tags = articles.reduce((agg, article) => {
-			if (article.data.tags) {
-				const articleTags = article.data.tags;
-				articleTags.forEach((t) => {
-					if (!(t in agg)) {
-						agg[t] = 0;
-					}
-				});
-			}
-			return agg;
-		}, {});
-		return Object.keys(tags);
 	});
 
 	eleventyConfig.addPassthroughCopy('assets');

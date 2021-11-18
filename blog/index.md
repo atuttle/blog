@@ -28,7 +28,7 @@ discuss: false
 	<!-- <span class="bucket">{{page.data.buckets}}</span> -->
 	<span class="tags">
 		{%- for tag in page.data.tags -%}
-			<a class="contentTag" href="javascript:alert('todo');">{{tag}}</a>
+			<a class="contentTag" href="/tags/{{ tag | slug }}/">{{tag}}</a>
 		{%- endfor -%}
 	</span>
 	{%- if page.data.desc -%}
