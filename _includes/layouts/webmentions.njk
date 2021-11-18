@@ -7,6 +7,8 @@
   {% set replies = mentions | webmentionsByType(['in-reply-to','mention-of'])  %}
   {% set repliesSize = replies | size  %}
 
+  {% set totalSize = repostsSize + likesSize + repliesSize %}
+
   {% if likesSize > 0 %}
     <div class="webmentions__facepile">
       <h3{% if repostsSize > 11 or likesSize > 11 %} class="webmentions__facepile__squish" {% endif %}>{{ likesSize }}
@@ -62,17 +64,10 @@
     </div>
   {% endif %}
 
-  <p><a href="https://indieweb.org/Webmention">Webmentions</a> via <a href="https://webmention.io/">webmention.io</a>.
-{#
-  <a href="#expand-form-webmention">Submit a mention from any url</a>.</p>
+  {% if totalSize == 0 %}
+    Be the first! <a href="https://twitter.com/intent/tweet?url={{metadata.url}}{{webmentionUrl}}">Tweet about this article</a>.
+  {% endif %}
 
-  <form action="https://webmention.io/adamtuttle.codes/webmention" method="post" class="form-webmention" style="display:none">
-      <label for="form-webmention-source">URL</label><br/>
-      <input id="form-webmention-source" type="url" name="source" placeholder="https://example.com" required />
-      <input type="hidden" name="target" value="https://adamtuttle.codes{{ page.url }}" />
-      <button type="submit" class="button button-small">Send Webmention</button>
-    </form>
-  </div>
-#}
+  <p><a href="https://indieweb.org/Webmention">Webmentions</a> via <a href="https://webmention.io/">webmention.io</a>.
 
 </div>
