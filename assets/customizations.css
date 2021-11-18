@@ -1,7 +1,7 @@
 :root {
 	--bg: #fff;
 	--fg: #000;
-	--panelbg: #f2f2f2;
+	--panelbg: #505660;
 	--panelfg: #000;
 	--paneltagbg: #e3e3e3;
 	--paneltagfg: #373737;
@@ -37,9 +37,12 @@ article img {
 	max-width: 100%;
 }
 
-article > pre {
+article pre,
+code[class*='language-'],
+pre[class*='language-'] {
 	overflow-x: scroll;
 	border-radius: 0.3rem;
+	background-color: var(--panelbg);
 }
 
 .clearfix {
@@ -167,6 +170,7 @@ h2 .tag::before {
 	color: var(--commentfg);
 	padding: 1rem;
 	border-radius: 0.3rem;
+	margin-top: 1rem;
 }
 .webmention img {
 	max-width: 30px;
@@ -214,9 +218,9 @@ footer.page-footer {
 }
 @media (prefers-color-scheme: dark) {
 	:root {
-		--bg: #111;
+		--bg: #2a2933;
 		--fg: #ccc;
-		--panelbg: #222;
+		--panelbg: #1b1a21;
 		--panelfg: #d3d3d3;
 		--paneltagbg: #333;
 		--paneltagfg: #808080;
