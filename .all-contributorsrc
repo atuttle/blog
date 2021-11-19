@@ -17,6 +17,15 @@
         "design",
         "infra"
       ]
+    },
+    {
+      "login": "dskaggs",
+      "name": "Dan Skaggs",
+      "avatar_url": "https://avatars.githubusercontent.com/u/432500?v=4",
+      "profile": "https://github.com/dskaggs",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
