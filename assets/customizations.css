@@ -192,6 +192,9 @@ h2 .tag::before {
 	text-decoration: none;
 	width: fit-content;
 }
+.webmentions__facepile a {
+	text-decoration: none;
+}
 .webmentions__facepile img {
 	border-radius: 50%;
 }
