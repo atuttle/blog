@@ -51,7 +51,7 @@ To the best of my understanding, webmentions are scraped from Twitter every 30 m
 
 ### Contributions Welcome
 
-At the bottom of most pages you'll find links to edit them directly on GitHub. I welcome anyone and everyone to [submit pull requests](https://github.com/atuttle/blog/). If you're making simple text changes like fxiing a tpyo then I find editing directly on GitHub instead of cloning to local to be a perfectly suitable approach, and they make submitting the PR really easy. I intend to add [all-contributors-bot][] to the blog repo, because I want to be transparent about my gratitude for your help.
+At the bottom of most pages you'll find links to edit them directly on GitHub. I welcome anyone and everyone to [submit pull requests](https://github.com/atuttle/blog/). If you're making simple text changes like fixing a typo then I find editing directly on GitHub instead of cloning to local to be a perfectly suitable approach, and they make submitting the PR really easy. I intend to add [all-contributors-bot][] to the blog repo, because I want to be transparent about my gratitude for your help.
 
 And if you've never made a pull request before, a copy edit to a blog post is a great way to get your feet wet!
 
