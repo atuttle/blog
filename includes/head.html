@@ -16,6 +16,14 @@ assign metatype = "article" %} {% endif %}
 <meta property="og:description" content="{{- metadesc -}}" />
 {% if img %}<meta property="og:image" content="{{ env.baseUrl }}{{ img }}" />{% endif %}
 
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@adamtuttle" />
+<meta name="twitter:creator" content="@adamtuttle" />
+<meta name="twitter:url" content="{{ page.url | prepend: site.baseurl }}" />
+<meta name="twitter:title" content="{{-metatitle-}}" />
+<meta name="twitter:description" content="{{- metadesc -}}" />
+<meta name="twitter:image" content="{{ env.baseUrl }}{{ img }}" />
+
 <link rel="icon" href="https://fav.farm/🌱" />
 <link rel="canonical" href="{{ page.url | prepend: site.baseurl }}" />
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
