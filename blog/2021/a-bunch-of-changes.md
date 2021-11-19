@@ -2,9 +2,14 @@
 title: A Bunch of Meta Changes for This Website That Probably Nobody Cares About
 desc: A bunch of stuff on my website has changed, and nobody will care, so I'll talk to myself about it.
 date: 2021-11-19
+img: /img/2021/ian-schneider-TamMbr4okv4-unsplash.jpg
 tags:
   - meta
 ---
+
+![](/img/2021/ian-schneider-TamMbr4okv4-unsplash.jpg)
+
+Photo by <a href="https://unsplash.com/@goian?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ian Schneider</a> on <a href="https://unsplash.com/s/photos/change?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>{class="photo-byline"}
 
 Frequent visitors to this website (so, me) might notice that there are some differences around here. That's because I've spent a bunch of little bits of free time over the last few months working on a bit of a redesign. If for no other reason than to mark the occasion, I thought I would discuss the changes here.
 
