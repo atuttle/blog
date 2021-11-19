@@ -27,7 +27,7 @@ I did poke at it for one evening and I think it'll be a fun project, but it wasn
 
 ### Now a Digital Garden, No Longer a Blog
 
-I don't know that most of you will notice anything different for this one. The TL;DR is that a [digital garden][] is intended to be pruned and maintained over time, where a blog is kind of an append-only log. It's information isn't necessarily organized in a chronological way. Check out [the new home page](/) to see what I mean by this. Thinking about it this way makes me feel freer to go back and delete or change older entries if/when I deem fit; though I don't know how much I'll actually do that.
+I don't know that most of you will notice anything different for this one. The TL;DR is that a [digital garden][] is intended to be pruned and maintained over time, where a blog is kind of an append-only log. Its information isn't necessarily organized in a chronological way. Check out [the new home page](/) to see what I mean by this. Thinking about it this way makes me feel freer to go back and delete or change older entries if/when I deem fit; though I don't know how much I'll actually do that.
 
 For SEO reasons I'm keeping the `/blog` in the URL (easier than fighting redirects and hoping for the best).
 
