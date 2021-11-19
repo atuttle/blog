@@ -1,6 +1,6 @@
 # The ~~blog~~ digital garden of Adam Tuttle
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 https://adamtuttle.codes
@@ -25,6 +25,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://adamtuttle.codes"><img src="https://avatars.githubusercontent.com/u/46990?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Adam Tuttle</b></sub></a><br /><a href="#blog-atuttle" title="Blogposts">📝</a> <a href="https://github.com/atuttle/blog/commits?author=atuttle" title="Code">💻</a> <a href="#content-atuttle" title="Content">🖋</a> <a href="#design-atuttle" title="Design">🎨</a> <a href="#infra-atuttle" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+    <td align="center"><a href="https://github.com/dskaggs"><img src="https://avatars.githubusercontent.com/u/432500?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dan Skaggs</b></sub></a><br /><a href="#content-dskaggs" title="Content">🖋</a></td>
   </tr>
 </table>
 
