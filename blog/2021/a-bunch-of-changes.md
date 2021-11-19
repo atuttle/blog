@@ -47,6 +47,8 @@ I was first exposed to Webmentions by [swyx's post on doing it all client-side][
 
 I have a reasonably good idea that my posts were getting _some_ engagement on Twitter that wasn't reflected in the old comments, so hopefully this makes it easier to participate, which should hopefully encourage some participation.
 
+To the best of my understanding, webmentions are scraped from Twitter every 30 minutes or so, and I'm running builds of my site on a schedule every half hour now, which should mean that your likes/comments/etc would show up within an hour at the latest. If my math is correct.
+
 ### Contributions Welcome
 
 At the bottom of most pages you'll find links to edit them directly on GitHub. I welcome anyone and everyone to [submit pull requests](https://github.com/atuttle/blog/). If you're making simple text changes like fxiing a tpyo then I find editing directly on GitHub instead of cloning to local to be a perfectly suitable approach, and they make submitting the PR really easy. I intend to add [all-contributors-bot][] to the blog repo, because I want to be transparent about my gratitude for your help.
