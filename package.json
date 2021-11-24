@@ -30,7 +30,7 @@
 		"markdown-it-footnote": "^3.0.3",
 		"title-case": "^3.0.3",
 		"isomorphic-fetch": "^3.0.0",
-		"luxon": "^1.28.0",
+		"luxon": "^2.1.1",
 		"netlify-plugin-cache-folder": "^0.0.8"
 	}
 }
