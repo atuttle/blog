@@ -10,7 +10,7 @@ assign metatype = "article" %} {% endif %}
 <title>{{- metatitle -}}</title>
 
 <meta name="description" content="{{- metadesc -}}" />
-<meta property="og:title" content="{{-metatitle-}}" />
+<meta property="og:title" content="{{ metatitle | htmlencode}}" />
 <meta property="og:type" content="{{-metatype-}}" />
 <meta property="og:url" content="{{ page.url | prepend: site.baseurl }}" />
 <meta property="og:description" content="{{- metadesc -}}" />
@@ -20,7 +20,7 @@ assign metatype = "article" %} {% endif %}
 <meta name="twitter:site" content="@adamtuttle" />
 <meta name="twitter:creator" content="@adamtuttle" />
 <meta name="twitter:url" content="{{ page.url | prepend: site.baseurl }}" />
-<meta name="twitter:title" content="{{-metatitle-}}" />
+<meta name="twitter:title" content="{{ metatitle | htmlencode}}" />
 <meta name="twitter:description" content="{{- metadesc -}}" />
 <meta name="twitter:image" content="{{ env.baseUrl }}{{ img }}" />
 

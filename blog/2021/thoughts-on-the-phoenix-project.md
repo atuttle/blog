@@ -1,5 +1,5 @@
 ---
-title: Thoughts on "The Phoenix Project"
+title: 'Thoughts on "The Phoenix Project"'
 desc: A (spoiler alert) fun novelisation of DevOps/Agile principles.
 img: /img/2021/phoenix-project-cover.jpg
 date: 2021-11-29
