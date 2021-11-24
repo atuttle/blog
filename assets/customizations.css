@@ -157,7 +157,15 @@ h2 .tag::before {
 	font-size: 0.8em;
 	margin-top: -20px;
 }
-
+.bleep {
+	color: transparent;
+	text-shadow: 0 0 10px var(--fg);
+}
+.bleep:hover {
+	color: var(--fg);
+	text-shadow: none;
+	cursor: not-allowed;
+}
 #webmentions h2 {
 	margin-top: 3rem;
 }
