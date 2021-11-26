@@ -7,7 +7,7 @@ img: /img/me.jpg
 
 <link rel="preconnect" href="https://embed.podcasts.apple.com" />
 
-# Yo! I'm Adam
+## Yo! I'm Adam
 
 ![Photo of Adam Tuttle][gravatar]{class="headshot"} I make stuff on the internet, but as you can tell from... _\*gestures broadly\*_ ... I am not a designer.
 
