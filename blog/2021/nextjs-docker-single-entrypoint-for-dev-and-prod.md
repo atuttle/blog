@@ -63,6 +63,10 @@ Well, can you see what's missing? Yes, we're properly overriding the `NODE_ENV` 
 
 I found an easy and simple way to accomplish this with npm scripts, but it's not perfect...
 
+### My Solution
+
+> ⚠️ NOTE: Since writing this section I've since found a method that's _so_ much better! You can keep reading to learn something that could be useful to know elsewhere, but I would now recommend that you [use this technique in your npm scripts](#update-an-even-better-way).
+
 ```json/3
 "scripts": {
 	"dev": "next dev",
@@ -87,7 +91,7 @@ I know that I can make the `npm run dev` portion of `prestart` exit with a nonze
 "prestart": "node -e 'process.env.NODE_ENV === \"production\" || process.exit(1);' || (npm run dev && exit 1)"
 ```
 
-I'm not sure if that's trading one bad thing for another, nor whether or not it's a good trade to make.
+I'm not sure if that's trading one bad thing for another, nor whether or not it's a good trade to make.<span id="update-an-even-better-way"></span>
 
 ### ❗UPDATE: An Even Better Way
 
