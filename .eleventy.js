@@ -45,6 +45,7 @@ module.exports = function (eleventyConfig) {
 	const md = markdownIt(markdownItOptions)
 		.use(require('markdown-it-footnote'))
 		.use(require('markdown-it-attrs'))
+		.use(require('markdown-it-anchor'))
 		.use(function (md) {
 			// Recognize Mediawiki links ([[text]])
 			md.linkify.add('[[', {

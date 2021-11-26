@@ -27,13 +27,13 @@ As you might expect, you use `npm run dev` to start a local development instance
 So, your typical Dockerfile for a Next.js application should resemble this:
 
 ```dockerfile
-FROM node:14 as Builder
+FROM node:LTS as builder
 WORKDIR /usr/src/app
 COPY . /usr/src/app
 ENV NODE_ENV=production
 RUN npm ci
 
-FROM node:14.17.1-alpine
+FROM node:LTS-alpine
 WORKDIR /usr/src/app
 COPY --from=builder /usr/src/app /usr/src/app
 RUN npm run build
@@ -88,6 +88,25 @@ I know that I can make the `npm run dev` portion of `prestart` exit with a nonze
 ```
 
 I'm not sure if that's trading one bad thing for another, nor whether or not it's a good trade to make.
+
+### ❗UPDATE: An Even Better Way
+
+Here's an even better way which has all of the same benefits, with no draw-backs, and simpler and _less_ code.
+
+```json/2
+"scripts": {
+	"build": "next build",
+	"start": "npm run start:$NODE_ENV",
+	"start:": "npm run start:development",
+	"start:development": "next dev",
+	"start:production": "next start",
+	"start:test": "next start"
+},
+```
+
+Npm will evaluate any environment variables you include in the script, so it's really easy to make sub-scripts that are environment-specific. Here, I've created `start` which you trigger with `npm run start` as usual. It will run `npm run start:$NODE_ENV`, so it will ultimately run `start:production` if your `NODE_ENV` is `production`. On the off chance that you don't have a `NODE_ENV` value set, I've also created a `start:` script which then proxies on to `start:development`.
+
+This method doesn't rely on any "clever" tactics to interrupt the original intent, doesn't result in any swallowed errors, and just runs smoothly no matter what. And it's _dead simple_.
 
 [makefiles]: https://adamtuttle.codes/blog/2021/my-ongoing-love-affair-with-gnu-make/
 [npmscripts]: https://docs.npmjs.com/cli/v6/using-npm/scripts#pre--post-scripts
