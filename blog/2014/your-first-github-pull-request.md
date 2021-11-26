@@ -1,5 +1,6 @@
 ---
 title: GitHub Tip for Your First Pull Request
+desc: Step by step instructions and advice for a successful first pull request.
 date: 2014-09-10
 img: /img/2014/darinka-kievskaya-ff221Bu56mI-unsplash.jpg
 tags:
