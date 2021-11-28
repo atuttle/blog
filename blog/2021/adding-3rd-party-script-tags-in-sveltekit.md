@@ -24,6 +24,10 @@ You might be asking yourself why anyone would do that in 2021. The answer is int
 If you try to add a `<script>` tag to a SvelteKit page to embed an external script, you're probably going to run into an error:
 
 ```html
+<script>
+	// normal svelte component stuff...
+</script>
+
 <h1>Welcome to the Church of Mountain Dew</h1>
 
 <script src="https://adam-tuttle.ck.page/02c5dc9bec/index.js"></script>
@@ -33,7 +37,7 @@ If you try to add a `<script>` tag to a SvelteKit page to embed an external scri
 
 **SvelteKit Error:** A component can only have one instance-level `<script>` element{class="photo-byline"}
 
-So what's the magic fix? It's almost too easy.
+So what's the magic fix? It's almost too easy. It came to me totally at random one evening while watching TV with my wife.
 
 Wrap it in an [`{#if browser}{/if}`](https://kit.svelte.dev/docs#modules-$app-env) conditional:
 
