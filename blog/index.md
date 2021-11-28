@@ -1,5 +1,5 @@
 ---
-title: All the Things
+title: All of my content
 eleventyExcludeFromCollections: true
 discuss: false
 ---
