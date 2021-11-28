@@ -8,11 +8,13 @@ layout: default
 	{{content | safe}}
 </article>
 
+{% if discuss %}
 <section id="webmentions">
 	<h2>Webmentions</h2>
 	{% set webmentionUrl %}{{ page.url | url | absoluteUrl(site.url) }}{% endset %}
 	{% include 'layouts/webmentions.njk' %}
 </section>
+{% endif %}
 
 <section class="andThen">
 	<p>
