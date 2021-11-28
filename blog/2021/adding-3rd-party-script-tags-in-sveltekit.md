@@ -1,5 +1,5 @@
 ---
-title: 'How do I add a 3rd party script tag to a SvelteKit page body?'
+title: 'How to add a 3rd party script tag to a SvelteKit page body'
 desc: This was one of the first few problems I faced when learning SvelteKit, and the solution is surprisingly easy!
 img: /img/2021/danny-howe-bn-D2bCvpik-unsplash.jpg
 credit: Photo by <a href="https://unsplash.com/@dannyhowe?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Danny Howe</a> on <a href="https://unsplash.com/s/photos/party?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
