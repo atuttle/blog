@@ -3,7 +3,7 @@ title: 'How to add a 3rd party script tag to a SvelteKit page body'
 desc: This was one of the first few problems I faced when learning SvelteKit, and the solution is surprisingly easy!
 img: /img/2021/danny-howe-bn-D2bCvpik-unsplash.jpg
 credit: Photo by <a href="https://unsplash.com/@dannyhowe?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Danny Howe</a> on <a href="https://unsplash.com/s/photos/party?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-date: 2021-11-30
+date: 2021-11-28
 tags:
   - sveltekit
   - svelte
@@ -17,7 +17,7 @@ Early in the process of playing with the idea of using SvelteKit for [my website
 
 The biggest problem I had was embedding a 3rd party `<script>` tag in the page content.
 
-You might be asking yourself why anyone would do that in 2021. The answer is integrations. The `<script>` tag is for the email signup form [on the root page of my site](/).
+You might be asking yourself why anyone would do that in 2021. The answer is integrations. The `<script>` tag is for the email signup form [on the root page of my site](/#let's-stay-in-touch).
 
 ## Embedding 3rd Party Javascript Tags in SvelteKit Page Content
 
