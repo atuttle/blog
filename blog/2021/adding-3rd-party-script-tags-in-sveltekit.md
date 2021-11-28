@@ -57,5 +57,9 @@ No more error, and the script tag is embedded and executes exactly as expected.
 
 Like so many other things in Svelte, when I saw that this was the solution I sat there slack-jawed and asked myself, "Is that really all that's needed?"
 
+Svelte has become a new obsession of mine. You should [follow me on Twitter][twitter] or [subscribe via rss][rss] to follow along as I learn more and share what I learn.
+
 [redesign]: /blog/2021/a-bunch-of-changes/
 [sveltediscord]: https://discord.gg/svelte
+[twitter]: https://twitter.com/adamtuttle
+[rss]: /feed/feed.xml
