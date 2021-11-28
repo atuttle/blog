@@ -65,12 +65,18 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.setLibrary('md', md);
 
+	const published = (entry) => {
+		const now = new Date();
+		// console.log({ title: entry.data.title, future: entry.data.date > now });
+		return entry.data.date <= now;
+	};
+
 	eleventyConfig.addCollection('blog', function (collection) {
-		return collection.getFilteredByGlob(['blog/**/*.md', 'index.md']);
+		return collection.getFilteredByGlob(['blog/**/*.md', 'index.md']).filter(published);
 	});
 
 	eleventyConfig.addCollection('blogLatest', function (collection) {
-		return collection.getFilteredByGlob(['blog/**/*.md', 'index.md']).slice(-1);
+		return collection.getFilteredByGlob(['blog/**/*.md', 'index.md']).filter(published).slice(-1);
 	});
 
 	eleventyConfig.addCollection('tagsByCount', function (collection) {
