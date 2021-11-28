@@ -3,7 +3,8 @@ layout: default
 ---
 
 <article>
-	<h2>{{title}}</h2>
+	<h1>{{title}}</h1>
+	<p class="byline">By Adam Tuttle on <time>{{date | asPostDate }}</time></p>
 	{{content | safe}}
 </article>
 
