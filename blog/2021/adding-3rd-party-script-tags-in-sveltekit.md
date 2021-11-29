@@ -17,9 +17,9 @@ Early in the process of playing with the idea of using SvelteKit for [my website
 
 The biggest problem I had was embedding a 3rd party `<script>` tag in the page content.
 
-You might be asking yourself why anyone would do that in 2021. The answer is integrations. The `<script>` tag is for the email signup form [on the root page of my site](/#let's-stay-in-touch).
+You might be asking yourself why anyone would do that in 2021. The answer is integrations. The `<script>` tag is for the email signup form [on the root page of my site](/#let's-stay-in-touch). I don't control its contents (nor do I want to) and it outputs additional HTML at the DOM location where I've included the script tag (think `documemt.write`)...
 
-## Embedding 3rd Party Javascript Tags in SvelteKit Page Content
+## Embedding a Script Tag in Page Content
 
 If you try to add a `<script>` tag to a SvelteKit page to embed an external script, you're probably going to run into an error:
 
