@@ -8,8 +8,6 @@ tags:
   - tdd
 ---
 
-# The Mistake that Every TDD Tutorial Makes
-
 I refactored this article out of [[2021/tdd-by-example-kent-beck | my notes on the book TDD By Example by Kent Beck]] because it's my website and I can do what I want. 😜 While what I have to say here sounds negative &mdash;even to me&mdash; I am actually quite excited to learn TDD and improve my testing skills. I guess I'm just tired of being treated like a "child," as it were. Thanks for indulging me.
 
 I hold the opinion that "automated tests are good" and that there are good ways and bad ways to test things, and that there is significant value in using the correct approach. E.g. test the feature, not the implementation. I also believe that TDD _might_ be a useful tool to ensure that you've written tests to cover every feature. I haven't finished reading the [TDD Bible][tddbyex] yet, so I am withholding my opinion on that for now.

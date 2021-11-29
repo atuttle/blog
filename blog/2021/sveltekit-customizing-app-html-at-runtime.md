@@ -56,7 +56,7 @@ Back in our custom handle hook, we want to determine what the REAL skin html sho
 3. Parse the skin html into useful chunks
 4. Inject those chunks into app.html
 
-### Part 1: Determine Input Args for Skin Lookup
+## Part 1: Determine Input Args for Skin Lookup
 
 Let's assume the skin can be determined from the domain name and URL string; because that's what my need is.
 
@@ -71,7 +71,7 @@ export async function handle({ request, resolve }) {
 }
 ```
 
-### Part 2: Get the Skin HTML
+## Part 2: Get the Skin HTML
 
 For the sake of clean code and a short-ish article, I'll leave the actual skin html lookup code as an exercise for the reader. In my case, I'm making an HTTP request to an API and the skin html is returned in a property in the JSON response.
 
@@ -82,7 +82,7 @@ export default async function getSkin(host, path){
 }
 ```
 
-### Part 3: Parse the Skin HTML
+## Part 3: Parse the Skin HTML
 
 In order to be easily injected into app.html, we need to do a tiny amount of processing on the HTML we got from the previous step. Ultimately, we want `getSkin()` to return an object with 3 properties: `before`, `after`, and `head`. The `head` property will contain everything between the `<head></head>` tags in the skin HTML. The `before` and `after` properties will contain everything in the `<body></body>` tag, but split into two chunks based on a predetermined token. In my case, the skin is required to have the token `{{ "{{app}}" }}`, and so I want `before` to be everything before `{{ "{{app}}" }}` and `after` to be everything after it -- from within the `<body></body>` tags.
 
@@ -153,7 +153,7 @@ export default async function getSkin(host, path){
 }
 ```
 
-### Part 4: Inject Skin Parts Into app.html
+## Part 4: Inject Skin Parts Into app.html
 
 Now that we have head/before/after, we need to modify the response to inject our HTML fragments in the correct locations. There's a few different ways you could do this, but here's what I did.
 

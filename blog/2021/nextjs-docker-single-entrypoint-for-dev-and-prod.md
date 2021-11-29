@@ -63,7 +63,7 @@ Well, can you see what's missing? Yes, we're properly overriding the `NODE_ENV` 
 
 I found an easy and simple way to accomplish this with npm scripts, but it's not perfect...
 
-### My Solution
+## My Solution
 
 > ⚠️ NOTE: Since writing this section I've since found a method that's _so_ much better! You can keep reading to learn something that could be useful to know elsewhere, but I would now recommend that you [use this technique in your npm scripts](#update-an-even-better-way).
 
@@ -93,7 +93,7 @@ I know that I can make the `npm run dev` portion of `prestart` exit with a nonze
 
 I'm not sure if that's trading one bad thing for another, nor whether or not it's a good trade to make.<span id="update-an-even-better-way"></span>
 
-### ❗UPDATE: An Even Better Way
+## ❗UPDATE: An Even Better Way
 
 Here's an even better way which has all of the same benefits, with no draw-backs, and simpler and _less_ code.
 

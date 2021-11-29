@@ -20,7 +20,7 @@ The reason it's not part of the Semaphore project is that it's specific to our f
 
 In addition to this service, we also have some wiring to do in controllers. But I'm getting ahead of myself.
 
-### How to create your own featureFlagService
+## How to create your own featureFlagService
 
 What steps would you need to take if you were going to write your own `featureFlagService` specific to your application?
 
@@ -148,7 +148,7 @@ public function before( rc ){
 
 In our flag-data admin interface, after flags are updated, we send http requests to each server to notify them that flags have been updated and they should pull down the updated data. None of that is pictured here, because this post doesn't include any portion of my flag-data-admin interface; but hopefully you can see how that should work.
 
-### What's still missing?
+## What's still missing?
 
 I have very much glossed over a few things:
 

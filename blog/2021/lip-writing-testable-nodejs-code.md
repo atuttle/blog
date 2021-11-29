@@ -10,7 +10,9 @@ tags:
   - tdd
 ---
 
-Yesterday I was trying to <acronym title="Test Driven Development">TDD</acronym> some Node.js code, and I got stuck. I asked for help on the [KCD Discord][kcdd]\* but I guess my explanation of the problem wasn't great, so I promised I would follow up with a repro case. Meanwhile I am also trying to do better at [learning in public][lip], so I'm going to write about it here, too. So here we go.
+Yesterday I was trying to <acronym title="Test Driven Development">TDD</acronym> some Node.js code, and I got stuck. I asked for help on the [KCD Discord][kcdd][^1] but I guess my explanation of the problem wasn't great, so I promised I would follow up with a repro case. Meanwhile I am also trying to do better at [learning in public][lip], so I'm going to write about it here, too. So here we go.
+
+[^1]: By the by: If you're looking for a fantastic community of JavaScript developers, the [KCD Discord][kcdd] is amazing. I can't recommend it strongly enough.
 
 I am working on an AWS Lambda service that will run on a schedule and process some data. It will be written in Node.js. Node Lambda functions define a starting point file that exports an object containing a function. I think the convention is `index.js` and `{ handler: () => {} }`, but it's configurable. I'll stick with the convention. Also, Lambdas can either report that they are complete via a callback or a promise. I'm a big fan of async/await, so I'm going to go with that.
 
@@ -103,10 +105,6 @@ Of course JavaScript has classes, but I hate them. More than just hate, they are
 I feel like there's some 3rd option that I'm not seeing. There's gotta be, right?
 
 Now here's where reality is setting in: I pretty much burned my entire day yesterday trying to get over this hurdle. Testing is important, but I can't let something so trivial completely block me from getting any work done. So for now, I'm putting TDD to the back of the stove and when I understand how to solve these problems I will come back and refactor my code to be testable and write the tests. In the meantime, I've got to get some work done.
-
----
-
-\* By the by: If you're looking for a fantastic community of JavaScript developers, the [KCD Discord][kcdd] is amazing. I can't recommend it strongly enough.
 
 [kcdd]: https://kentcdodds.com/discord
 [lip]: https://www.swyx.io/learn-in-public/

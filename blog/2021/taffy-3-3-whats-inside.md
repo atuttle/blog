@@ -25,7 +25,7 @@ To be fair, much of what's new in Taffy 3.3.0 has been there for a while. I was 
   - Added support for displaying sample return data for each method (more on this below).
   - With the addition of the sample responses, docs can get really long really fast, so I've added a small accordion to each method to collapse the documentation for its inputs and sample response (if any).
 
-### Sample responses, you say?
+## Sample responses, you say?
 
 Yup! Have you ever tried to onboard a new API consumer and wanted to give them a way to interact with the API to verify they're calling it correctly, but either don't have real data for them yet or don't want them testing against it? Enter **sample responses** and **simulated requests**.
 

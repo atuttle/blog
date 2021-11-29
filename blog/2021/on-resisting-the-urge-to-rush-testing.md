@@ -11,7 +11,7 @@ tags:
 
 I am very much in favor of automated testing. I understand the benefits and I need them in my life. But if I'm being honest, I know that the confidence of a passing test suite is only as good as the _effort_ that went into writing it. So then it stands to reason that one of the most important tenets of the testing ethos should be something like, "Slower is better if you identify more test cases."
 
-### Passing tests prove only that the remaining bugs haven't been found
+## Passing tests prove only that the remaining bugs haven't been found
 
 > "Program testing can be used to show the presence of bugs, but never to show their absence!" &mdash; Edsger W. Dijkstra
 

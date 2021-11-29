@@ -15,7 +15,7 @@ For what I hope are obvious reasons (deploys, fail-over, etc), docker health che
 
 Unfortunately they're also a bit of a black box. You write some code to report back whether or not it's healthy, and docker will call that code to determine if the container is healthy, but it's not obvious how to see the results of that code. When a container is being reported as unhealthy, it can be maddening to try and figure out why. Here are some techniques I've found over the years to make debugging them so much less frustrating.
 
-### Debugging Local Containers
+## Debugging Local Containers
 
 What is the current health status of a container?
 
@@ -35,7 +35,7 @@ Just in case you were thinking about not using `jq`, here's the difference in ou
 
 ![Terminal screen shot showing the difference between the two commands](/img/2021/docker-healthcheck-debug-1.png)
 
-### In The Cloud
+## In The Cloud
 
 The only cloud service I have experience with is AWS, so that's the only one I can provide this advice for. Feel free to share the equivalent for Google Cloud, Azure, etc.
 
