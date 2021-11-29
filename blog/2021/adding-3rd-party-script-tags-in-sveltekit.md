@@ -57,6 +57,18 @@ No more error, and the script tag is embedded and executes exactly as expected.
 
 Like so many other things in Svelte, when I saw that this was the solution I sat there slack-jawed and asked myself, "Is that really all that's needed?"
 
+## Alternatives That I Considered/Tried
+
+You might be wondering why I didn't use `<svelte:head>`.
+
+I needed this method specifically because the `<script>` tag that I need to embed creates HTML content at the DOM location where the tag exists. In this case, it creates the email list signup form.
+
+If I put my script tag in the document head, the email list signup form might not show up at all, or it might appear in a weird location.
+
+Another alternative would be to use an `onMount` hook to add it at runtime using something like `document.body.appendChild`. This would effectively be the same thing as what I've done above with `{#if browser}`, but less readable and, in my opinion, less expressive. It would also take much more code.
+
+While a need like this is pretty infrequent these days, I'm glad to have figured out how to pull it off with SvelteKit.
+
 Svelte has become a new obsession of mine. You should [follow me on Twitter][twitter] or [subscribe via rss][rss] to follow along as I learn more and share what I learn.
 
 [redesign]: /blog/2021/a-bunch-of-changes/
