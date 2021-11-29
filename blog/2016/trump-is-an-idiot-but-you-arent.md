@@ -16,20 +16,6 @@ The first of which, and the one I want to talk about today, happened as I watche
 
 (The West Wing is available on Netflix and I can't recommend it enough, regardless of your personal politics. You can also [rent it on YouTube][yt].)
 
-<object width="576" height="432">
-	<param name="movie" value="http://www.flasharc.com/bpr.swf" />
-	<param name="allowfullscreen" value="true" />
-	<param name="allowscriptaccess" value="always" />
-	<embed
-		src="http://www.flasharc.com/bpr.swf"
-		type="application/x-shockwave-flash"
-		allowscriptaccess="always"
-		allowfullscreen="true"
-		width="576"
-		height="432"
-	/>
-</object>
-
 And here's a transcript from [WestWingTranscripts.com][transcript]:
 
 > **SKINNER:**

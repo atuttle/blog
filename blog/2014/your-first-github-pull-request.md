@@ -45,7 +45,7 @@ Here's a more appropriate workflow:
 
 I hope this saves you the headache of adding commits to the wrong Pull Request and helps you enjoy your experience with Git and GitHub a little bit more.
 
-### Update
+## Update
 
 It was suggested that I also add information on pulling in upstream changes to stay up to date. Here you go!
 

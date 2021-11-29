@@ -8,7 +8,8 @@ tags:
   - aws
 ---
 
-![](/img/2016/paul-teysen-bukjsECgmeU-unsplash.jpg)
+![Shipping containers stacked high](/img/2016/paul-teysen-bukjsECgmeU-unsplash.jpg)
+Photo by <a href="https://unsplash.com/@hooverpaul55?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Paul Teysen</a> on <a href="https://unsplash.com/s/photos/containers?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>{class="photo-byline"}
 
 This is going to be more field-notes than how-to, but when I tweeted about how I had such an easy experience getting some Docker containers running in production I had several people express interest in reading about my experiences, so here we are.
 
@@ -92,7 +93,7 @@ Probably the most interesting part of this is the `db-backup` target. This Makef
 
 ![Nginx welcome screen](./sit-flying-1.jpg)
 
-### All Problems Solved. Time to Go to Production!
+## All Problems Solved. Time to Go to Production!
 
 I spent a lot of time over the last month thinking about this. Despite being interested in Google's cloud offerings, I had already sold my client on AWS so I knew I was going to be hosting it there. But should I use their [EC2 Container Service][ecs]? If not that, then what? I am aware of Kubernetes but suspect it would be easier to use on Google's cloud than Amazon's. Mostly this whole config was just a big question mark for me.
 
@@ -100,7 +101,7 @@ One thing I did know is that scaling is _just not an issue_. This app will only 
 
 For that reason, I decided to go with a standard vanilla Ubuntu AMI, on which I installed Git, Docker, and the AWS CLI. Because of the agreement I negotiated with my client, I knew I wanted a `3-year-reserved-full-upfront` EC2 instance, to save money over the on-demand prices. I've used EC2 before, but never reserved instances, so that was another question mark. Like many things AWS, it makes sense once you understand how it works but was not immediately obvious without reading the documentation very carefully.
 
-#### Getting a Reserved EC2 Instance
+### Getting a Reserved EC2 Instance
 
 Reserved instances are kind of funny. When you buy it, you're not buying an EC2 instance: You're buying the contract to host an EC2 instance of a certain type, for a certain time period, in a certain location. For example, a `t2.large` for three years in `us-east-1d`. The clock starts ticking as soon as the payment form is submitted, so if it were to take a week for you to stand that instance up, you just donated a week's hosting costs to Amazon. Be ready to start that instance before you submit your payment so that you can switch tabs and start it immediately.
 
@@ -108,7 +109,7 @@ The Reserved Instance contracts (I'm just calling them contracts, I don't know i
 
 From there, it works just like any other EC2 instance: save your key file and then connect to the server with SSH: `ssh -i ~/.ssh/my_server-root.pem ubuntu@ec2-{my-ip-address}.compute-1.amazonaws.com`.
 
-### Setting up My Server
+## Setting up My Server
 
 The first thing I needed to do was [install Docker on Ubuntu][install-docker], which was pretty straight-forward:
 
@@ -157,7 +158,7 @@ And now to install the aforementioned AWS CLI:
 $ sudo pip install awscli
 ```
 
-### Configuring My App
+## Configuring My App
 
 Now that all of the pre-requisites are satisfied, it's time to get my containers running and verify that my app is working. I cloned my git repo to `/opt/myapp` and then `chown -R ubuntu ubuntu /opt/myapp` so that sudo isn't required for simple things like getting the latest code with `git pull`.
 
@@ -180,7 +181,7 @@ Saving to: ‘/dev/null’
 
 Awesome, it's working!
 
-#### Reverse Proxy
+### Reverse Proxy
 
 This part isn't strictly necessary. If I only wanted to run this one thing on the server I could just directly expose the container's port 80 as the server's port 80 and call it a day. But putting a reverse-proxy in the middle allows me to add more containers to this server to do other things, which I hope to do in the near future. So I quickly wrapped it up in an [Nginx][nginx] reverse proxy:
 
@@ -214,7 +215,7 @@ server {
 
 Then symlink this file into `/etc/nginx/sites-enabled/`, and restart nginx. This will proxy all requests to my container that's listening on port 8888, which is good enough for now!
 
-### Remaining Problems
+## Remaining Problems
 
 Something's wonky with the system time inside the docker container. By default it comes up as UTC. My host was also UTC. I live in US/Eastern and my client is in US/Eastern so it just makes things easier for my servers to use US/Eastern, too. (Though really, [Timezones can die in a fire for all I care][tz].)
 
@@ -228,7 +229,7 @@ Just to verify I did add a comment to a view where I spit out the current value 
 
 I initially made some scripting changes to my Dockerfile to set the timezone and install NTP, but later found some advice to set an environment variable named `TZ` with the desired Timezone. That worked too (in that `$ date` reported the desired date & time), so I ripped out the Dockerfile changes. The environment variable approach works for the MariaDB container too, an added bonus.
 
-### Conclusion
+## Conclusion
 
 Soup to nuts, it went surprisingly smoothly. Aside from the Timezone/system time issue, I finished all of that in a day. I started at about 9:00am, took short breaks for lunch and dinner, and finished before 10:00pm. I had mentally prepared myself to stay up until the wee hours of the morning pulling out what's left of my hair, as I usually would in a similar situation, but it just wasn't necessary. The time that I saved, I turned around and used to write this blog post. 🤓
 

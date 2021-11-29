@@ -20,9 +20,9 @@ Spoiler alert: The reason this update seems so overdue is that it's been going s
 
 With that in mind, let's start with...
 
-# The Bad Stuff
+## The Bad Stuff
 
-## I can't install any OS updates
+### I can't install any OS updates
 
 That primarily means security patches. I'm not extremely worried about this, because this machine doesn't leave my house (it's not a laptop), I'm the only user, and I can and do easily avoid worms spread through email, messenger clients, etc. I know that doesn't protect everything, and _that's_ why I've left a little bit of room for worry. I do worry, but obviously not so much that it's worth paying the Apple hardware tax.
 
@@ -30,21 +30,21 @@ And for what little it's worth, there are _some_ updates (cough, Catalina, cough
 
 I'll talk more about OS updates in **The Good Stuff**, below.
 
-## USB is a little bit flaky
+### USB is a little bit flaky
 
 Not flaky as in things stop working at random times, but that certain USB ports work and others don't, and my USB hub doesn't always agree with OSX. For example, I bought a [tiny USB micro-sd card reader](https://amzn.to/3a4RwQB), and plugging that into my USB hub only mounts the memory card as a volume maybe 1 out of 10 times. I can either use a non-hub USB port to get that working, or boot into Windows to offload my files. Since offloading my files usually entails dumping them into cloud storage, it doesn't much matter where I do it. The only time it's been a nuissance is when I want to take footage from my GoPro and edit it immediately. A small price that I'm more than happy to continue paying in exchange for the other benefits.
 
 I know there are various hackintosh USB drivers available to try out, but to emphasize how little this problem bothers me, I haven't found it worth my time to try fixing the problem.
 
-## The OS thinks that there's an Apple webcam/microphone available
+### The OS thinks that there's an Apple webcam/microphone available
 
 As a remote worker, 90%+ of my meetings are web conferences using my webcam and microphone. I'm using a USB webcam to act as both of those, but that doesn't stop the OS from expecting the built-in webcam and microphone that it would have on any modern Apple hardware. It hasn't been an issue once I got things configured initially, but each app that uses the webcam and/or microphone will need to be told to use the USB options, not the "built-in" (missing) options.
 
-## I can't run any virtual machines
+### I can't run any virtual machines
 
 I don't use VM's much. As a webdev on OSX, it would be nice to be able to test something out on Edge or IE11 occasionally, and [Microsoft provides free VM's for exactly that purpose](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/). Alas, booting a virtualbox VM on my hackintosh instantly crashes it. I've managed not to suffer from this, but it has been annoying once or twice in the last year.
 
-# The Good Stuff
+## The Good Stuff
 
 This is fine! And I actually mean that, not in the dog-in-flaming-room sense.
 
@@ -52,7 +52,7 @@ This is fine! And I actually mean that, not in the dog-in-flaming-room sense.
 
 I'm just as productive as ever. Arguably more, with a faster CPU, dedicated GPU, and 4x more RAM. Aside from being unable to run virtual machines and the feeling of unease from not being able to install OS updates, as a daily driver, I've reached 100% of my productivity goals.
 
-## OS Updates are possible, just not as easy
+### OS Updates are possible, just not as easy
 
 After each OSX update, the Hackintosh community is hard at work making it possible to install from scratch with that new latest version. So when I get far enough behind, and/or an upgrade becomes actually necessary, or when Amazon can start delivering free time in boxes with smiles on them with free next-day shipping, then I can give it a shot.
 
@@ -60,13 +60,13 @@ And here's the great thing about this whole hackintosh process. The safest path 
 
 If it works out, then you install the apps that you use that aren't cloud services, and get back to work. Maybe you burn a day in that process? And let's be honest, who among us doesn't revel in the thought of moving into a freshly installed and pristine OS?
 
-## I've also got my gaming computer
+### I've also got my gaming computer
 
 One of the not-so-secret bonuses of building a hackintosh was that I would wind up with a computer capable of dual booting into Windows and, gasp, being able to play modern games.
 
 My dual-boot Windows installation is not without its own quirks (perhaps for another time), but it serves its purpose just fine. It's been many years since I've had a Windows gaming computer at my disposal, and I've had a lot of fun getting into Steam for the first time. (I know, right?! 😱) I switched to Mac as my primary/only computer around 2008-2010, and while that's been great for work it's also meant I completely lost touch with PC gaming.
 
-# What would it take to move to a new machine?
+## What would it take to move to a new machine?
 
 I mentioned before that OS updates/upgrades are relatively painless. First of all, in 2020, the cloud is pretty great.
 

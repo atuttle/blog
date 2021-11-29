@@ -15,7 +15,7 @@ I don't know if this is brilliant or boneheaded, but it works reasonably well fo
 
 A long time ago I saw my friend (and super smart dude) [Mark Mandel](https://twitter.com/neurotic) use Make as a way to store command aliases within a project. Maybe that sentence needs some explanation.
 
-### Aliasing CLI Commands
+## Aliasing CLI Commands
 
 The command line interface (CLI) can be an incredibly powerful environment, but to fully use that power you might need to string together an incredibly long command. For example, after a `git merge` you'll sometimes have merge conflicts. Here's a command that will open them all in VSCode for editing:
 
@@ -47,7 +47,7 @@ And bonus: making it part of the code repository means it's shared across the te
 
 > Obviously there's [Docker-Compose](https://docs.docker.com/compose/), but that will _only_ compose a local development environment. This Makefile approach is useful beyond that and actually pairs well with Docker Compose. We use compose to compose a collection of containers as our local development environment, but we have a Makefile that we use to build and publish production containers to Amazon ECR, and deploy them on Amazon ECS, and Docker Compose can't do that. It also won't automate the little things like attaching to a shell session inside your Nginx container.
 
-### A Make Primer
+## A Make Primer
 
 This isn't going to be an article on the intricacies of Make and Makefiles ([learn more here](https://www.gnu.org/software/make/manual/html_node/index.html)), but here's a quick Make primer.
 
@@ -69,7 +69,7 @@ You run `make myapp` and when all is said and done, your app should be compiled.
 
 Make is super powerful, and writing this post reminded me that one of the few books I kept from college was [Linux in a Nutshell](https://amzn.to/3ccrtJp), which is kind of like the manpages of all of the most common Linux tools in printed form for quick reference, but a little better. I checked, and mine (_3rd edition, printed August 2000! I'm so old!_) does have a section on Make. A quick skim showed me a few things that I'm eager to learn more about, so I popped a bookmark in and left it on my desk to come back to later. (Narrator: He won't.)
 
-### Sharing aliases and workflows with Makefiles
+## Sharing aliases and workflows with Makefiles
 
 Cool, so now we understand the power of aliases to simplify complex commands and give them short and easily remembered names; and we're eager to share commands with our teammates. How can Make help with that?
 
@@ -124,7 +124,7 @@ rebuild:
 	@docker build -t myapp . && touch .myapp-built
 ```
 
-### What's up with the @ and - prefixes?
+## What's up with the @ and - prefixes?
 
 Given:
 
@@ -148,7 +148,7 @@ Hello, world.
 
 The `-` prefix tells Make to ignore any errors that command might throw. For example, if you try to stop a container that's not running, Docker will throw an error. Normally Make would stop executing because of the error. But since we just want to make sure that it's not running and we don't care if it was already not running, we can ignore that error.
 
-### Is there a better way?
+## Is there a better way?
 
 This is the best way I've found to share automation shortcuts with my team. We've also used npm scripts to do similar work in the past, but I feel like they aren't quite as robust. Since they have to go into package.json, you end up having to jump through some hoops to make them work as one-liners that can live in a JSON string, and there's no baked-in dependency resolution.
 

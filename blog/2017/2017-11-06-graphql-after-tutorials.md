@@ -13,7 +13,7 @@ But what I wanted to write about here is all of the things that were going on in
 
 But what about related data types from my schema? What about authentication? Action-authorization? Error logging? How does my client get the inserted id back from a create mutation?
 
-### Related Data
+## Related Data
 
 This one is specific to Apollo Server. You have a `User` type and a `Role` type, and users can have Roles:
 
@@ -50,7 +50,7 @@ The `obj` arg passed to this `User.roles` resolver is the User record after it g
 
 > **Note:** This is not the most efficient approach, using two separate queries. I've heard rumors that it's possible to "look ahead" at the incoming query and detect certain situations to fork off to a more efficient single-query approach. I haven't figured that out yet.
 
-### Authentication
+## Authentication
 
 The general line here is, "don't reinvent the wheel." Whatever you're using for the rest of your application should be fine for the API too. This took me some time to wrap my head around since I've spent years adding token-based auth to REST APIs.
 
@@ -82,7 +82,7 @@ server.use((req, res, next) => {
 });
 ```
 
-#### Action-Authorization
+### Action-Authorization
 
 Now that I know the person making the request is logged in, what if I want to make sure they don't do things they shouldn't have access to?
 
@@ -112,7 +112,7 @@ const saveUser = (reqUser, userToSave) => {
 };
 ```
 
-### Error Logging
+## Error Logging
 
 This one turns out to be pretty easy. What you do with the errors is up to you (write to a log file, push them out to a service like Raygun, etc). We just need to give Apollo Server a function that does what we want with the exception:
 
@@ -132,7 +132,7 @@ server.use(
 );
 ```
 
-### Getting inserted id from mutation
+## Getting inserted id from mutation
 
 Apollo client gives us a really powerful `mutate` method ([docs](https://www.apollographql.com/docs/react/basics/mutations.html#calling-mutations)), but of course with power comes a bit of complexity. One common necessity that I ran into and had some trouble with, even after following a tutorial that showed me exactly this, was getting the inserted id value back from a mutation that creates a database row.
 

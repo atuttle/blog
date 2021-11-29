@@ -30,7 +30,7 @@ This screen shot of the commit proposed for merge into DMCA is what opened my ey
 
 Without a signature, there's no way to know if this was really committed by Nat Friedman. Of course it wasn't, but there's no good way to prove it. Git has a way to let you provide that proof: Signing your commits. The signature verifies that it was you, the owner of the key, that made the commit.
 
-### How to sign your commits
+## How to sign your commits
 
 There are plenty of guides out there, including [the one I used][guide] provided by GitHub, so I'm going to make this short and sweet. If this isn't enough for you, or if you're not on a Mac, I suggest you start by looking at [the GitHub guide][guide].
 

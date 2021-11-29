@@ -17,7 +17,7 @@ I think the motivation for Ben's post is correct:
 
 But his metaphors are full of holes and his thesis of knowledge decay is too broad. Allow me to explain.
 
-### Metaphors revisited
+## Metaphors revisited
 
 [Ignaz Semmelweis][handwasher], a Hungarian doctor in the mid 1800s, was ridiculed because he believed that microscopic living organisms could reside on your skin and be transmitted from one patient to the next, spreading disease. Of course today we understand about bacteria and viruses and we wash our hands between surgeries.
 
@@ -35,7 +35,7 @@ Lawyers must be aware of new laws and precedents. Accountants have to keep up wi
 
 In all of these cases, if someone abandons learning new things the day they get their first job they will not have a very long career at all.
 
-### That nugget of truth
+## That nugget of truth
 
 > The doctor at 40 doesn't seem to be worried about discovering that all his knowledge of the vascular system is about to evaporate in favor of some new organizing theory.
 
@@ -57,7 +57,7 @@ You can't compare your highly abstracted concepts to the core concepts of anothe
 
 **This is the cost of working at a high level of abstraction.**
 
-### The result is the same
+## The result is the same
 
 Even with all of the above nit-picking, I agree with Ben's conclusion: Focus on learning the core concepts of your field well and they will serve you well for a long time to come. For everything else, don't rush to be an early adopter, and wait for some amount of consensus to grow before you dive in head-first.
 

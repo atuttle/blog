@@ -9,7 +9,7 @@ tags:
   - docker
 ---
 
-You guys. AWS Fargate is amazing! #notsponsored
+AWS Fargate is amazing! #notsponsored
 
 I started writing this article back in August of 2019, but ended up setting it aside because I didn't know where I wanted to take it. The story that I'm about to tell you ended fantastically for us, and we've since gone on to have even more success with Fargate, so I am happy to sing its praises from the mountaintop.
 
@@ -21,7 +21,7 @@ Sounds pretty major, right? I figured it would take a week of tweaking knobs and
 
 https://twitter.com/AdamTuttle/status/1162118705909850112
 
-### Our Beanstalk app, and why we had to change solutions
+## Our Beanstalk app, and why we had to change solutions
 
 We send a lot of email. More specifically, our customers (colleges and universities) send _a lot of email_. One part of that process involves flinging api requests at our mail provider as fast as we can (and updating database records to reflect that they've been sent). To reach our desired throughput, we use a small orchestra of relatively long-running (for Lambda, at least) AWS Lambda functions to make the api requests. Each function is in constant contact with a sort of &mdash;to continue the orchestra metaphor&mdash; "conductor" process that is responsible for keeping tabs on each musician and controlling them to limit our api usage, aiming to get us as close to the rate limit as possible without going over.
 
@@ -45,7 +45,7 @@ https://twitter.com/CodeWisdom/status/1162342494711033856
 
 We completely forgot about the problem until we ran out of IP addresses again. And of course this time there was no time to waste. It was time to deal with this problem head-on.
 
-### Fargate to the rescue
+## Fargate to the rescue
 
 Thankfully my coworker Chad has a personal interest in AWS service offerings and in the meantime had become passingly familiar with Fargate, so we at least had a name for something we should look into. We made a quick list of the things that we absolutely had to be able to get out of our new solution:
 

@@ -7,7 +7,8 @@ tags:
   - osx
 ---
 
-![](/img/2016/scott-webb-lnRPKo7Lo5Q-unsplash.jpg)
+![Keys hanging from a lego brick used as a keychain attached to some lego bricks on the wall](/img/2016/scott-webb-lnRPKo7Lo5Q-unsplash.jpg)
+Photo by <a href="https://unsplash.com/@scottwebb?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Scott Webb</a> on <a href="https://unsplash.com/s/photos/keychain?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>{class="photo-byline"}
 
 The truth is that I just don't have anywhere better to jot this down for my own future reference, so I'm inflicting it on the world as another blog post. I guess it could prove helpful to some people too, so there's that.
 
