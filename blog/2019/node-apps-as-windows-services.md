@@ -5,7 +5,7 @@ img: /img/2019/bady-abbas-z6KUjY4asSY-unsplash.jpg
 date: 2019-05-24
 tags:
   - til
-  - node.js
+  - node
   - windows
 ---
 

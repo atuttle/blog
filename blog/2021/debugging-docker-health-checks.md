@@ -4,7 +4,6 @@ date: 2021-11-18
 img: /img/2021/barrett-ward-5WQJ_ejZ7y8-unsplash.jpg
 tags:
   - docker
-commentsPostId: debugging-docker-health-checks
 ---
 
 ![Shipping containers in a busy port](/img/2021/barrett-ward-5WQJ_ejZ7y8-unsplash.jpg)

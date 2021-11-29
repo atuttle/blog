@@ -6,7 +6,7 @@ img: /img/2015/emmanuel-appiah-O5RwuC5Nf-8-unsplash.jpg
 tags:
   - windows
   - iis
-  - node.js
+  - node
 ---
 
 Here's something I've wanted to be able to do for a long time now: I have a Windows server, running IIS and a dozen or so websites on various technologies like PHP, CFML, and ASP.NET. I'd like to add node.js support to that mix without disrupting any of the existing websites.
