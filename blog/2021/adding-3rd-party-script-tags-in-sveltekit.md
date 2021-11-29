@@ -67,6 +67,8 @@ If I put my script tag in the document head, the email list signup form might no
 
 Another alternative would be to use an `onMount` hook to add it at runtime using something like `document.body.appendChild`. This would effectively be the same thing as what I've done above with `{#if browser}`, but less readable and, in my opinion, less expressive. It would also take much more code.
 
+While I wouldn't have been happy with this solution, I did also try to copy the code of the import and try my hand at adding it directly to the page, modifying as necessary to make it work. In this case it just wasn't a workable solution. There's too much code, and it's too complex, to make that a path worth pursuing. Especially once I found the solution described above!
+
 While a need like this is pretty infrequent these days, I'm glad to have figured out how to pull it off with SvelteKit.
 
 Svelte has become a new obsession of mine. You should [follow me on Twitter][twitter] or [subscribe via rss][rss] to follow along as I learn more and share what I learn.
