@@ -12,9 +12,9 @@ tags:
 
 Photo by <a href="https://unsplash.com/@ahmad_kanbar?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">ahmad kanbar</a> on <a href="https://unsplash.com/s/photos/mole?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>{class="photo-byline"}
 
-There has been no shortage of articles in the last few days [sensationalizing][bleeping] the fact that there's been yet-another incident on npm where someone's brain has been taken over by parasites and they've sabotaged modules they own in order to make some sort of political statement or just to be a jerk (see also: [left-pad][])...
+There has been no shortage of articles in the last few days sensationalizing the fact that there's been yet-another incident on npm where someone's brain has been taken over by parasites and they've sabotaged modules they own in order to make some sort of political statement or just to be a jerk (see also: [left-pad][])...
 
-Look at the headline for the BleepingComputer article I linked:
+Look at the headline for [this BleepingComputer article][bleeping]:
 
 > #### Dev corrupts NPM libs 'colors' and 'faker' breaking thousands of apps
 
