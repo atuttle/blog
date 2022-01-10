@@ -33,7 +33,7 @@ Here's what's involved in releasing a new version of Taffy:
 
 - As we merge pull requests with new features and bug fixes, we add them to the documentation, with an assumed version number (we should probably switch this to be something like `@next`, because sometimes the version number ends up changing...)
 - Eventually &mdash;as [BDFL][bdfl]&mdash; I decide that we've reached a good moment for a release, and do the following things, if I remember them all and/or can be bothered:
-  - Create a new git tag with the updated version number, and push it to GitHub
+  - Create a new git tag with the updated version number (obeying [SemVer][semver]), and push it to GitHub
   - Add the (hidden) docs for the new version to the version listing so that it's no longer hidden.
   - Tweet about it on [@taffyio][@taffyio] and [@AdamTuttle][@adamtuttle].
   - Share the news in the `#taffy` channel of the [CFML Slack][cfmlslack].
@@ -73,3 +73,4 @@ I'm considering this entry a living document. I'll be updating it as I do more t
 [autotweet]: https://github.com/marketplace/actions/send-tweet-action
 [displayrelease]: https://github.com/atuttle/Taffy/blob/5fded423c041edf4de7a3910967378c51bae809d/index.html#L74-L81
 [api]: https://github.com/atuttle/Taffy/blob/5fded423c041edf4de7a3910967378c51bae809d/index.html#L99
+[semver]: https://semver.org/
