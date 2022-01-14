@@ -16,7 +16,7 @@ Photo by <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&utm_med
 
 It would be easy to feel a responsibility to create a named type for everything in a TypeScript application. And for domain primitives, it makes sense to do so. "Domain primitives" would be roughly analagous to "database tables." But it would be a mistake to create a named type for every intermediary type necessary to write an application. This is (probably?) a good chunk of the reason that anonymous types are supported: You only need them in one location, or in a way where defining them once allows all uses to be inferred.
 
-However, I ran into a problem with an anonymous type that represented some data that I had massged into a different shape in order to be useful for my application. It took some googling and reading, but eventually I found the [index signatures][isig] documentation, which solved my problem.
+However, I ran into a problem with an anonymous type that represented some data that I had massaged into a different shape in order to be useful for my application. It took some googling and reading, but eventually I found the [index signatures][isig] documentation, which solved my problem.
 
 But before I give you the answer, here's a real world example of why I needed to use it. _Don't worry, it doesn't use any generics!_
 
@@ -91,7 +91,7 @@ If we take off those `any` types, we get this error from TypeScript:
 
 > Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
 
-We can use the `any` type and call it a day, but that has deletirious effects downstream in the app, as TypeScript won't really know what to expect, and so it's not really offering us much (any? (heh)) benefit when working with this data after it's been massaged. So it would be nice if we knew how to properly type this.
+We can use the `any` type and call it a day, but that has deleterious effects downstream in the app, as TypeScript won't really know what to expect, and so it's not really offering us much (any? (heh)) benefit when working with this data after it's been massaged. So it would be nice if we knew how to properly type this.
 
 So here's the answer, given a name only to help it syntax highlight and make sense:
 
