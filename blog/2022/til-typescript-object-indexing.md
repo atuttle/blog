@@ -14,104 +14,77 @@ Photo by <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&utm_med
 
 > _**Heads up:** I'm new to TypeScript. This is my first entry on the subject and it's entirely possible I'm giving bad advice here. I'm sharing as I learn, and I haven't (yet?) taken the time to read through the [TypeScript handbook][handbook]. Please feel free to help me learn more, and definitely don't take what I say here as any sort of best practice; even if I do get lucky enough to stumble into the truth._
 
-It would be easy to feel a responsibility to create a named type for everything in a TypeScript application. And for domain primitives, it makes sense to do so. "Domain primitives" would be roughly analagous to "database tables." But it would be a mistake to create a named type for every intermediary type necessary to write an application. This is (probably?) a good chunk of the reason that anonymous types are supported: You only need them in one location, or in a way where defining them once allows all uses to be inferred.
+I ran into a problem trying to type some data that represented a collection of other Types that I had massaged into a different shape in order to be useful for my application. It took some googling and reading, but eventually I found the [index signatures][isig] documentation, which solved my problem.
 
-However, I ran into a problem with an anonymous type that represented some data that I had massaged into a different shape in order to be useful for my application. It took some googling and reading, but eventually I found the [index signatures][isig] documentation, which solved my problem.
-
-But before I give you the answer, here's a real world example of why I needed to use it. _Don't worry, it doesn't use any generics!_
-
-I'm working on an application that builds and runs dynamic SQL based on chunks of SQL it pulls out of the database. I know that sounds a little bit crazy, but you're just going to have to trust me that it makes sense for what we're doing. Anyway, those chunks of SQL have their own table (`FilterDefinition`s) and get referenced in another table (`Filter`s) that use this type[^1]:
+Let's assume you have an array of Widget objects:
 
 ```ts
-interface Filter {
-	filterDefinitionId: number;
-	filterId: string;
-	filterName?: string;
-	joinGroup?: string;
-	not: boolean | string;
-	value: string | number;
-	max: string | number;
-	min: string | number;
-	operator: FilterOperator;
+interface Widget {
+	category: 'thingamajigs' | 'whosawhatsis';
+	squanches: boolean;
+	universeId: string;
 }
 ```
 
-In the application, users build lists composed of a collection of filters combined using AND and OR. The data looks something like this:
+And let's further assume that you need to break that array of `Widget`s up into a set of named arrays, one per category, and the category name is the key of the object. After doing so, it would look like this:
 
 ```js
 {
-	id: 'guid-here',
-	type: 'grouping',
-	operator: 'AND',
-	filters: [
-		// Objects of type Filter
-	]
-}
-```
-
-There are also types for a `FilterCollection` (what the above data represents[^2]) and the `FilterDefinition`s referenced by `Filter`s, but they're not necessary to make my point.
-
-So a given `List` has a `FilterCollection` containing one or more `filters` that might need to be combined. Of course, based on the `FilterDefinition` of the Filter there are different ways we might need to combine those filters. For example, we might need to group some of them.
-
-Maybe it will help if I pull back the curtain a little bit more. Let's say that one filter is for "Degree Year", and another is for "Degree Major." If you asked for people with degree year 2021 and degree major of Software Engineering, there's a good chance that what you really want is people who got a Software Engineering degree AND that degree was awarded in the year 2021. So we have to take those two primitives and massage them together so they become one query.
-
-In our app, we accomplish that with the `joinGroup` property. If they have the same `joinGroup` value, and unless you separate them with an `OR` operator in your `FilterCollection`, we will combine them. We combine them by massaging the `FilterCollection` into a different object that represents all of the same requested filters, but organized into groups based on joinGroup:
-
-```js
-{
-	'degree': [
-		{ /* degree_year filter */ },
-		{ /* degree_major filter */ }
+	'thingamajigs': [
+		//Wiget
+		//Wiget
+		//Wiget
 	],
-	'__isolated__': [
-		/* filters with no join group go here, which we know to run in isolation */
+	'whosawhatsis': [
+		//Wiget
+		//Wiget
 	]
 }
 ```
 
-The function that creates this data structure is pretty simple:
+The function that creates this data structure is pretty simple[^1]:
 
-```ts/0-1
-function joinGroupFilters(filters: Filter[]): any {
+```ts
+function categorizeWidgets(widgets: Widget[]): any {
 	let groups: any = {};
-	filters.forEach((f) => {
-		const joinGroup = f.joinGroup ?? '';
-		if (!(joinGroup in groups)) {
-			groups[joinGroup] = [];
-		}
-		groups[joinGroup].push(f);
+	widgets.forEach((w) => {
+		const cat = w.category;
+		groups[cat] ??= [];
+		groups[cat].push(w);
 	});
 	return groups;
 }
 ```
 
-I've used `any` here as a placeholder for this imaginary anonymous type that we need to create that defines what we're trying to produce. So my question was, "How do I create a type that indicates that it's an object with arbitrary strings as keys, and arrays of Filters as values?"
+I've used `any` here as a placeholder for this imaginary anonymous type that we need to create that defines what we're trying to produce. So my question was, "How do I create a type that indicates that it's an object with arbitrary strings as keys, and arrays of `Widget`s as values?"
 
 If we take off those `any` types, we get this error from TypeScript:
 
 > Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
 
-We can use the `any` type and call it a day, but that has deleterious effects downstream in the app, as TypeScript won't really know what to expect, and so it's not really offering us much (any? (heh)) benefit when working with this data after it's been massaged. So it would be nice if we knew how to properly type this.
+We can use the `any` type and call it a day (hey, the error went away!), but that has deleterious effects downstream in the app, since TypeScript won't really know what to expect, and so it's not really offering us much (any? (heh)) benefit when working with this data after it's been massaged. So it would be nice if we knew how to properly type this.
+
+We already have the `Widget` type, so you might think that you should create a `CategorizedWidgetCollection` type &mdash;and maybe you should, depending on how often you'll use it&mdash; but regardless, how do you specify the type of this object?
+
+I started with the basic `{}` (or `Object`), but of course TypeScript wasn't too happy with me. The same error comes back.
 
 So here's the answer, given a name only to help it syntax highlight and make sense:
 
 ```ts
-interface GroupedFilters {
-	[index: string]: Filter[];
+interface CategorizedWidgetCollection {
+	[index: string]: Widget[];
 }
 ```
 
-And here's how you might apply it in an anonymous fashion:
+And here's how you might apply it in an anonymous-type fashion:
 
-```ts/0-1
-function joinGroupFilters(filters: Filter[]): { [index: string]: Filter[] } {
+```ts
+function categorizeWidgets(widgets: Widget[]): { [index: string]: Widget[] } {
 	let groups: any = {};
-	filters.forEach((f) => {
-		const joinGroup = f.joinGroup ?? '__isolated__';
-		if (!(joinGroup in groups)) {
-			groups[joinGroup] = [];
-		}
-		groups[joinGroup].push(f);
+	widgets.forEach((w) => {
+		const cat = w.category;
+		groups[cat] ??= [];
+		groups[cat].push(w);
 	});
 	return groups;
 }
@@ -119,14 +92,13 @@ function joinGroupFilters(filters: Filter[]): { [index: string]: Filter[] } {
 
 Note that the first line of the method still declares the `groups` object as `any` but TS doesn't complain about this because it can see from the input type, the output type, and the logic of the function that the contract is being adhered to.
 
-So the trick was the use of the `[index: string]` syntax. You're telling TS that the object will be indexed by strings. Let's review what the original error message was:
+So the trick was the use of the `[index: string]` syntax. You're telling TS that the object will be indexed by strings. If we look back at the error message one last time...
 
 > ... because expression of type 'string' can't be used to index type '{}'.
 
 Hopefully, for myself and for you alike, seeing this error message in the future will jog our memories about this `[index:]` syntax.
 
-[^1]: I'm still not clear on the difference between a Type and an Interface...
-[^2]: Sorta. I'm cutting some corners for the sake of brevity.
+[^1]: If you're not familiar with the syntax `x ??= y`, it's shorthand for `if (typeof x === 'undefined' || x === null){ x = y }`. I only just [learned](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment) of it today. This is something I've been wanting for at least 10 years! I love how much JS is evolving these days!
 
 [handbook]: https://www.typescriptlang.org/docs/handbook/intro.html
 [isig]: https://www.typescriptlang.org/docs/handbook/2/objects.html#index-signatures
