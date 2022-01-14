@@ -20,7 +20,7 @@ However, I ran into a problem with an anonymous type that represented some data 
 
 But before I give you the answer, here's a real world example of why I needed to use it. _Don't worry, it doesn't use any generics!_
 
-I'm working on an application that builds and runs dynamic SQL based on chunks of SQL it pulls out of the database. I know that sounds a little bit crazy, but you're just going to have to trust me that it makes sense for what we're doing. Anyway, those chunks of SQL have their own table and this type[^1]:
+I'm working on an application that builds and runs dynamic SQL based on chunks of SQL it pulls out of the database. I know that sounds a little bit crazy, but you're just going to have to trust me that it makes sense for what we're doing. Anyway, those chunks of SQL have their own table (`FilterDefinition`s) and get referenced in another table (`Filter`s) that use this type[^1]:
 
 ```ts
 interface Filter {
@@ -49,9 +49,9 @@ In the application, users build lists composed of a collection of filters combin
 }
 ```
 
-There are also types for a `FilterCollection` (what the above data represents[^2]) and `FilterDefinition`, but they're not necessary to make my point.
+There are also types for a `FilterCollection` (what the above data represents[^2]) and the `FilterDefinition`s referenced by `Filter`s, but they're not necessary to make my point.
 
-So a given `List` has a `FilterCollection` containing one or more `filters` that need to be combined. Of course, based on the `FilterDefinition` of the Filter there are different ways we might need to combine those filters. For example, we might need to group some of them.
+So a given `List` has a `FilterCollection` containing one or more `filters` that might need to be combined. Of course, based on the `FilterDefinition` of the Filter there are different ways we might need to combine those filters. For example, we might need to group some of them.
 
 Maybe it will help if I pull back the curtain a little bit more. Let's say that one filter is for "Degree Year", and another is for "Degree Major." If you asked for people with degree year 2021 and degree major of Software Engineering, there's a good chance that what you really want is people who got a Software Engineering degree AND that degree was awarded in the year 2021. So we have to take those two primitives and massage them together so they become one query.
 
