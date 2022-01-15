@@ -53,7 +53,7 @@ I've...
 - added a GitHub workflow that enforces use of the [SemVer][semver] labels for all Pull Requests (more on why those are required in a moment)
 - added a GitHub workflow that creates a new tag, marks it as a release, generates release notes, and copies the `@next.md` documentation file as the new version number (e.g. `3.4.0.md`) so that it's possible to browse the docs for that version no matter how far we go into the future.
 
-  - To keep things simple, since we already had a package.json in order to use npm-provided LessCSS tooling, it uses the `npm version` command to decide the new version number. This is the only input needed when creating a new release. More on that below.
+  - To keep things simple, since we already had a package.json in order to use npm-provided LessCSS tooling, it uses the `npm version` command to decide the new version number. This is the only input needed when creating a new release.
   - There's a new `/.github/release.yml` file that tells GitHub how to interpret each pull request since the last version, based on the semver labels I mentioned above. If a PR has the `Semver: MAJOR` label, it gets listed under the "Breaking Changes" heading, and so-on for `Semver: MINOR` and `Semver: PATCH`. Now release notes, which were probably the biggest contributor to my release anxiety and the primary reason for lack of releases, are 100% automated!
   - In addition, I've folded the TaffyDocs repo back into the Taffy repo, for a couple of reasons. Not only does it make things simple for this automation to copy `@next.md` to `{new-version}.md`, but it means that when contributors submit a PR, the same PR can contain the code changes and the documentation changes. \*chef-kiss\*
 
