@@ -26,7 +26,7 @@ Then today I saw that there was supposedly some sort of ["leak" of the GitHub so
 
 This screen shot of the commit proposed for merge into DMCA is what opened my eyes:
 
-![A spoofed commit from Nat Friedman, CEO of GitHub, supposedly leaking the GitHub source into the DMCA repo](images/github-spoof.png)
+![A spoofed commit from Nat Friedman, CEO of GitHub, supposedly leaking the GitHub source into the DMCA repo](/img/2020/github-spoof.png)
 
 Without a signature, there's no way to know if this was really committed by Nat Friedman. Of course it wasn't, but there's no good way to prove it. Git has a way to let you provide that proof: Signing your commits. The signature verifies that it was you, the owner of the key, that made the commit.
 

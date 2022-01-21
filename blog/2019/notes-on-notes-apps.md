@@ -7,7 +7,7 @@ tags:
   - productivity
 ---
 
-![Lots and lots of sticky notes stuck to a wall](nathalia-rosa-P1SdQAhcJz8-unsplash.jpg)
+![Lots and lots of sticky notes stuck to a wall](/img/2019/nathalia-rosa-P1SdQAhcJz8-unsplash.jpg)
 
 I'd love to have a conversation about note taking, and especially about note taking apps.
 

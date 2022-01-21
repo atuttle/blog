@@ -34,5 +34,5 @@ In recent years I've spent the majority of the time on a Google Hangout, but I t
 [cmnh]: https://chop.childrensmiraclenetworkhospitals.org/
 [chop]: http://www.chop.edu/
 [cn]: http://www.charitynavigator.org/index.cfm?bay=search.summary&orgid=5756
-[book_splash]: ./rest-assured-extra-life.png
+[book_splash]: /img/2016/rest-assured-extra-life.png
 [book]: http://restassuredbook.com

@@ -29,7 +29,7 @@ For the uninitiated, [Extra Life][extralife] is a charity that collects money fo
 
 Kids with cancer, or heart issues, or that were in car accidents. The list goes on and on and on.
 
-![My son Dylan playing xbox with me](./dylan-xbox.jpg)
+![My son Dylan playing xbox with me](/img/2015/dylan-xbox.jpg)
 
 They deserve our support and our help! And they're in my back yard. I play for the Children's Hospital of Philadelphia (CHOP), but there are CMN Hospitals all over the world. There's probably one near you too.
 
@@ -37,7 +37,7 @@ They deserve our support and our help! And they're in my back yard. I play for t
 
 How does it work? Well, I usually compare it to the ACS Relay For Life, except instead of walking in circles for 24 hours we're playing games &mdash; of all varieties. The header image is of my brothers and I (and my son) playing some Rock Band during my 2013 marathon. Video games are a big part of it for most people, but I usually try to get my whole family involved by playing board and card games too.
 
-![Robot Turtles, playing with my kids!](./robot-turtles.jpg)
+![Robot Turtles, playing with my kids!](/img/2015/robot-turtles.jpg)
 
 Just like Relay for Life, it all hinges on soliciting donations from friends. _**Friends like you**._ Would you be so kind as to donate a few dollars to help sick kids? I'm attempting to raise \$1,024 this year, and I could really use your help. I greatly appreciate every donation, no matter how small; but more importantly, it goes directly to helping sick kids get the medical care that they need.
 

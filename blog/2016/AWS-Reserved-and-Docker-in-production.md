@@ -91,7 +91,7 @@ logs:
 
 Probably the most interesting part of this is the `db-backup` target. This Makefile is to be used outside of the container, so what this target does is gzip up a copy of the **database** folder and push it into Amazon S3 using their [AWS CLI][awscli]. Lastly it notifies [Dead Man's Snitch][dms] that the backup has run so that I can sleep soundly. Should we ever need to restore the database, it should be as simple as unzipping the appropriate backup file into the database folder and starting the container.
 
-![Nginx welcome screen](./sit-flying-1.jpg)
+![Nginx welcome screen](/img/2016/sit-flying-1.jpg)
 
 ## All Problems Solved. Time to Go to Production!
 
@@ -191,7 +191,7 @@ $ sudo apt-get install nginx
 
 Once installed, Nginx is already running:
 
-![Nginx welcome screen](./nginx-welcome.png)
+![Nginx welcome screen](/img/2016/nginx-welcome.png)
 
 I didn't spend a lot of time searching out the best Nginx Reverse Proxy tutorial; it was something that was pretty easy to figure out from just the hints in the [2nd google result][proxy] (jump down to "Step 7").
 
@@ -221,7 +221,7 @@ Something's wonky with the system time inside the docker container. By default i
 
 But I noticed this in the Lucee admin overview at around 22:33 (10:33pm) on Sept 4th:
 
-![Nginx welcome screen](./docker-lucee-time.png)
+![Nginx welcome screen](/img/2016/docker-lucee-time.png)
 
 What's odd is that it's ahead by ten hours (The container and the host were both in UTC at the time). I changed both to use Timezone `America/New_York` and restarted both the host and the containers, but that doesn't seem to have helped. Setting the Timezone in the MariaDB container seems to have worked: `select current_timestamp;` returns my current local time, so I have to imagine there's some disconnect between the system time and Lucee.
 

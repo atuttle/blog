@@ -18,7 +18,7 @@ _Will you notice that you didn't get that email last night when the backups shou
 
 What you really need in this situation is a [dead man's switch](https://en.wikipedia.org/wiki/Dead_man%27s_switch). These take many forms, but at their simplest you can think of them as a grenade with the pin removed. If you loosen your grip and the "spoon" is released from the grenade ... boom. In digital form, releasing the spoon would be your scheduled job missing a "check in," and the boom would be a notification that your job hasn't run on schedule.
 
-![Grenade](./brain_grenade.jpg)
+![Grenade](/img/2016/brain_grenade.jpg)
 <small>Photo credit: <a href="https://www.flickr.com/photos/lapolab/16833901255/">lapolab</a></small>
 
 Enter [Dead Man's Snitch](https://deadmanssnitch.com/r/228ab4a26f). This app actually started out as a side project for a local Philly entrepreneur and aquiantance of mine; and I like to support local businesses, especially when they're awesome. DMS is a web service that your job calls to "check in" via a simple HTTP GET request. Miss a check in and they'll let you know. There are a bunch of different schedules available, and at varying price levels you get access to different integrations (i.e. Slack).

@@ -24,7 +24,7 @@ transaction {
 }
 ```
 
-![Screen shot of lucee error message. Content is repeated below.](./images/lucee-orm-error.png)
+![Screen shot of lucee error message. Content is repeated below.](/img/2020/lucee-orm-error.png)
 
 The error message thrown is, "this feature is not supported". (Firstly... thanks for the great error message! 👍)
 

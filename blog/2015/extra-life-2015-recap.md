@@ -28,7 +28,7 @@ My campaign added another $350 from 8 donors over that 48 hour period, bringing 
 
 It bears repeating: _thank you._
 
-![Me after beating Portal (an Extra Life tradition of mine) around 2am](/img/2015/posts/2015/the-cake-is-a-lie.png)
+![Me after beating Portal (an Extra Life tradition of mine) around 2am](/img/2015/the-cake-is-a-lie.png)
 
 And play games I did.
 
@@ -48,7 +48,7 @@ Then, because I was in the mood, I started playing <a target="_blank" href="http
 
 We played a few hands of <a target="_blank" href="https://www.amazon.com/s/ref=as_li_ss_tl?_encoding=UTF8&camp=1789&creative=390957&field-keywords=exploding%20kittens&linkCode=ur2&rh=n%3A165793011%2Ck%3Aexploding%20kittens&sprefix=exploding%20kittens%2Cvideogames%2C127&tag=tuttl-20&url=search-alias%3Dtoys-and-games&linkId=CERZLY2MKZXETOXE">Exploding Kittens</a> because it's silly and fun, and then a few games of <a rel="nofollow" href="https://www.amazon.com/gp/product/B002SQBB3O/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B002SQBB3O&linkCode=as2&tag=tuttl-20&linkId=AUT2ZMYKS5ZFQ25Y">Tsuro</a>, because it's easy enough for even my 4 year old to play on his own while still being fun and interesting for adults. Once the kids were losing interest in board games, we switched over to some 4-way <a target="_blank" href="https://www.amazon.com/s/ref=as_li_ss_tl?_encoding=UTF8&camp=1789&creative=390957&field-keywords=mario%20kart%20wii&linkCode=ur2&sprefix=mario%20kart%20wii%2Ctoys-and-games%2C127&tag=tuttl-20&url=search-alias%3Dvideogames&linkId=7EBAYYB5SK7O6VNE">Mario Kart Wii</a> &ndash; always a favorite.
 
-![Tsuro is a family favorite!](/img/2015/posts/2015/tsuro.jpg)
+![Tsuro is a family favorite!](/img/2015/tsuro.jpg)
 
 From there we went back to play more Portal 2 until dinner, which was breakfast: Waffles, eggs, and bacon. Yum! My brother left after dinner, and I finished out the marathon playing more of the single player campaign for Portal 2.
 
@@ -56,7 +56,7 @@ From there we went back to play more Portal 2 until dinner, which was breakfast:
 
 I was recently reminded of a great scene from the awesome TV show "Louis":
 
-![Checking your neighbor's bowl](/img/2015/posts/2015/parenting.jpg)
+![Checking your neighbor's bowl](/img/2015/parenting.jpg)
 
 I have lived a very fortunate life, thanks to the efforts of my parents. We started out somewhere around "poor" and through some combination of hard work and luck manged to move a few rungs up that ladder. I'm reminded of this fact every time an Amazon Prime box containing some goody shows up on my front porch. Every time I buy skydiving equipment. Every time I click my garage door opener. Every time we buy fresh produce at the grocery store.
 

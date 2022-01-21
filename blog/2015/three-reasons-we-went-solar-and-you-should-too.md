@@ -22,7 +22,7 @@ Solar energy is really hot right now. Every time I mention our system on Faceboo
 
 Here's our electric consumption compared with our solar production for yesterday. And remember, it's almost winter here in the northern hemisphere, so we're almost opposite of ideal conditions. This is only going to get better during the summer!
 
-![Our solar production vs power consumption for Nov 16th](./solar-usage.png)
+![Our solar production vs power consumption for Nov 16th](/img/2015/solar-usage.png)
 
 Here, then, are the very first three reasons that come to mind when asked why I wanted to go solar, and you should too:
 
@@ -52,7 +52,7 @@ We signed a 20 year, fixed-rate contract at a per-kWh rate that is currently _hi
 
 Our contract is the green bars, and the PECO projection is the red bars.
 
-![~~Solar City~~ Tesla rates (actual) vs Peco rates (projection) over the next 20 years](./solar-rates.png)
+![~~Solar City~~ Tesla rates (actual) vs Peco rates (projection) over the next 20 years](/img/2015/solar-rates.png)
 
 But what are those blue bars? That's where the asterisk comes in.
 
@@ -62,7 +62,7 @@ For people that want to start saving money immediately, ~~Solar City~~ Tesla off
 
 How much more are we going to save over the life of the contract by signing up for the fixed rate (green bar) plan?
 
-![Amount saved over time, two Solar City plans compared](./solar-savings.png)
+![Amount saved over time, two Solar City plans compared](/img/2015/solar-savings.png)
 
 At the end of your 20 year contract, you've saved a bunch of money... And contributed to saving the planet in a meaningful way! But what's the real dollar difference between the two plans? In order to calculate this we need a rough estimate of the number of kWh used per year, which for my family is currently about 9,200 kWh/y.
 

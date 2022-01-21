@@ -9,7 +9,7 @@ tags:
 
 <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
 
-<img src="REST-Web-APIs-The-Book.png" width="100" hspace="3" style="max-width:100px;border:2px solid #d0d0d0;border-radius: 3px;" />I've decided to write a book about designing REST Web APIs. I'm calling it <a href="https://gumroad.com/l/rest-the-book"><strong>REST Web APIs: The Book</strong></a>.
+<img src="/img/2014/REST-Web-APIs-The-Book.png" width="100" hspace="3" style="max-width:100px;border:2px solid #d0d0d0;border-radius: 3px;" />I've decided to write a book about designing REST Web APIs. I'm calling it <a href="https://gumroad.com/l/rest-the-book"><strong>REST Web APIs: The Book</strong></a>.
 
 <p align="center"><a href="https://gum.co/rest-the-book" class="btn btn-lg btn-warning" style="text-decoration: none"><i class="fa fa-book"></i> Pre-Order REST Web APIs for $12</a></p>
 

@@ -54,7 +54,7 @@ There are two other parts to this puzzle: Putting the libraries in the right loc
 
 There is no "right" place to put the libraries, but I like to put them into the resources folder. For the sake of cleanliness, I like to put an AnythingToXML folder inside the resources folder and put the AnythingToXML components inside that folder, because there are a few of them. In the case of JSONUtil, which is only a single component, you could just put the component directly into the resources folder; but for consistency, I create a JSONUtil folder and put the JSONUtil component inside it. Now, our example API folder structure resembles this:
 
-![Folder structure for supporting multiple mime types](/images/taffy-multimime-libs.png)
+![Folder structure for supporting multiple mime types](/img/2010/taffy-multimime-libs.png)
 
 All that's left to do is cache the libraries in Application scope. My example Application.cfc is:
 

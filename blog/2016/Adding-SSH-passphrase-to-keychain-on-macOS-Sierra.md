@@ -20,7 +20,7 @@ After dinner that night I forgot to make sure my latest Apache config changes we
 
 However, one thing I noticed quickly &ndash;aside from the fact that Apple brazenly threw out anything they deemed unnecessary in my Apache config, as they always do&ndash; was that I was now required to enter my SSH passphrase every time I use ssh.
 
-![SSH passphrase required](./ssh-passphrase.jpg)
+![SSH passphrase required](/img/2016/ssh-passphrase.jpg)
 
 In general I would say this is a good thing. I am pro-security. But I use ssh for my git repos and I'm pushing and pulling commits all day long. Entering my password 50+ times in a day doesn't sound fun. I use whole-disk encryption, a strong system password, require my password immediately after the screen saver kicks on, and have developed a healthy habit of throwing my mouse cursor into the hot-corner that activates the screen saver if I have to leave my laptop unattended.
 
