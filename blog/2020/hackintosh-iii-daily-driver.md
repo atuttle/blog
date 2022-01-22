@@ -48,7 +48,7 @@ I don't use VM's much. As a webdev on OSX, it would be nice to be able to test s
 
 This is fine! And I actually mean that, not in the dog-in-flaming-room sense.
 
-![comic of dog sitting in a burning building, saying "this is fine."](./img/2020/this-is-fine.jpg)
+![comic of dog sitting in a burning building, saying "this is fine."](/img/2020/this-is-fine.jpg)
 
 I'm just as productive as ever. Arguably more, with a faster CPU, dedicated GPU, and 4x more RAM. Aside from being unable to run virtual machines and the feeling of unease from not being able to install OS updates, as a daily driver, I've reached 100% of my productivity goals.
 
