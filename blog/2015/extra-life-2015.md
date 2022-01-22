@@ -41,6 +41,7 @@ How does it work? Well, I usually compare it to the ACS Relay For Life, except i
 
 Just like Relay for Life, it all hinges on soliciting donations from friends. _**Friends like you**._ Would you be so kind as to donate a few dollars to help sick kids? I'm attempting to raise \$1,024 this year, and I could really use your help. I greatly appreciate every donation, no matter how small; but more importantly, it goes directly to helping sick kids get the medical care that they need.
 
+<!--
 <iframe
 	src="https://www.extra-life.org/index.cfm?fuseaction=widgets.300x250thermo&participantID=148892"
 	width="302"
@@ -53,9 +54,9 @@ Just like Relay for Life, it all hinges on soliciting donations from friends. _*
 		Make a Donation!
 	</a>
 </iframe>
-
+-->
 What do you say? Let's help some kids!
-
+<!--
 <iframe
 	width="560"
 	height="315"
@@ -71,5 +72,6 @@ What do you say? Let's help some kids!
 	frameborder="0"
 	allowfullscreen
 />
+-->
 
 [extralife]: http://www.extra-life.org/
