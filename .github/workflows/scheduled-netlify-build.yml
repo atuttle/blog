@@ -1,7 +1,7 @@
 name: Scheduled Netlify Build
 on:
   schedule:
-    - cron: "15 8,10,12,14,16,18 * * *"
+    - cron: "30 8-18 * * *"
 jobs:
   build:
     name: Call Netlify build hook
