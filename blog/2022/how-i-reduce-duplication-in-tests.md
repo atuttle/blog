@@ -66,5 +66,7 @@ it('throws for a missing email address', async () => {
 
 In the highlighted lines you can see that I'm creating a new `testData` object, which inherits all of the properties of the `mockRow` object, but then overwrites the `email` property to null, because that's the only one that matters for the purpose of this test. This is extremely useful when you need the entire record to contain something realistic so that you're isolating the one thing you want to test, without duplicating that realistic data between every test.
 
+Why is this important? Well, like I said, without it your test code could potentially grow at an alarming rate. For my current project, even while making heavy use of this technique, I found myself with more than 9 lines of test code (including mock data and mock modules) for every line of application code. Don't take that to mean testing is bad or wasteful, but testing well can be a lot of work and require a lot of setup data.
+
 [jest]: https://jestjs.io/
 [spread]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
