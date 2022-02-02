@@ -36,5 +36,5 @@ A few times each year I send out some emails. It's something I usually reserve f
 <script async data-uid="02c5dc9bec" src="https://adam-tuttle.ck.page/02c5dc9bec/index.js"></script>
 
 [wcp]: https://workingcode.dev
-[gravatar]: https://www.gravatar.com/avatar/c9e260373387e72ce020928a3a546ec5?rating=G&size=200&default=mm
+[gravatar]: https://www.gravatar.com/avatar/c9e260373387e72ce020928a3a546ec5?rating=G&size=400&default=mm
 [garden]: /blog/digital-garden
