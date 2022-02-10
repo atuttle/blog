@@ -24,12 +24,14 @@ Build just enough of your application to say you have the feature.
 
 Do it the easy way.
 
-Don't care that it won't work if you achieve Facebook-activity-level scale.
-
-That level of activity almost never shows up overnight. Watch activity logs. Measure performance. When you're spending less time fixing bugs and adding features than you are on holding the application's hand so that it can finish the computationally-expensive processes, and/or when those processes become critical-path to the success of your business, that's when you invest time and money in them to add complexity and support the increased demand.
+Don't care that it won't work if you achieve Facebook-activity-level scale. That level of activity almost never shows up overnight.
 
 Odds are good that you'll never need to.
 
 And that's a good thing.
 
 It freed you up to spend more time building more new ideas (naïvely). The more you build, the more likely one of those ideas is to find success.
+
+So put it in the monolith. Use algorithms that are easy to implement. Avoid complex workflows like message queues service busses.
+
+Watch activity logs. Measure performance. When, _**and only when**_ you're spending less time fixing bugs and adding features than you are on holding the application's hand so that it can finish the computationally-expensive processes, and/or when those processes become critical-path to the success of your business, that's when you invest time and money in them to add complexity and support the increased demand.
