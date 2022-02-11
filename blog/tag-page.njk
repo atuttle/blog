@@ -11,16 +11,16 @@ layout: tag.html
 
 {% set taglist = collections[ tag ] %}
 <section id="index">
-  {% for post in taglist | reverse %}
-    <article>
-      <h5><strong><a href="{{ post.url | url }}">{{ post.data.title }}</a></strong></h5>
-      <time>{{ post.data.date | asPostDate }}</time>
-      <span class="tags">
-        {% for t in post.data.tags %}
-          <a class="contentTag" href="/tags/{{ t | slug }}/">{{t}}</a>
-        {% endfor %}
-      </span>
-      <span class="summary">{{ post.data.desc }}</span>
-    </article>
+  {% for post in taglist | published | reverse %}
+      <article>
+        <h5><strong><a href="{{ post.url | url }}">{{ post.data.title }}</a></strong></h5>
+        <time>{{ post.data.date | asPostDate }}</time>
+        <span class="tags">
+          {% for t in post.data.tags %}
+            <a class="contentTag" href="/tags/{{ t | slug }}/">{{t}}</a>
+          {% endfor %}
+        </span>
+        <span class="summary">{{ post.data.desc }}</span>
+      </article>
   {% endfor %}
 </section>

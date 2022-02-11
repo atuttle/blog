@@ -18,6 +18,16 @@ module.exports = function (eleventyConfig) {
 		return str.toLowerCase();
 	});
 
+	eleventyConfig.addFilter('published', (items) => {
+		const now = new Date();
+		return items.filter((item) => {
+			if (!('data' in item)) return true;
+			if (!('date' in item.data)) return true;
+			if (item.data.date < now) return true;
+			return false;
+		});
+	});
+
 	eleventyConfig.addFilter('htmlencode', (str) => {
 		return str.replace(/"/g, '&quot;');
 	});
@@ -81,7 +91,11 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addCollection('tagsByCount', function (collection) {
 		const articles = collection.getFilteredByGlob(['blog/**/*.md']);
+		const now = new Date();
 		const tags = articles.reduce((agg, article) => {
+			if (article.data.date > now) {
+				return agg;
+			}
 			if (article.data.tags) {
 				const articleTags = article.data.tags;
 				articleTags.forEach((t) => {

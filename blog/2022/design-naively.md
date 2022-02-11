@@ -4,7 +4,8 @@ desc: What exactly does it mean to avoid premature optimization?
 img: /img/2022/timo-volz-9Psb5Q1TLD4-unsplash.jpg
 date: 2022-02-10
 tags:
-  - work-anniversary
+  - architecture
+  - best practices
 ---
 
 ![A very complex intersection seen from a high vantage point](/img/2022/timo-volz-9Psb5Q1TLD4-unsplash.jpg)
