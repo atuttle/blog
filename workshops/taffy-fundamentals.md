@@ -18,7 +18,9 @@ You don't need to be a CFML expert, but having a basic understanding of the foll
 
 The workshop heavily uses exercises that you will complete on your own computer, and does not include time in the schedule for troubleshooting installation issues. You are expected to arrive for the workshop with a functional CFML environment, and a functioning Taffy installation. (Coming soon: a docker container ready to go!)
 
----
+## Taught by Taffy's Creator{style="font-size:1.953em"}
+
+That's me. I'm Adam. I created Taffy in 2010 and I am still the primary maintainer today.
 
 ## After this workshop, you will know how to...{style="font-size:1.953em"}
 
@@ -60,8 +62,6 @@ In addition, class sizes will be kept small (<= 10 people) during beta workshops
 ## Cost{style="font-size:1.953em"}
 
 Cost will be $1,000 USD per seat. Discounts will be available for multiple seats (send your entire team!), and for referrals. I would like to offer [purchasing power parity](https://en.wikipedia.org/wiki/Purchasing_power_parity) if I can find a way to do it well.
-
----
 
 ## Date and time{style="font-size:1.953em"}
 
