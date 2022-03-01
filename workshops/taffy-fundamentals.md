@@ -6,7 +6,7 @@ img: /img/2022/foundational-taffy.png
 
 ![Taffy Fundamentals](/img/2022/taffy-fundamentals.png)
 
-![BETA](/img/2022/beta.png){style="position: relative;top: -210px;width: 320px;left: 460px;margin-bottom: -170px;transform: rotate(-11deg)"}
+![BETA](/img/2022/beta.png){style="position: relative;top: -210px;width: 320px;left: 58%;margin-bottom: -170px;transform: rotate(-11deg); max-width: 36vw;"}
 
 This is a four hour, online workshop for CFML developers who know little-to-nothing about writing REST API's with [Taffy](https://taffy.io), and want to get up to speed in a day.
 
