@@ -9,6 +9,8 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(pluginSyntaxHighlight);
 	eleventyConfig.addPlugin(embedTwitter);
 
+	eleventyConfig.addPassthroughCopy("_redirects");
+
 	// https://www.alpower.com/tutorials/formatting-dates-in-eleventy/
 	eleventyConfig.addFilter('asPostDate', (dateObj) => {
 		return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
