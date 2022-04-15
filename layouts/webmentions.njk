@@ -58,7 +58,7 @@
     <div class="webmention-replies">
       <h3>{{ repliesSize }} {% if repliesSize == "1" %}Reply{% else %}Replies{% endif %}</h3>
 
-      {% for webmention in replies %}
+      {% for webmention in replies | reverse %}
         {% include 'layouts/webmention.njk' %}
       {% endfor %}
     </div>
