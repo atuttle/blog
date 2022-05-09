@@ -9,6 +9,7 @@
 	--codefg: #ff6000;
 	--commentbg: #eee;
 	--commentfg: #000;
+	--markbg: #39185a;
 }
 * {
 	box-sizing: border-box !important;
@@ -226,6 +227,9 @@ h2 .tag::before {
 
 footer.page-footer {
 	margin-top: 2rem;
+}
+mark {
+	background-color: var(--markbg);
 }
 @media not speech {
 	.sr-only {
