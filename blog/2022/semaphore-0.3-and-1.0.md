@@ -32,7 +32,7 @@ if (flagEnabled('some-feature-dev,some-feature-qa,some-feature-prod')) {
 
 This works fine, but it's annoying, because it requires managing 3 feature flags for every feature; possibly more if you aren't primarily splitting on 3 possible environments!
 
-Fixing this requires making a breaking change to the DSL for specifying flag rules.
+Fixing this requires making a breaking change to the DSL for specifying flag rules. If you have some sort of GUI for creating and managing flags, it will need to be updated to read and output these changes to the underlying data.
 
 Currently, a flag consists of:
 
