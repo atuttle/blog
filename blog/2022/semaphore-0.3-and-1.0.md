@@ -105,6 +105,8 @@ rules: [
 rules: [[other]];
 ```
 
+This approach is still a little bit naïve, but what it lacks in cleverness it repays in simplicity. So yes, it's true that you won't be able to have rules with deeply nested AND/OR expressions, but if you're willing to suffer some (probably minor) duplication, it should solve for every possible need.
+
 I expect that this change should greatly improve my teams happiness using Semaphore[^2], and hopefully yours too.
 
 [^1]: Tentatively targeting May 19th; exactly 1 year after Semaphore's [introduction](/blog/2021/introducing-semaphore/).
