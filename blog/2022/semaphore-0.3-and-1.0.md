@@ -8,7 +8,7 @@ tags:
   - open source
 ---
 
-Today I am releasing Semaphore version 0.3, which includes no functional changes, but serves as a ⚠️ **deprecation warning** ⚠️ for breaking changes coming in v1.0, soon[^1].
+Today I am releasing Semaphore [version 0.3](https://github.com/atuttle/semaphore/releases/tag/v0.3.0), which includes no functional changes, but serves as a ⚠️ **deprecation warning** ⚠️ for breaking changes coming in v1.0, soon[^1].
 
 My team has been using Semaphore in production for almost a year now, and it's been working great _with one annoying exception_. The way the rules engine is implemented means that in order to accomplish a true combination of "AND" and "OR" rules for a single feature, we ended up hoisting the OR implementation out a layer into what could be considered "userland" code. There's currently no way to do it inside of semaphore.
 
