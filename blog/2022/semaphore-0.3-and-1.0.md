@@ -2,7 +2,7 @@
 title: Semaphore 0.3 and 1.0
 desc: Semaphore is about to get its first major version bump, which means there's a breaking change. I wonder what it could be!
 img: /img/2021/640px-US_Navy_051129-N-0685C-007_Quartermaster_Seaman_Ryan_Ruona_signals_with_semaphore_flags_during_a_replenishment_at_sea.jpg
-date: 2022-05-11
+date: 2022-05-10
 tags:
   - semaphore
   - open source
@@ -10,7 +10,42 @@ tags:
 
 Today I am releasing Semaphore version 0.3, which includes no functional changes, but serves as a ⚠️ **deprecation warning** ⚠️ for breaking changes coming in v1.0, soon[^1].
 
-My team has been using Semaphore in production for almost a year now, and it's been working great _with one annoying exception_. The way the rules engine is implemented means that in order to accomplish a true combination of "AND" and "OR" rules for a single feature, we ended up hoisting the AND/OR implementation out a layer. There's currently no way to do it inside of semaphore.
+My team has been using Semaphore in production for almost a year now, and it's been working great _with one annoying exception_. The way the rules engine is implemented means that in order to accomplish a true combination of "AND" and "OR" rules for a single feature, we ended up hoisting the OR implementation out a layer into what could be considered "userland" code. There's currently no way to do it inside of semaphore.
+
+Long story short, we're tired of not having a good way to mix AND and OR support together, so I'm fixing that flaw; and it involves some breaking changes.
+
+Unless you're using Semaphore and you need to plan for the upcoming data structure changes, you can probably stop reading here. The rest is very technical and will be meaningless unless you care about implementing this specific project, or I guess if you have an interest in rules engines.
+
+Either way, you've been warned. :)
+
+---
+
+### The ultra-short version
+
+Specifying rules in v0.2:
+
+```js
+{
+	matchRules: 'ALL', //ALL = AND, ANY = OR
+	rules: [RULE, RULE, RULE]
+}
+```
+
+Specifying rules in v1.0+:
+
+```js
+{
+	rules: [
+		[RULE, /* and */ RULE, /* and */ RULE],
+		/* or */
+		[RULE, /* and */ RULE, /* and */ RULE]
+	];
+}
+```
+
+---
+
+### The full explanation
 
 Consider these rules: Feature X should be enabled if:
 
@@ -30,7 +65,7 @@ if (flagEnabled('some-feature-dev,some-feature-qa,some-feature-prod')) {
 }
 ```
 
-This works fine, but it's annoying, because it requires managing 3 feature flags for every feature; possibly more if you aren't primarily splitting on 3 possible environments!
+This works fine, but it's annoying, because it requires us to manage 3 feature flags for every feature because we usually have 3 possible OR-cases. If you have more OR's, then you'd need even more flags!
 
 Fixing this requires making a breaking change to the DSL for specifying flag rules. If you have some sort of GUI for creating and managing flags, it will need to be updated to read and output these changes to the underlying data.
 
