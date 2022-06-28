@@ -28,3 +28,13 @@ People with less than perfect eyesight can have trouble differentiating indentat
 Nothing against those of you with fantastic vision —I used to be one of you— but when you can get your preference in a way that allows me to also be able to read and understand the code, that is **objectively better** than an alternative that only lets one of us get what we want or need.
 
 Tabs are just better. It's an accessibility issue.
+
+## Addendum
+
+Occasionally I find even more slam-dunk evidence that tabs is the only correct way to indent code, and I've decided that when I do I'm going to add it here.
+
+Thanks to [Rich Harris](https://twitter.com/Rich_Harris/status/1541761871585464323) for pointing this one out:
+
+> The main reason I would like to see this change is for refreshable braille displays that are used by blind programmers a lot. Each space wastes one braille cell and takes away valuable braille realestate. So if the default indentation of a project is 4 spaces per level, a 3rd level indentation wastes 12 braaille cells before code starts. On a 40 cell display, which is the most commonly used with notebooks, this is more than a quarter of the available cells wasted with no information. If each indentation level was represented by only one tab character, there would be three cells occupied by a tab character each, and on the 4th cell, the code would start. That's less than 10 percent occupied on the same length display, but all cells contain valuable information that is easily discoverable and immediately comprehensible.
+>
+> &mdash; [MarcoZehe on GitHub](https://github.com/prettier/prettier/issues/7475#issuecomment-668544890) in a PR requesting that [prettier]() change their `useTabs` setting from default `false` to default `true`.
