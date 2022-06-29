@@ -27,7 +27,7 @@ Let's assume your container is unhealthy. How can you get more detail than that?
 [jq]: https://stedolan.github.io/jq/
 
 ```bash
-docker inspect --format "{{ "{{json .State.Health }}" }}" iq_platform_jsconfig_mt | jq
+docker inspect --format "{{ "{{json .State.Health }}" }}" container_name | jq
 ```
 
 Just in case you were thinking about not using `jq`, here's the difference in output of the previous command, without and then with jq:
@@ -41,7 +41,7 @@ The only cloud service I have experience with is AWS, so that's the only one I c
 Unfortunately AWS doesn't expose the full healthcheck log through their CLI, but you can at least get some sense for it using this command.
 
 ```bash
-aws ecs describe-tasks --cluster platform-jsconfig-mt  --tasks <task-id> | jq '.tasks[0].containers[0]'
+aws ecs describe-tasks --cluster <cluster-name> --tasks <task-id> | jq '.tasks[0].containers[0]'
 ```
 
 Of course this requires you to know the task id (at present, this is a 32 character alphanumeric string), which I imagine you can extract using other aws cli commands if needed -- that's out of scope for this discussion.
