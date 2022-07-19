@@ -2,7 +2,7 @@
 title: Separation Of Concerns Is A Bullshit Excuse
 desc: An argument that separation of concerns should _encourage_ the approach that React and Svelte enable for modularity, rather than disqualify them.
 img: /img/2022/distracted-boyfriend-meme.jpg
-date: 2022-09-20
+date: 2052-09-20
 tags:
   - react
   - svelte
