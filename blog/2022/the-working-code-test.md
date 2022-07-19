@@ -30,7 +30,7 @@ While we covered the items in order, it may have been a little difficult to foll
 9. Do you require extensive automated tests for critical path and mission critical features?
 10. Do new candidates write code during their interview?
 11. Do you do hallway usability testing?
-12. Do you have any women or minorities on the team?
+12. Is the existing team diverse and does it value the benefits of diversity?
 13. Are engineers given the freedom to participate in ideation and the freedom to figure out the best solution, rather than implementing a rigid specification?
 14. Do you include accessibility concerns in testing and code reviews?
 15. Do engineers get face-to-face contact with customers and the support team?
