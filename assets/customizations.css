@@ -231,6 +231,21 @@ footer.page-footer {
 mark {
 	background-color: var(--markbg);
 }
+.call-out {
+	background-color: #14131d;
+	border-radius: 0.3rem;
+	padding: 0.5rem 1rem 1rem 1rem;
+	color: #ccc;
+	text-indent: -2em;
+	line-height: 1.65rem;
+}
+.call-out::before{
+	content: '⚠️';
+	position: relative;
+	right: -105%;
+	top: -1.5rem;
+	font-size: 2em;
+}
 @media not speech {
 	.sr-only {
 		display: none !important;
