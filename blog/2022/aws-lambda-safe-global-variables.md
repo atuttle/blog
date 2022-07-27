@@ -23,7 +23,7 @@ Given the multiple-request model of Express[^1], if you write a global variable 
 
 [^1]: I don't mean to pick on Express here, it's not a problem unique to their implementation, but it's an ecosystem that the average Node.js developer should be familiar with, so it's a useful model for illustration purposes.
 
-The way that Amazon Web Services [implements concurrency](https://aws.amazon.com/blogs/compute/understanding-aws-lambda-scaling-and-throughput/) for Lambda functions is, to over-simplify, that you can have up to N concurrently-available containers ("environments" if you don't want to use a word that evokes Docker), but that each container will have its own segregated memory, and each container will only ever handle 1 request at a time. Once a request completes, its container can be reused if there are pending requests, and any global state left at the end of the first request will be set and available at the start of the next.
+The way that Amazon Web Services implements [concurrency for Lambda functions](https://aws.amazon.com/blogs/compute/understanding-aws-lambda-scaling-and-throughput/) is, to over-simplify, that each function can have up to N concurrently-available containers ("environments" if you don't want to use a word that evokes Docker), but that each container will have its own segregated memory, and each container will only ever handle 1 request at a time. Once a request completes, its container can be reused if there are pending requests, and any global state left at the end of the first request will be set and available at the start of the next.
 
 That's it. That's the point. If you're good enough at reading between the lines, that's all there is to learn here.
 
