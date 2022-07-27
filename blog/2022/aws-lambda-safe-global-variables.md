@@ -103,7 +103,7 @@ async function warnAboutInventoryCount(bucket, context) {
 
 For those familiar with React.js, this feels a lot like the [prop drilling](https://kentcdodds.com/blog/prop-drilling)[^2] problem. Potentially many functions in the middle of a chain of function calls need to support context as input and pass it on to functions called later, without ever using it or adding to it, all because something at the end of the chain might need it. This gets tedious and feels _bad_ and _wrong_, even if you can't articulate why.
 
-[^2]: The irony is not lost on me: I'm advocating for usage of global variables (_in a well-defined scenario!_) and linking to an article that says that prop drilling is a useful solution for using global variables. I agree that globals are bad in a React application for all of the reasons Kent explains.
+[^2]: The irony is not lost on me: I'm advocating for usage of global variables (_in a well-defined scenario!_) and linking to an article that says that prop drilling is a useful solution for the problem of using global variables. I agree that globals are bad in a React application for all of the reasons Kent explains; but I contend that this different situation deserves separate consideration.
 
 ## Global Variables to the Rescue
 
