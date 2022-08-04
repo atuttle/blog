@@ -15,7 +15,7 @@ We dug deep on what's the same &ndash; sometimes astonishingly so! &ndash; 22 ye
 
 It was the year 2000 when he wrote the original. Just months after I graduated from high school. So it is with tremendous respect and appreciation for the work of those that came before me that I try to do it justice by giving it the glow-up it deserves.
 
-[insert player here]
+<iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/us/podcast/086-the-working-code-test/id1544142288?i=1000574879560"></iframe>
 
 While we covered the items in order, it may have been a little difficult to follow, so here then is our revised list:
 
