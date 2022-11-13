@@ -10,7 +10,7 @@ tags:
 ![Sandhill Cranes against a cloudy sky](/img/2022/chris-briggs-V72Hk6LjjjI-unsplash.jpg)
 Photo by <a href="https://unsplash.com/@cgbriggs19?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Chris Briggs</a> on <a href="https://unsplash.com/s/photos/migration?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>{class="photo-byline"}
 
-My team and I migrated 13 customer databases from MySQL 5.x to 8.x this week. It was hell.
+My team and I migrated 13 customer databases from MySQL 5.x to 8.x last week. It was hell.
 
 Most crimes of database inefficiency can fly under the radar if your database is small enough.
 
