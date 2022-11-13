@@ -26,7 +26,7 @@ All of these lessons require careful thought, but this one especially so.
 
 ```sql
 set foreign_key_checks = 0;
-load data from s3 /* ... */;
+/* import data here */;
 set foreign_key_checks = 1
 ```
 
@@ -71,11 +71,13 @@ Now imagine your table is hundreds of gigabytes, with a bunch of indexes. In the
 
 ## Lesson #3: Split the work up to use the best tool for the data you need to move
 
-`mysqldump` is great, but not the best approach when you've got a bunch of tables that are hundreds of gigabytes each that need to be moved. Since we're on AWS, and our MySQL databases are actually [Aurora MySQL][aurora], we were able to use some special syntax to [export data to CSV's on S3][export] and then [load it back into MySQL][import] on the new instance:
+`mysqldump` is great, but not the best approach when you've got a bunch of tables that are hundreds of gigabytes each that need to be moved. Since we're on AWS, and our MySQL databases are actually [Aurora MySQL][aurora], we were able to use some special syntax to [export data to CSV's on S3][export] and then [load it back into MySQL][import] on the new instance.
 
 [aurora]: https://aws.amazon.com/rds/aurora/
 [export]: https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Integrating.SaveIntoS3.html
 [import]: https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Integrating.LoadFromS3.html
+
+We also heavily used `mysqldump` to handle the migration of smaller tables. That's why this lesson is labeled "split the work up;" because sometimes it makes sense to use `mysqldump` and sometimes it doesn't. Anything under 1gb we especially didn't even consider worth ... considering. But for those really big tables, here's how we exported them to S3 and then into the new database server:
 
 ```sql
 select * from Fubar into outfile s3 's3-us-east-1://bucket-name/Fubar.csv'
@@ -107,20 +109,20 @@ set
 
 _Repeat the `load data` step for each 6gb chunk, e.g. `.part_00001`, `.part_00002`, etc._
 
-The approach described above is great for moving really large tables to a new db server instance. You wouldn't want to do this for all tables, unless they're all really large, because it adds a bunch of manual steps. You have to create the tables manually, and you'll want to wait until the data is inserted before adding the indexes so that the indexes don't have to be updated for every record you insert.
+The approach described above is great for moving really large tables to a new db server instance. You wouldn't want to do this for all tables, unless they're all really large, because it adds a bunch of manual steps. When you do it this way, you have to create the tables manually and you'll want to wait until the data is inserted before adding the indexes so that the indexes don't have to be updated for every record you insert.
 
-But this approach is better than using `mysqldump` specifically because it allows you to import the data before the indexes are added. I bet there are arguments to `mysqldump` to make it not create indexes or to affect when it adds them, but by default it includes them in the `create table` statements.
+But this approach is better than using `mysqldump` for large tables specifically because it allows you to import the data before the indexes are added. I bet there are arguments to `mysqldump` to make it not create indexes or to affect when it adds them, but by default it includes them in the `create table` statements.
 
 This approach also gives you the opportunity to:
 
-1. import a subset of the data
+1. import only a subset of the data (in our case, the most recent data)
 2. add the indexes
 3. bring the application back online so that users can continue working, and then
 4. allow the rest of the data to restore over time, albeit more slowly because of the constant index rebuilding.
 
 This is what we ended up doing.
 
-After waiting for _more than 6 hours_ for 5 indexes to be added to a single table, we stumbled our way into the idea of importing only the most recent data for each table, then added the indexes. This allowed our app to run in a slightly degraded state, but it was online. Then we queued up the rest of the imports (`load data from s3`) and went to bed. When I woke up in the morning, I checked in on it and the data loads were complete.
+After waiting for _more than 6 hours_ for 5 indexes to be added to a single table after importing its entire history, we stumbled our way into the idea of importing only the most recent data for each table, then adding the indexes. This allowed our app to run in a slightly degraded state, but it was online. Then we queued up the rest of the imports (`load data from s3`) and went to bed. When I woke up in the morning, I checked in on it and the data loads were complete.
 
 This approach also requires some special care.
 
