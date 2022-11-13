@@ -16,6 +16,8 @@ Most crimes of database inefficiency can fly under the radar if your database is
 
 My databases weren't small enough.
 
+For reference, our largest tables were &gt; 100gb but &lt; 150gb.
+
 I work for a startup, on a small team where every team member wears every hat. We're all the DBA and the Architect and the Code Monkey and the Project Manager and the Helpdesk and the DevOps and the Site Reliability Engineers. I'm sure that most or all of what I'm about to describe is already well known by people who specialize in databases, or even people in similar roles to me who have more experience.
 
 Sometimes you have to learn the hard way by fighting the process until 3am and figuring it out from first principles and lots of web searches.
