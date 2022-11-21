@@ -32,6 +32,8 @@ Without a signature, there's no way to know if this was really committed by Nat 
 
 ## How to sign your commits
 
+> **November 2022 update:** I have switched from GPG signing to using SSH signatures and 1Password to manage them. 1Password provides a better experience, including using my mac's Touch-Id to authenticate the key for commits, and they have [a great guide to setting it up](https://blog.1password.com/git-commit-signing/).
+
 There are plenty of guides out there, including [the one I used][guide] provided by GitHub, so I'm going to make this short and sweet. If this isn't enough for you, or if you're not on a Mac, I suggest you start by looking at [the GitHub guide][guide].
 
 Do you have `gpg` installed?
