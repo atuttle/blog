@@ -10,14 +10,6 @@ Last June, I called my buddy Mike and told him I wanted to go solar. We were abo
 
 Six days ago (in terrible weather for solar energy production) we turned our system on!
 
-<iframe
-	width="560"
-	height="315"
-	src="https://www.youtube.com/embed/hcAEw0Ft8G8"
-	frameborder="0"
-	allowfullscreen
-/>
-
 Solar energy is really hot right now. Every time I mention our system on Facebook and Twitter I get more people asking me for details about what we paid, how much we're saving, and so on. Everybody wants in. And the good news is it's unbelievably easy, and the savings are real.
 
 Here's our electric consumption compared with our solar production for yesterday. And remember, it's almost winter here in the northern hemisphere, so we're almost opposite of ideal conditions. This is only going to get better during the summer!
