@@ -9,7 +9,7 @@ tags:
 
 Svelte stores are great. You can easily subscribe to them to be notified when a value changes, and react accordingly.
 
-```js
+```ts
 //store.ts
 import { writable } from 'svelte/store';
 import type { Filter } from './ListFilterTypes';
@@ -24,7 +24,7 @@ export const emptyFilter: Filter = {
 	max: ''
 };
 
-export const filter = writable < Filter > Object.assign({}, emptyFilter);
+export const filter = writable<Filter>(Object.assign({}, emptyFilter));
 ```
 
 ```js
@@ -46,10 +46,10 @@ Derived stores allow you to create a new store that is based on the value of an 
 
 So we can easily add a derived store to our `store.ts` file:
 
-```js/0,4
+```ts/0,4
 import { writable, derived } from 'svelte/store';
 
-export const filter = writable < Filter > Object.assign({}, emptyFilter);
+export const filter = writable<Filter>(Object.assign({}, emptyFilter));
 
 export const filterValue = derived(filter, ($filter) => $filter.value);
 ```
