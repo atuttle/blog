@@ -1,7 +1,7 @@
 ---
 title: Fix missing CSS when Using Tailwind to write a Svelte component library
 desc: Tailwind's JIT compiler is awesome, but by default it won't inspect installed component libraries.
-img: /img/2022/sigmund-aI4RJ--Mw4I-unsplash.jpg
+img: /img/2023/deva-darshan-Jt9syHEhrPE-unsplash.jpg
 date: 2023-02-13
 tags:
   - svelte
