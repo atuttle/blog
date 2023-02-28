@@ -13,13 +13,15 @@ Photo by <a href="https://unsplash.com/@huntersrace?utm_source=unsplash&utm_medi
 
 ## How to write good software
 
+It's not _dark science_ or _rocket surgery_ to write decent software. You can get lucky and slap something together that works on the first try and never has problems, but you can't count on that luck to last your entire career. The good news is that there's a consistent and predictable way to write good software.
+
 1. Decide what feature needs to be written. If complexity necessitates, write a specification.
 2. Write tests that will validate when you've reached the goal. When the tests pass, stop working. If your tests are passing and you know there's more features to add or more edge cases to handle, then you need to add more failing tests first.
 3. Write the code that makes the tests pass, ignoring best practices.
 4. Refactor the code to follow all of those best practices you ignored in the last step. Fortunately you have the tests to give you confidence that you haven't broken anything!
    1. Remove duplication
    1. Employ [SOLID principles](https://en.wikipedia.org/wiki/SOLID)
-   1. Make it readable for the developer who has to debug it in 10 years and doesn't know what you're thinking today. It might be you.[^1]
+   1. Make it readable for the developer who has to debug it in 10 years and doesn't know what you're thinking today. It might be you. Or it might not be.[^1]
    1. etc...
 5. Submit for code review, and incorporate feedback as appropriate.
 
@@ -29,13 +31,15 @@ Photo by <a href="https://unsplash.com/@huntersrace?utm_source=unsplash&utm_medi
 
 **My theory is that we allow "the business" to get in the way of doing our jobs well.**
 
-Too often, software companies and IT departments are given a project mandate and an allowable time limit to spend working on it. That's the wrong way to think about it.
+Too often, software companies and IT departments are given a project mandate and an allowable time limit to spend working on it. Maybe they talked to customers about it, decided it would be a valuable project, and the customer would need it by a certain date in order to be able to use it.
+
+That's the wrong way to think about it.
 
 Even if we are diligent about only working on the parts that _really must be included_ and not getting sidetracked by things that are interesting, the phrase "it'll be done when it's done" is still right; regardless of whether the business wants it done in 3 months or 3 weeks.
 
 So you've accepted a project, and an unrealistic timeline. Now what?
 
-Well, you can't skip step 3, you've got to write the code. And step 5 (code review) seems like it could be a good safeguard against the problems that steps 1 (specification) and 2 (tests) protect you from (if people were perfect at code reviews, which...). And step 4 (refactoring)? Take written code and make it better without making any functional changes? That's going to go right out the window.
+Well, you can't skip step 3, you've got to write the code. And step 5 (code review) seems like it could be a good safeguard against the problems that steps 1 (specification) and 2 (tests) protect you from (if people were perfect at code reviews, _which..._). And step 4 (refactoring)? You think the business is going to let you take code that's already working make it "better" without making any functional changes? That's going to go right out the window.
 
 What's left?
 
@@ -45,6 +49,8 @@ What's left?
 _Sound familiar?_
 
 I bet it does.
+
+Skipping those steps is where technical debt comes from.
 
 \* \* \*{style="text-align:center"}
 
@@ -83,3 +89,11 @@ I am far from the first to champion the concept of "[Appetite](https://37signals
 The short version is that if the timeline must be fixed, then the scope must be flexible. If there's not enough time to do the software engineering right, and to get it all done, then features have to start getting dropped. Start with the most important features, and be ruthless about cutting things.
 
 You can have a fixed scope, or a fixed timeline, but not both.
+
+Prevention is the best cure, and that's what I'm championing here. If we as an industry start standing up for ourselves and enforce the right way of doing our jobs, then future technical debt can be minimized if not avoided entirely. And we can get some sleep, too!
+
+### But what about pre-existing technical debt?
+
+I am a big fan of [framing technical debt as "maintenance load"](https://stackoverflow.blog/2023/02/27/stop-saying-technical-debt/). It helps the business understand the true cost of technical debt: If your maintenance load is 50% then a 6 week project will take 12 weeks to complete. It also gives us, the engineers, a concrete objective to battle against. Identifying specific sources of maintenance load and reducing or eliminating them will (**measurably!**) improve the lives of the whole team, allow the department to ship projects faster, and help the business do... business things... better.[^3]
+
+[^3]: I am so good at wording.
