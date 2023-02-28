@@ -76,9 +76,9 @@ If you know you're not being given enough time to complete the project well, ref
 
 Of course, we're not expected to sign documents like that. So what does the metaphorical signature-refusal look like in the real world?
 
-Explain to the business that good work takes time and you can't arbitrarily decide it needs to be done faster. You can't just pour concrete mix into a hole and move on to scaffolding up the building.
+Explain to the business that good work takes time and you can't arbitrarily decide it needs to be done faster. You can't skip the tests and expect robust software, just like you can't pour dry concrete mix into a hole and hope that the rain will soak the concrete and cure before its strength is needed. If you want a reliable product, there are steps you can't skip.
 
-Ask them: do they want a hack thrown together by a team of under-slept coffee addicts whose nerves are shot from the on-call alarm buzzing constantly, or do they want the right solution, engineered properly to support the business in its activities and for the concept that there's software making the business possible (dare I say easy) to be invisible?
+Do they want a hack thrown together by a team of under-slept coffee addicts whose nerves are shot from the on-call alarm buzzing constantly, or do they want the right solution, engineered properly to support the business in its activities and for the concept that there's software making the business possible (dare I say easy) to be invisible?
 
 \* \* \*{style="text-align:center"}
 
