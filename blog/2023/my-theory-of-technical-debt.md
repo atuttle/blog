@@ -97,3 +97,13 @@ Prevention is the best cure, and that's what I'm championing here. If we as an i
 I am a big fan of [framing technical debt as "maintenance load"](https://stackoverflow.blog/2023/02/27/stop-saying-technical-debt/). It helps the business understand the true cost of technical debt: If your maintenance load is 50% then a 6 week project will take 12 weeks to complete. It also gives us, the engineers, a concrete objective to battle against. Identifying specific sources of maintenance load and reducing or eliminating them will (**measurably!**) improve the lives of the whole team, allow the department to ship projects faster, and help the business do... business things... better.[^3]
 
 [^3]: I am so good at wording.
+
+### Estimating: The Footgun of Software Engineering
+
+I don't have any silver bullets (yet?) for doing better at estimating, but I acknowledge that not every project is brought down from the mountain with a requirements doc and an unrealistic deadline pre-attached. Sometimes we estimate ourselves into this situation, and in those cases we have only ourselves to blame.
+
+I've heard people say that they come up with their estimation, and then they double or triple it, and give that as the actual estimation, to cover anything they haven't thought of. That's one way to do it, though probably imprecise.
+
+I think it's more likely that we just forget to think about planning, testing, refactoring, and code review when we make estimations, because writing code quickly can be a point of pride. _You need 4 weeks to write that? I could do it in 2!_ But never in the history of ever has _I could do it in 2!_ guy been thinking about planning, testing, refactoring and code review when he gives that number.
+
+Don't be that guy.
