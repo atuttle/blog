@@ -46,9 +46,7 @@ What's left?
 1. Write code
 2. Get a code review
 
-_Sound familiar?_
-
-I bet it does.
+Sound familiar? I bet it does.
 
 Skipping those steps is where technical debt comes from.
 

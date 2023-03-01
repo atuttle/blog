@@ -117,6 +117,10 @@ small {
 	font-size: 0.8em;
 }
 
+em {
+	color: #bc74ff;
+}
+
 /* backlinks */
 .backlinks-title {
 	margin-bottom: 0;
