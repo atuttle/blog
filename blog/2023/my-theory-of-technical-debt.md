@@ -80,7 +80,7 @@ Do they want a hack thrown together by a team of under-slept coffee addicts whos
 
 \* \* \*{style="text-align:center"}
 
-I am far from the first to champion the concept of "[Appetite](https://37signals.com/seven-shipping-principles#appetite)"[^2] in software planning.
+I am far from the first to champion the concept of "[Appetite](https://37signals.com/seven-shipping-principles#appetite)" in software planning.[^2]
 
 [^2]: I am not a fan of DHH / 37Signals, but this was the first place I became aware of the concept. Credit where it's due, I guess.
 
