@@ -1,5 +1,5 @@
 ---
-title: What to Do When You’re Drowning in Technical Debt
+title: What to Do When You’re Drowning in Tech Debt
 desc: An explanation of how to frame the discussion so that the business sees value in reducing and preventing technical debt.
 img: /img/2023/hunters-race-MYbhN8KaaEc-unsplash.jpg
 date: 2023-03-30
@@ -11,7 +11,7 @@ tags:
 ![An old fashioned metal key](/img/2023/hunters-race-MYbhN8KaaEc-unsplash.jpg)
 Photo by <a href="https://unsplash.com/@huntersrace?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Hunters Race</a> on <a href="https://unsplash.com/photos/MYbhN8KaaEc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>{class="photo-byline"}
 
-## How to write good software
+## Where does it come from?
 
 It's not _dark science_ or _rocket surgery_ to write decent software. You can get lucky and slap something together that works on the first try and never has problems, but you can't count on that luck to last your entire career. The good news is that there's a consistent and predictable way to write good software.
 
@@ -28,9 +28,9 @@ It's not _dark science_ or _rocket surgery_ to write decent software. You can ge
 [^0]: It is a legitimate strategy to write a prototype of the feature first before you write tests if you don't yet understand what it will take to implement the feature. You can't test something you don't understand, so write a throw-away prototype to learn from, then throw it away, and write your tests for the real implementation.
 [^1]: "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live. Code for readability." - [John Woods](https://stackoverflow.com/a/878436/751)
 
-## Then, why is there always so much technical debt?
+### Then, why is there always so much technical debt?
 
-**My theory is that we allow "the business" to get in the way of doing our jobs well.**
+**I beleive that we allow "the business" to get in the way of doing our jobs well.**
 
 Too often, software companies and IT departments are given a project mandate and an allowable time limit to spend working on it. Maybe the CEO talked to customers about it, decided it would be a valuable project, and the customer would need it by a certain date in order to be able to use it.
 
@@ -49,15 +49,11 @@ What's left?
 
 Sound familiar? I bet it does.
 
-Skipping those steps is where technical debt is born.
+**Skipping those steps is where technical debt is born.**
 
-\* \* \*{style="text-align:center"}
+### Professional Responsibility
 
-What if you had to sign a form stating that your code is engineered correctly and safe to go into production, and that you may be held personally responsible if it breaks and causes financial, reputational, or other realizable harm to the business?
-
-Aside from quitting, what would you do?
-
-\* \* \*{style="text-align:center"}
+What if you had to sign a document stating that your code is engineered correctly and safe to go into production, and that you may be held personally responsible if it breaks and causes financial, reputational, or other realizable harm to the business? This is not that far off from the responsibility that architects and construction site engineers bear.
 
 Would an architect allow her design to move on to construction without confidence that the specified girders can hold the weight of the building and all of the people and equipment it will one day need to hold? Not one who wants to keep her license.
 
@@ -75,7 +71,7 @@ The Archictects and Site Engineers _are_ responsible, and they _will_ be held ac
 
 Everyone acknowledges safety is important. Shouldn't it be important in business software, too?
 
-If you know you're not being given enough time to complete the project well, refuse to sign the paperwork that says that you can be held responsible for failure, because you know it inevitably will.
+If you know you're not being given enough time to complete the project well, refuse to sign the paperwork that says that you can be held responsible for failure, because you know it inevitably will fail.
 
 Of course, we're not expected to sign documents like that. So what does the metaphorical signature-refusal look like in the real world?
 
@@ -85,7 +81,7 @@ Do they want a hack thrown together by a team of under-slept coffee addicts whos
 
 \* \* \*{style="text-align:center"}
 
-I am far from the first to champion the concept of "[Appetite](https://37signals.com/seven-shipping-principles#appetite)" in software planning.[^2]
+I am of course championing the concept of [Appetite](https://37signals.com/seven-shipping-principles#appetite) in software planning.[^2]
 
 [^2]: I am not a fan of DHH / 37Signals, but this was the first place I became aware of the concept. Credit where it's due, I guess.
 
@@ -99,7 +95,9 @@ You'll never escape from technical debt if you don't slow down its creation.
 
 An ounce of prevention is worth a pound of cure. If we as an industry start standing up for ourselves and enforce the right way of doing our jobs, then future technical debt can be minimized if not avoided entirely. And we can get some sleep, too!
 
-### But what about pre-existing technical debt?
+Truth be told, I don't think most businesses will have an appreciation for technical debt until they're being told it's what's causing their developers to move more slowly than they expected. Sometimes you have to suffer a little bit before you're willing to invest in the process. Which brings us nicely to existing tech debt.
+
+### What about pre-existing tech debt?
 
 I am a big fan of [framing technical debt as "maintenance load."](https://stackoverflow.blog/2023/02/27/stop-saying-technical-debt/) It helps the business understand the true cost of technical debt: If your maintenance load is 50% then a 6 week project will take 12 weeks to complete. It also gives us, the engineers, a concrete objective to battle against. Identifying specific sources of maintenance load and reducing or eliminating them will (**measurably!**) improve the lives of the whole team, allow the department to ship projects faster, and help the business do... business things... better.[^3]
 
