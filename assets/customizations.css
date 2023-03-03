@@ -1,4 +1,6 @@
 :root {
+	--accent: #2d9cdb;
+	--grey: #444;
 	--bg: #fff;
 	--fg: #000;
 	--panelbg: #1b1a21;
@@ -239,13 +241,29 @@ mark {
 	text-indent: -2em;
 	line-height: 1.65rem;
 }
-.call-out::before{
+.call-out::before {
 	content: '⚠️';
 	position: relative;
 	right: -105%;
 	top: -1.5rem;
 	font-size: 2em;
 }
+a[href] {
+	color: var(--accent);
+	text-decoration: none;
+	font-weight: bold;
+	padding: 0 2px;
+}
+a[href]:hover {
+	background-color: var(--accent);
+	color: var(--bg);
+	border-radius: 4px;
+}
+a[href]:focus {
+	outline: 2px solid var(--accent);
+	outline-offset: 4px;
+}
+
 @media not speech {
 	.sr-only {
 		display: none !important;
