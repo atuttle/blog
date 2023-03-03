@@ -2,7 +2,7 @@
 title: What to Do When You’re Drowning in Tech Debt
 desc: An explanation of how to frame the discussion so that the business sees value in reducing and preventing technical debt.
 img: /img/2023/hunters-race-MYbhN8KaaEc-unsplash.jpg
-date: 2023-03-30
+date: 2023-03-03
 tags:
   - technical debt
   - software craftsmanship
@@ -19,10 +19,10 @@ It's not _dark science_ or _rocket surgery_ to write decent software. You can ge
 2. Write tests that will validate when you've reached the goal. When the tests pass, stop working. If your tests are passing and you know there's more features to add or more edge cases to handle, then you need to add more failing tests first.[^0]
 3. Write the code that makes the tests pass, ignoring best practices &ndash; get to passing tests as quick and dirty as you can!
 4. Refactor the code to follow all of those best practices you ignored in the last step. Fortunately you now have the tests to give you confidence that you haven't broken anything during your refactoring.
-   1. Remove duplication
-   1. Employ [SOLID principles](https://en.wikipedia.org/wiki/SOLID)
-   1. Make it readable for the developer who has to debug it in 10 years and doesn't know what you're thinking today. It might not be you.[^1]
-   1. etc...
+   - Remove duplication
+   - Employ [SOLID principles](https://en.wikipedia.org/wiki/SOLID)
+   - Make it readable for the developer who has to debug it in 10 years and doesn't know what you're thinking today. It might not be you.[^1]
+   - etc...
 5. Submit for code review, and incorporate feedback as appropriate.
 
 [^0]: It is a legitimate strategy to write a prototype of the feature first before you write tests if you don't yet understand what it will take to implement the feature. You can't test something you don't understand, so write a throw-away prototype to learn from, then throw it away, and write your tests for the real implementation.
@@ -30,7 +30,7 @@ It's not _dark science_ or _rocket surgery_ to write decent software. You can ge
 
 ### Then, why is there always so much technical debt?
 
-**I beleive that we allow "the business" to get in the way of doing our jobs well.**
+**I believe that we allow "the business" to get in the way of doing our jobs well.**
 
 Too often, software companies and IT departments are given a project mandate and an allowable time limit to spend working on it. Maybe the CEO talked to customers about it, decided it would be a valuable project, and the customer would need it by a certain date in order to be able to use it.
 
