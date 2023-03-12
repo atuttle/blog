@@ -40,7 +40,7 @@ Even if we are diligent about only working on the parts that _really must be inc
 
 So you've accepted a project, and an unrealistic timeline. Now what happens?
 
-Well, you can't skip step 3 (_write the code_), because writing the code is the whole point. And step 5 (_code review_) seems like it could be a good safeguard against the problems that steps 1 (_specification_) and 2 (_tests_) protect you from, and code review tends to take a lot less time the writing a spec and tests. And step 4 (_refactoring_)? You think the business is going to let you take code that's already working make it "better" without making any functional changes? That's going to go right out the window.
+Well, you can't skip step 3 (_write the code_), because writing the code is the whole point. And step 5 (_code review_) seems like it could be a good safeguard against the problems that steps 1 (_specification_) and 2 (_tests_) protect you from, and code review tends to take a lot less time than writing a spec and tests. And step 4 (_refactoring_)? You think the business is going to let you take code that's already working make it "better" without making any functional changes? That's going to go right out the window.
 
 What's left?
 
