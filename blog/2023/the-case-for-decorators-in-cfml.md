@@ -1,7 +1,7 @@
 ---
 title: The case for decorators in CFML
 desc: The CFML language doesn't have first class support for object decorators. I think it would be pretty useful if they did. Here's one way I would use them.
-img: /img/2023/everyday-basics-GJY1eAw6tn8-unsplash.jpg
+img: /img/2023/jake-melara-2k26mRosr2o-unsplash.jpg
 date: 2023-11-17
 tags:
   - cfml
