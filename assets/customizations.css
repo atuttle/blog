@@ -49,6 +49,7 @@ pre[class*='language-'] {
 	overflow-x: scroll;
 	border-radius: 0.3rem;
 	background-color: var(--panelbg);
+	font-size: 0.9em;
 }
 
 .clearfix {
@@ -294,5 +295,13 @@ a[href]:focus {
 		grid-template-columns: 1fr;
 		margin: 0 auto;
 		width: fit-content;
+	}
+}
+@media only screen and (max-width: 744px) {
+	article pre,
+	code[class*='language-'],
+	pre[class*='language-'] {
+		margin: 0 -24px;
+		border-radius: 0;
 	}
 }
