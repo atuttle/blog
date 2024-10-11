@@ -17,7 +17,7 @@
 	function handleInput() {
 		var isNumeric = chkIsNumeric.checked;
 		var buffer = "";
-		var input = textarea.value.split("\n");
+		var input = txtInput.value.split("\n");
 		var buffer = "where X in (";
 		input = input.map((line) => {
 			return isNumeric ? line.trim() : "'" + line.trim() + "'";
