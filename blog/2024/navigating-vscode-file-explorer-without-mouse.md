@@ -69,7 +69,7 @@ Search youtube/twitter/instagram and you'll find 1,000 people peddling the same 
 
 ## Custom shortcuts
 
-🤘🏻-tip: Map <kbd>caps lock</kbd> to <kbd>^ ctrl</kbd><kbd>⇧ shift</kbd><kbd>⌥ opt</kbd><kbd>⌘ cmd</kbd> using [Karabiner-Elements][ke]. This is often called the "super" key, and I'll refer to it here as <kbd>⭐</kbd>. Nobody uses caps lock any more anyway, right?
+🤘🏻-tip: Map <kbd>caps lock</kbd> to <kbd>^ ctrl</kbd><kbd>⇧ shift</kbd><kbd>⌥ opt</kbd><kbd>⌘ cmd</kbd> using [Karabiner-Elements][ke]. This is often called the "hyper" key, and I'll refer to it here as <kbd>⭐</kbd>. Nobody uses caps lock any more anyway, right?
 
 [ke]: https://karabiner-elements.pqrs.org/
 
