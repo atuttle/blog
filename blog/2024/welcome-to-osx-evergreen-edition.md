@@ -9,15 +9,15 @@ tags:
 
 I had an old version of this article [written in 2016 <span style="font-size: 50px">👴🏻</span>](/blog/2016/welcome-to-osx-2016-edition/), but obviously a lot has changed since then. Instead of rewriting it every few years, I'm going to designate this as the "evergreen" version. I'll update it as I find new tools that I like, or as my workflow changes.
 
-## Fundamental Improvements: Finder, Terminal, Karabiner Elements
+## Fundamental Improvements: Finder, Terminal, Launcher
 
-It took me a while to not be annoyed by Finder. There were other things I used ([TotalFinder][totalfinder]) or looked at from a distance ([Path Finder][pathfinder]), but after many years, vanialla Finder does the job.
+It took me a while to not be annoyed by Finder. There were other things I used ([TotalFinder][totalfinder]) or looked at from a distance ([Path Finder][pathfinder]), but after many years either it has improved or I've changed enough that vanialla Finder does the job.
 
-To be honest, the default Terminal app is _fine_, and miles ahead of Windows CMD or PowerShell. But since when is _fine_ good enough? You have a variety of good options to choose from on Mac. I'm currently using [Warp][warp], but if that wasn't an option I'd be using [iTerm2][iterm].
+To be honest, the default Terminal app is _fine_, and miles ahead of Windows CMD or PowerShell. But since when is _fine_ good enough? You have a variety of good options to choose from on Mac. I'm currently using [Warp][warp], but if that wasn't an option I'd be using [iTerm2][iterm]. I have <code>ctrl+\\</code> configured as my terminal "visor" shortcut. I leave it running 24x7 and can use that keyboard shortcut to bring up a terminal window no matter what I'm doing.
 
-As crazy as it sounds, even inheriting an extra modifier key with OSX ("command" in addition to shift, control, and alt) I still occasionally find myself wishing for another. So I use [Karabiner Elements][karabiner] to map the CAPS_LOCK key to cmd+ctrl+alt+shift, which some people call "super."
+Having tried a bunch of different options, I've settled on using [Raycast][raycast] as my launcher/utility app. It's a great launcher (think: Alfred), with window management, clipboard history, and a bunch more features all baked in for free; including the ability to make your own extensions with JavaScript. I also happen to like their AI Chat interface, so it's one of the few things I pay a subscription for.
 
-I have <code>ctrl+\\</code> configured as my terminal visor shortcut. I leave it running 24x7 and can use that keyboard shortcut to bring up a terminal window no matter what I'm doing.
+As crazy as it sounds, even inheriting an extra modifier key with OSX ("command" in addition to shift, control, and alt) I still occasionally find myself wishing for another. So I use the Raycast feature to map the CAPS LOCK key to cmd+ctrl+alt+shift, which some people call "hyper." I've used other solutions to the same effect in the past, but the bit that makes Raycast the best at it is that their implementation doesn't ruin your ability to use the caps lock button as caps lock, on the rare occasion it would be handy.
 
 ## Developer Stuff
 
@@ -65,27 +65,25 @@ I also write my blog posts in VSCode using Markdown. It's all [hosted on GitHub]
 
 Pretty much everything else that I use near-daily is [Node.js][node] and node modules. If you just need to stand up a quick basic static-file web server in a random directory, I like [nws][nws].
 
-Do enough Node stuff and eventually you'll run into native modules that require compiling locally on your system. That, or if you do any iOS development at all (even with PhoneGap), you're going to need XCode. Better to just bite the bullet early and install it / update it as needed through the App Store.
-
 On the off chance that you need an (S)FTP/S3 client, [Transmit][transmit] is pretty good.
 
 [Microsoft Remote Desktop][rdp] is actually reasonably good for managing a few windows boxes remotely, but [Royal TSX][royal] is better.
 
-Most of the time I do my Git work in the terminal, but occasionally I'll want a GUI for block-level staging or history browsing. In those cases I like [SourceTree][sourcetree].
+Most of the time I do my Git work in the terminal, but occasionally I'll want a GUI for block-level staging or history browsing. In those cases I like [SourceTree][sourcetree] (more recently I've been leaning into [lazygit]).
 
 I use Keynote for presentations where I won't be doing any live code demos, or various web presentation frameworks when I am.
 
 ## Other Great Stuff
 
-You _will not find a better password manager_ than [1Password][1p]. Fast, secure, and beautiful to boot. Integrates really well with major browsers and has system keyboard shortcuts for quick access. They even have an Android Keyboard that makes accessing your passwords on the go a snap. I bought a family license and forced it on my wife and mom, too. When my kids are old enough to start having passwords for stuff, they'll be forced into it too.
+You _will not find a better password manager_ than [1Password][1p]. Fast, secure, and beautiful to boot. Integrates really well with major browsers and has system keyboard shortcuts for quick access. It also integrates well with iPhone and Android for on-the-go access to your passwords with minimal inconvenience. I forced it on my wife, kids, and my mom, too. BONUS: if your company uses a 1Password business license, every employee-user gets a free family account, too!
 
 All of the computers in my house backup to [Backblaze][backblaze].
 
 For email, I've tried a bunch over the years. None are ever as good as straight up webmail. That said, _all_ of my email is through Google Mail. If you have a work Exchange server or something, I can understand why you would want a local native client. I just don't have a recommendation for you. Lately I've been using [Mimestream][mimestream] as a native mail client because it has good integration with gmail, and the least-awful dark mode I've seen.
 
-I have access to somewhere between half a dozen and a dozen google calendars, and coordinating them can be a real pain. I really like [Cron][cron].
+I have access to more than a dozen google calendars, and coordinating them can be a real pain. I really like [Notion Calendar][notioncalendar] (formerly: "Cron").
 
-For a basic running todo list I have been using the native apple Reminders app. It looks better on mobile than on desktop, but it syncs automatically and it has _most_ of the features I want. I also dabble with notes in [Obsidian][obsidian] that border on to-dos, but when pressed to give my primary to-do source, it's Reminders.
+I have tried just about every to-do app there is, and none of them are perfect for me. I need some amount of organizing and bucketing (e.g. separate work and personal, and different projects within work), and I want instant sync between my phone and my computer. I don't have many recurring tasks, but I do have a couple that I could live without if I had to. Currently I'm using [Things]. Yes, it's expensive for a todo app. Yes, I paid for it twice so I could have it on both my phone and my Mac. Yes, that's insane. But that's where I've found myself at the moment. 🤷🏻‍♂️
 
 I have used [LibreOffice][libre] for office documents (word, excel, etc), but the modern apps from Microsoft aren't half bad. Whatever you do, [don't use OpenOffice][notoo]!
 
@@ -97,6 +95,7 @@ Need to figure out what's eating up so much disk space? Try [Disk Space Analyzer
 [pathfinder]: http://www.cocoatech.com/pathfinder/
 [totalfinder]: http://totalfinder.binaryage.com/
 [iterm]: https://www.iterm2.com/
+[raycast]: https://www.raycast.com/
 [omz]: http://ohmyz.sh/
 [keymap]: /blog/2013/My-Sublime-Keymap-Common-KB-Shortcuts/
 [sql]: https://github.com/Sequel-Ace/Sequel-Ace
@@ -114,9 +113,10 @@ Need to figure out what's eating up so much disk space? Try [Disk Space Analyzer
 [vlc]: http://www.videolan.org/vlc/index.html
 [royal]: https://royalapps.com/ts/mac/features
 [warp]: https://www.warp.dev/
-[karabiner]: https://pqrs.org/osx/karabiner/
 [mimestream]: https://mimestream.com/
-[cron]: https://cron.app/
+[notioncalendar]: https://www.notion.com/product/calendar
 [obsidian]: https://obsidian.md/
 [disk]: https://nektony.com/disk-expert
 [vscode]: https://code.visualstudio.com/
+[lazygit]: https://github.com/jesseduffield/lazygit?tab=readme-ov-file#elevator-pitch
+[Things]: https://culturedcode.com/things/
