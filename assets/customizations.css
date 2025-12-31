@@ -129,6 +129,7 @@ article video {
 .tagsWrapper {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	gap: 1.3rem;
 }
 .taglist-item {
 	margin-bottom: 1rem;
