@@ -12,7 +12,7 @@ I'm not interested in forcing my personal agenda on anyone, but I do want it to 
 
 Most of what I write on here is technical. In the past I wrote a lot about CFML (ColdFusion Markup Language), but these days it's mostly either JavaScript or more generalized and broadly applicable to most types of coding, or at least web-development.
 
-To feed my family I work at [AlumnIQ][iq]. I could say that I'm the "first hire" but, well, _it's complicated_. There were some people before me, but we were operating under a different name at the time. I joined while we were still operating under that name, and at the time I was the only employee other than the solo-founder. During my tenure we started doing business as AlumnIQ[^1], and we currently operate with a team of 7 people. We've always been 100% remote &mdash;before COVID-19 made it cool&mdash; and we currently span 3 of the 4 (contiguous) US time zones. As for how long and how much I enjoy working at my company, I'll refer you to [[2020/challenge-breeds-stability | my latest work-anniversary entry]].
+To feed my family I work at [AlumnIQ][iq]. I could say that I'm the "first hire" but, well, _it's complicated_. There were some people before me, but we were operating under a different name at the time. I joined while we were still operating under that name, and at the time I was the only employee other than the solo-founder. During my tenure we started doing business as AlumnIQ[^1], and we currently operate with a team of 8 people. We've always been 100% remote &mdash;before COVID-19 made it cool&mdash; and we currently span 3 of the 4 (contiguous) US time zones. As for how long and how much I enjoy working at my company, I'll refer you to [[2020/challenge-breeds-stability | my latest work-anniversary entry]].
 
 [^1]: If you ever get the opportunity to name a product or a company, I would advise you to either not use a [portmanteau][portmanteau] or to make peace with your customers and the general public spelling and pronouncing it wrong constantly. Personally, I wouldn't do it again. Yes, the AlumnIQ name idea was mine. As a portmanteau of "Alumni" and "IQ" it's intended to be pronounced "alumni-queue" with no pause between them.
 
@@ -26,9 +26,9 @@ I make a weekly podcast with 3 of my closest tech friends, called [Working Code]
 
 I like to [contribute to open source software][github] when I can.
 
-I am most active [on Mastodon][masto]. This is mostly tech stuff, too.
+After quitting Twitter, I don't really do much social media any more. I am most active [on Bluesky][bluesky] when I have tech things to talk about, but even that has been pretty rare. (Thanks, Musk?)
 
-When I've got some free time, the thing I most want to do is usually to go skydiving. I have over 700 jumps and I am an instructor and an FAA certificated parachute rigger. I post skydiving videos [on TikTok][tiktok].
+When I've got some free time, the thing I most want to do is usually to go skydiving. I have over 1,200 jumps and I am an instructor and an FAA certificated parachute rigger. I post skydiving videos [on TikTok][tiktok].
 
 Unfortunately, skydiving is a fair-weather sport and the weather isn't always fair. When I can't jump out of airplanes, I can often be found in my basement workshop making furniture out of wood. I document those exploits, to some extent, [on Instagram][insta].
 
@@ -41,7 +41,7 @@ I don't drink much alcohol, but when I do I love trying new beers &ndash; especi
 [portmanteau]: https://www.merriam-webster.com/dictionary/portmanteau
 [rest]: https://restassuredbook.com/
 [wc]: https://workingcode.dev
-[masto]: https://jawns.club/@adamtuttle
+[bluesky]: https://bsky.app/profile/adamtuttle.codes
 [tiktok]: https://tiktok.com/@planespooppeople
 [insta]: https://www.instagram.com/alteregowoodworks/
 [github]: https://github.com/atuttle
