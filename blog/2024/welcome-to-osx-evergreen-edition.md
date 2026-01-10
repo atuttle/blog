@@ -69,7 +69,7 @@ On the off chance that you need an (S)FTP/S3 client, [Transmit][transmit] is pre
 
 [Microsoft Remote Desktop][rdp] is actually reasonably good for managing a few windows boxes remotely, but [Royal TSX][royal] is better.
 
-Most of the time I do my Git work in the terminal, but occasionally I'll want a GUI for block-level staging or history browsing. In those cases I like [SourceTree][sourcetree] (more recently I've been leaning into [lazygit]).
+Most of the time I do my Git work in the terminal, but occasionally I'll want a GUI for block-level staging or history browsing. In those cases I like [lazygit].
 
 I use Keynote for presentations where I won't be doing any live code demos, or various web presentation frameworks when I am.
 
