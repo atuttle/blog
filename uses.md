@@ -10,7 +10,7 @@ There won't be a section for this, so I'll just say here that I use **[Bluesky](
 
 - **IDE:** [Cursor](https://cursor.com/) (though I've been leaning more into [Claude Code](https://docs.anthropic.com/en/docs/claude-code) lately)
 - **Terminal:** [Warp](https://www.warp.dev/)
-- **Theme:** [Tailwind CSS Dark](https://tailwindcss.com/sponsor#insiders)
+- **Theme:** [Tailwind CSS Dark (Enhanced)](https://tailwindcss.com/sponsor#insiders)
 - **Font:** Fira Code
 
 ## Desktop Apps
