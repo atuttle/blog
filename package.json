@@ -21,17 +21,18 @@
 	},
 	"homepage": "https://adamtuttle.codes",
 	"dependencies": {
-		"@11ty/eleventy": "^1.0.2",
-		"@11ty/eleventy-plugin-rss": "^1.2.0",
-		"@11ty/eleventy-plugin-syntaxhighlight": "4.2.0",
+		"@11ty/eleventy": "^3.1.2",
+		"@11ty/eleventy-plugin-rss": "^2.0.4",
+		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
 		"eleventy-plugin-embed-twitter": "^1.4.0",
 		"isomorphic-fetch": "^3.0.0",
-		"luxon": "^2.4.0",
-		"markdown-it": "^13.0.2",
-		"markdown-it-anchor": "^8.6.7",
+		"lodash": "^4.17.23",
+		"luxon": "^3.7.2",
+		"markdown-it": "^14.1.0",
+		"markdown-it-anchor": "^9.2.0",
 		"markdown-it-attrs": "^4.1.6",
-		"markdown-it-footnote": "^3.0.3",
+		"markdown-it-footnote": "^4.0.0",
 		"netlify-plugin-cache-folder": "^0.0.8",
-		"title-case": "^3.0.3"
+		"title-case": "^4.3.2"
 	}
 }

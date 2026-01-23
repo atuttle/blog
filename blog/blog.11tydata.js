@@ -15,7 +15,7 @@ module.exports = {
 	buckets: ['article'], //default to the article bucket
 	eleventyComputed: {
 		title: (data) => titleCase(data.title || data.page.fileSlug),
-		backlinks: (data) => {
+		backlinks: async (data) => {
 			const notes = data.collections.blog;
 			const currentFileSlug = data.page.filePathStem.replace('/blog/', '');
 
@@ -23,7 +23,9 @@ module.exports = {
 
 			// Search the other notes for backlinks
 			for (const otherNote of notes) {
-				const noteContent = otherNote.template.frontMatter.content;
+				// In Eleventy 3.x, we need to use async read() to access template content
+				const templateData = await otherNote.template.read();
+				const noteContent = templateData.content || '';
 
 				// Get all links from otherNote
 				const outboundLinks = (noteContent.match(wikilinkRegExp) || []).map((link) =>
