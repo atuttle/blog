@@ -9,6 +9,7 @@ layout: default
 		{{content | safe}}
 	</div>
 	<a class="u-url" href="{{page.url | absoluteUrl}}" hidden></a>
+	<img class="u-photo" src="/img/me.png" alt="Adam Tuttle" style="display:none" />
 	{% if syndication %}{% for url in syndication %}<a class="u-syndication" href="{{url}}" hidden></a>{% endfor %}{% endif %}
 </article>
 
