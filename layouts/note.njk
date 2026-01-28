@@ -5,6 +5,7 @@ layout: default
 <article class="h-entry">
 	<h1 class="p-name">{{title}}</h1>
 	<p class="byline">By <a class="p-author h-card" href="{{site.author.url}}">Adam Tuttle</a> on <time class="dt-published" datetime="{{date | htmlDateString}}">{{date | asPostDate }}</time></p>
+	{% if tags %}<p class="categories" style="margin-top: -1em;"><small>Tags: {% for tag in tags %}<a class="p-category" href="/tags/{{ tag | slug }}/">#{{tag}}</a>{% if not loop.last %}, {% endif %}{% endfor %}</small></p>{% endif %}
 	<div class="e-content">
 		{{content | safe}}
 	</div>
