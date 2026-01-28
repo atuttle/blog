@@ -30,13 +30,13 @@ Here's the basic structure:
 
 ```bash
 ~/.bin/
-├── plan           # Starts planning sessions
-├── ralph          # Runs iterative development cycles
-└── ralph-install  # Sets up .ralph directory in your project
+├── plan               # Starts planning sessions
+├── ralph              # Runs iterative development cycles
+└── ralph-install      # Sets up .ralph directory in your project
 
 ~/.ralph/
-├── prd.example.json     # PRD template
-├── progress.md          # Example progress document
+├── prd.example.json   # PRD template
+└── progress.md        # Example progress document
 ```
 
 You don't technically need the `ralph` script, it just executes the `./.ralph/ralph.sh` script, but who wants to type `./.ralph/ralph.sh` when you can just type `ralph`?

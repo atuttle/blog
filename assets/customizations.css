@@ -66,7 +66,7 @@ section#index .thumbnail {
 }
 
 kbd {
-	font-family: Consolas, 'Lucida Console', monospace;
+	font-family: 'Atkinson Hyperlegible Mono', monospace;
 	font-size: 1em;
 	display: inline-block;
 	border-radius: 3px;
@@ -95,7 +95,7 @@ ul code {
 	color: var(--codefg);
 	border-radius: 4px;
 	box-sizing: border-box;
-	font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+	font-family: 'Atkinson Hyperlegible Mono', monospace;
 	padding: 2px 4px 2px 4px;
 	font-size: 0.9em;
 }

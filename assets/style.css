@@ -4,7 +4,7 @@ html {
 }
 
 body {
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Atkinson Hyperlegible', sans-serif;
 	font-size: 1.3rem;
 	line-height: 1.55;
 
@@ -65,7 +65,7 @@ h2,
 h3,
 h4,
 h5 {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Atkinson Hyperlegible', sans-serif;
 	margin: 2.75rem 0 1.05rem;
 	font-weight: 900;
 	line-height: 1.15;

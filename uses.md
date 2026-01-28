@@ -9,24 +9,26 @@ There won't be a section for this, so I'll just say here that I use **[Bluesky](
 ## Editor + Terminal
 
 - **IDE:** [Cursor](https://cursor.com/) (though I've been leaning more into [Claude Code](https://docs.anthropic.com/en/docs/claude-code) lately)
-- **Terminal:** [Warp](https://www.warp.dev/)
-- **Theme:** [Tailwind CSS Dark (Enhanced)](https://tailwindcss.com/sponsor#insiders)
-- **Font:** Fira Code
+- **Terminal:** [Warp](https://www.warp.dev/) (not loving it. got suggestions?)
+- **Theme:** [GitHub Dark Dimmed](https://open-vsx.org/extension/GitHub/github-vscode-theme)
+- **Font:** [Atkinson Hyperlegible Mono](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Mono)
 
 ## Desktop Apps
 
-- **[Helium](https://helium.computer/)** - Browser
-- **[Jabber](https://github.com/rselbach/jabber)** - Voice dictation tool. A vibe-coded clone of [Wispr Flow](https://wisprflow.ai/).
-- **[Mimestream](https://mimestream.com/)** - Email client
-- **[Notion Calendar](https://www.notion.so/product/calendar)** - Calendar client (backed by Google Calendar)
-- **[Cal.com](https://cal.com/)** - Scheduling
-- **[Things](https://culturedcode.com/things/)** - Todo app
-- **[Obsidian](https://obsidian.md/)** - Notes
-- **[Affinity Photo 2](https://affinity.serif.com/en-us/photo/)** - Photo editing (Photoshop alternative)
-- **[GitHub](https://github.com/)** - Source control
-- **[Raycast](https://www.raycast.com/)** - Launcher
-- **[Ice](https://icemenubar.app/)** - Menu bar management (free/open source Bartender alternative)
-- **[Backblaze](https://www.backblaze.com/)** - System backups
+- [Raycast](https://www.raycast.com/) - Launcher
+- [Helium](https://helium.computer/) - Browser
+- [Wispr Flow](https://wisprflow.ai/) - Voice dictation (I am optimistic about [Jabber](https://github.com/rselbach/jabber), but it's not as good yet.)
+- [Mimestream](https://mimestream.com/) - Email client (Least-awful dark mode + notifications)
+- [Notion Calendar](https://www.notion.so/product/calendar) - Calendar client (with dozens of Google Calendars)
+- [Cal.com](https://cal.com/) - Scheduling
+- [Things](https://culturedcode.com/things/) - Todo app
+- [Obsidian](https://obsidian.md/) - Notes
+- [LibreOffice](https://www.libreoffice.org/) - Alternative to Microsoft Office
+- [Affinity Photo 2](https://affinity.serif.com/en-us/photo/) - Alternative to Photoshop
+- [GitHub](https://github.com/) - Source control
+- [Ice](https://icemenubar.app/) - Menu bar management (free/open source Bartender alternative)
+- [Claude Usage Tracker](https://github.com/hamed-elfayome/Claude-Usage-Tracker) - MacOS menu bar tracking of Claude usage limits
+- [Backblaze](https://www.backblaze.com/) - System backups
 
 ## Desk Setup
 
@@ -37,10 +39,11 @@ There won't be a section for this, so I'll just say here that I use **[Bluesky](
 - **[TobenONE DisplayLink Docking Station](https://www.amazon.com/dp/B0C616N8T5)** - Triple 4K monitor support
 - **[Elgato Wave LP](https://www.amazon.com/dp/B097376LKF)** - Low profile mic arm
 - **[Samson Q2U](https://samsontech.com/products/microphones/usb-microphones/q2u/)** - Microphone for my podcast, [Working Code](https://workingcode.dev/)
-
-## Other Gear
-
-- **Wyze Noise Cancelling Headphones** - Over-ear headphones
-- **AirPods Pro 2** - Earbuds
-- **iPhone 14 Pro** - Phone (iOS 26 sucks)
+- [Wyze Headphones](https://www.wyze.com/products/wyze-headphones) - Over-ear ANC headphones
 - **[Synology DS420+](https://www.synology.com/en-us/products/DS420+)** - NAS
+
+## This Site
+
+- [Eleventy](https://www.11ty.dev/) - Static site generator
+- [Atkinson Hyperlegible](https://fonts.google.com/specimen/Atkinson+Hyperlegible) - Prose font
+- [Atkinson Hyperlegible Mono](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Mono) - Code font
