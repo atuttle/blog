@@ -12,6 +12,7 @@ There won't be a section for this, so I'll just say here that I use **[Bluesky](
 - **Terminal:** [Warp](https://www.warp.dev/) (not loving it. got suggestions?)
 - **Theme:** [GitHub Dark Dimmed](https://open-vsx.org/extension/GitHub/github-vscode-theme)
 - **Font:** [Atkinson Hyperlegible Mono](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Mono)
+- **Git Client:** [lazygit](https://github.com/jesseduffield/lazygit) with [delta-git](https://dandavison.github.io/delta/) for syntax highlighting in diffs
 
 ## Desktop Apps
 
