@@ -2,10 +2,14 @@
 layout: default
 ---
 
-<article>
-	<h1>{{title}}</h1>
-	<p class="byline">By Adam Tuttle on <time>{{date | asPostDate }}</time></p>
-	{{content | safe}}
+<article class="h-entry">
+	<h1 class="p-name">{{title}}</h1>
+	<p class="byline">By <a class="p-author h-card" href="{{site.author.url}}">Adam Tuttle</a> on <time class="dt-published" datetime="{{date | htmlDateString}}">{{date | asPostDate }}</time></p>
+	<div class="e-content">
+		{{content | safe}}
+	</div>
+	<a class="u-url" href="{{page.url | absoluteUrl}}" hidden></a>
+	{% if syndication %}{% for url in syndication %}<a class="u-syndication" href="{{url}}" hidden></a>{% endfor %}{% endif %}
 </article>
 
 {% if discuss %}

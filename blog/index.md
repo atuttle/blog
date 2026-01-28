@@ -14,17 +14,17 @@ discuss: false
 	<img src="/assets/icons8-star-48.png" class="favorite" alt="My favorites" title="My favorites" height="18" /> Items with a star are my favorites.
 </section>
 
-<section id="index">
+<section id="index" class="h-feed">
 {%- for page in collections.blog reversed -%}
 {%- if page.data.title -%}
-<article data-buckets="{{page.data.buckets}}" data-title="{{page.data.title | lcase}}">
+<article class="h-entry" data-buckets="{{page.data.buckets}}" data-title="{{page.data.title | lcase}}">
 	<h5>
 		{%- if page.data.favorite -%}
 			<img src="/assets/icons8-star-48.png" class="favorite" alt="My favorites" title="My favorites" />
 		{%- endif -%}
-		<strong><a href="{{page.url}}">{{page.data.title}}</a></strong>
+		<strong><a class="u-url p-name" href="{{page.url}}">{{page.data.title}}</a></strong>
 	</h5>
-	<span class="timestamp">{{page.date | asPostDate}}</span>
+	<time class="dt-published timestamp" datetime="{{page.date | htmlDateString}}">{{page.date | asPostDate}}</time>
 	<!-- <span class="bucket">{{page.data.buckets}}</span> -->
 	<span class="tags">
 		{%- for tag in page.data.tags -%}
