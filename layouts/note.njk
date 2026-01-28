@@ -11,7 +11,7 @@ layout: default
 {% if discuss %}
 <section id="webmentions">
 	<h2>Webmentions</h2>
-	<p class="wat">It's like comments, but you do it on Twitter.</p>
+	<p class="wat">It's like comments, but you do it on social media.</p>
 	{% set webmentionUrl %}{{ page.url | url | absoluteUrl(site.url) }}{% endset %}
 	{% include 'layouts/webmentions.njk' %}
 </section>
