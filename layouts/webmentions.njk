@@ -65,9 +65,9 @@
   {% endif %}
 
   {% if totalSize == 0 %}
-    Be the first! <a href="https://twitter.com/intent/tweet?url={{metadata.url}}{{webmentionUrl}}">Tweet about this article</a>.
+    Be the first to share this article on <a href="https://bsky.app/intent/compose?text={{webmentionUrl | urlencode}}">Bluesky</a> or Mastodon.
   {% else %}
-    Add your comment: <a href="https://twitter.com/intent/tweet?url={{metadata.url}}{{webmentionUrl}}">Tweet about this article</a>.
+    Share this article on <a href="https://bsky.app/intent/compose?text={{webmentionUrl | urlencode}}">Bluesky</a> or Mastodon.
   {% endif %}
 
   <p style="font-size: 0.8rem"><a href="https://indieweb.org/Webmention">Webmentions</a> via <a href="https://webmention.io/">webmention.io</a>.
