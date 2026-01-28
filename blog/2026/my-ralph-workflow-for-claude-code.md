@@ -233,5 +233,9 @@ The `progress.md` file serves as a running log of work completed and lessons lea
 
 If you're not sure why/how ralph accomplished something, it's probably in progress.md. You could read it (_like a chump_) or you could tell claude to read it and then ask claude to explain itself to you.
 
+## MODIFY THE SCRIPT
+
+These things are super fluid. Modify them to fit your project, your tools, and your workflow. That's why I copy the script into the project directory: so it can be unique not just to you, but to your project, too.
+
 [wcp]: https://workingcode.dev
 [matt]: https://www.youtube.com/watch?v=example
