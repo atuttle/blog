@@ -15,6 +15,11 @@ img: /img/me.png
 
 <a class="u-url u-uid" href="https://adamtuttle.codes/" hidden></a>
 
+<p class="p-note" style="display:none;">First engineer @ AlumnIQ, now CTO.
+<br/>Temporary collection of stardust, but with a heartbeat. Take that rocks!
+<br/>I like skydiving, woodworking, and lists of three.
+<br/>My love language is sending and receiving gifs.
+<br/>Trans rights are human rights! 🏳️‍⚧️🏳️‍🌈</p>
 </div>
 
 I am a life-long-learner and I believe that sharing what you learn is a great way to crystalize the lessons for yourself, so I write about things I learn here. I fancy myself a decent writer, and have decided to inconvenience _these specific electrons_ to prop up that fantasy.
