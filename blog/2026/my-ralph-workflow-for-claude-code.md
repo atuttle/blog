@@ -8,6 +8,8 @@ tags:
   - claude
   - automation
   - productivity
+syndication:
+  - https://bsky.app/profile/adamtuttle.codes/post/3mdijse4ors24
 ---
 
 This is somewhat close to the bleeding edge of how LLM's are being used to code right now, so I don't expect this to be relevant for very long, but I needed to be able to share my notes, so here you go.
