@@ -2,18 +2,24 @@
 layout: default
 eleventyExcludeFromCollections: true
 discuss: false
-img: /img/me.jpg
+img: /img/me.png
 ---
 
 <link rel="preconnect" href="https://embed.podcasts.apple.com" />
 
-## Yo! I'm Adam
+<div class="h-card">
 
-![Photo of Adam Tuttle][gravatar]{class="headshot"} I make stuff on the internet, but as you can tell from... _\*gestures broadly\*_ ... I am not a designer.
+## Yo! I'm <span class="p-name">Adam Tuttle</span>
+
+![Photo of Adam Tuttle][gravatar]{class="headshot u-photo"} I make stuff on the internet, but as you can tell from... _\*gestures broadly\*_ ... I am not a designer.
+
+<a class="u-url u-uid" href="https://adamtuttle.codes/" hidden></a>
+
+</div>
 
 I am a life-long-learner and I believe that sharing what you learn is a great way to crystalize the lessons for yourself, so I write about things I learn here. I fancy myself a decent writer, and have decided to inconvenience _these specific electrons_ to prop up that fantasy.
 
-My passion for learning drives me to dabble in many hobbies. In addition to tech, my other interests including skydiving, woodworking, and podcasting.<br/>[For the curious, I've obliged with some detail about myself here](/blog/2021/about-me/).
+My passion for learning drives me to dabble in many hobbies. In addition to tech, my other interests including skydiving, woodworking, and podcasting.<br/>For the curious, [I've obliged with some detail about myself here](/blog/2021/about-me/).
 
 ### Recently Inconvenienced Electrons
 
@@ -36,5 +42,5 @@ A few times each year I send out some emails. It's something I usually reserve f
 <script async data-uid="02c5dc9bec" src="https://adam-tuttle.ck.page/02c5dc9bec/index.js"></script>
 
 [wcp]: https://workingcode.dev
-[gravatar]: https://www.gravatar.com/avatar/c9e260373387e72ce020928a3a546ec5?rating=G&size=400&default=mm
+[gravatar]: /img/me.png
 [garden]: /blog/digital-garden
