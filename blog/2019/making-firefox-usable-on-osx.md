@@ -4,7 +4,7 @@ desc: To be fair, Firefox has gotten a lot better since I wrote this article.
 img: /img/2019/thomas-bonometti-OyO5NDiRPMM-unsplash.jpg
 date: 2019-06-17
 tags:
-  - apple
+  - macos
   - google
   - firefox
 ---

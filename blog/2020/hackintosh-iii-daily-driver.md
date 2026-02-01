@@ -4,7 +4,7 @@ desc: I built a Hackintosh over a year ago. How well has it been working for me?
 img: /img/2020/little-john-Z54rB8BhG48-unsplash.jpg
 date: 2020-02-25
 tags:
-  - apple
+  - macos
   - productivity
   - hackintosh
 ---

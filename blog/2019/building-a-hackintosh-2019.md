@@ -4,7 +4,7 @@ desc: Building a Hackintosh isn't as hard as it used to be... I hope.
 img: /img/2019/zhang-kaiyv-dhiOkqjewAM-unsplash.jpg
 date: 2019-04-30
 tags:
-  - apple
+  - macos
   - productivity
   - hackintosh
 ---

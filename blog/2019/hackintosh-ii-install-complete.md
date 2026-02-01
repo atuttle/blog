@@ -4,7 +4,7 @@ desc: Feature Complete may not mean what you think it means...
 img: /img/2019/martijn-baudoin-4h0HqC3K4-c-unsplash.jpg
 date: 2019-05-17
 tags:
-  - apple
+  - macos
   - productivity
   - hackintosh
 ---
