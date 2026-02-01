@@ -9,6 +9,8 @@ tags:
   - 1password
   - ssh
   - macos
+syndication:
+  - https://bsky.app/profile/adamtuttle.codes/post/3mdt25pkk6s2i
 ---
 
 ![A rainbow of spools of thread organized on a wall](/img/2026/declan-sun-4tEnRui_P-g-unsplash.jpg)
