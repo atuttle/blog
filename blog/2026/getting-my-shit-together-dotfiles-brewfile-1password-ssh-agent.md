@@ -100,17 +100,28 @@ This next part is where it starts to feel _just a tad rube-goldberg-ian_, but on
 
 1Password is my password manager of choice[^1]. I was a happy paying customer for years before I recommended that my company use it for managing our secrets. We do, it's been an amazing tool for doing that. And as an added bonus, every person who has an employee-seat in your business license gets a free family account too (up to 5 people per family account).
 
+[^1]: Not sponsored. Just a very happy customer.
+
 1Password has dozens of great features that I glazed them for on [episode 245 of the Working Code podcast](https://workingcode.dev/episodes/245-browser-passwords-youre-doing-it-wrong/), but the one that's really useful here is their `op` CLI tool. Think of it as a way to make certain secrets of your choosing available as environment variables only for the duration of a single command execution.
 
 Let's get concrete.
 
-I use the `gh` (github) CLI pretty regularly to create pull requests for my work. Formerly gh stored an oauth token in `~/.config/gh/config.yml`. But helpfully claude informed me that gh also supports reading the token from an env variable named GH_TOKEN. So here's the fix.
+I don't have an example of where this is necessary for a personal need right now but I'll translate from work experience.[^2]
+
+[^2]: The one place where I was planning on using this for a personal need was the `gh` cli, but I like using that in interactive mode and that's incompatible with the `opat` approach. In that case, I use `opatsession` from my `.zshrc`.
+
+We use GitHub Packages private npm registry. NPM no longer supports long-lived tokens, but GitHub does. We store the token in 1Password, and in `.npmrc` files we can reference it via an environment variable.
+
+```bash
+@atuttle:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=${IQ_NPM_TOKEN}
+```
 
 1. Create a new 1Password item for the token.
 
-![screen shot of 1Password item for the gh token](/img/2026/1p_gh_token.png)
+![screen shot of 1Password item for the npm token](/img/2026/1p-npm-token.png)
 
-Note that the title of the entry is `keys_gh_oauth_token`, the name of the field containing the token is `password`, and the entry is saved in the vault named `Private` (very top of the image). These will become important momentarily.
+Note that the title of the entry is `keys_PERSONAL_NPM_TOKEN`, the name of the field containing the token is `password`, and the entry is saved in the vault named `Private` (very top of the image). These will become important momentarily.
 
 So how do we tell 1Password that we want this secret available as an environment variable? With a custom ENV file that uses a special `op` syntax to describe where to find it.
 
@@ -119,10 +130,10 @@ So how do we tell 1Password that we want this secret available as an environment
 In my dotfiles you'll also see a [.config/op/personal.env](https://github.com/atuttle/dotfiles/blob/main/.config/op/personal.env):
 
 ```bash
-GH_TOKEN=op://Private/keys_gh_oauth_token/password
+NPM_TOKEN=op://Private/keys_PERSONAL_NPM_TOKEN/password
 ```
 
-It should be fairly obvious, but the syntax is: `op://<vault name>/<item name>/<field name>`.
+The syntax is: `op://<vault name>/<item name>/<field name>`.
 
 3. Putting it together: Create a new script that runs the `op` command with some args to specify your ENV file. I put mine in my `.zshrc` file, but you could put it in your `~/.bin/` folder too.
 
@@ -142,7 +153,7 @@ opat() {
 }
 ```
 
-Now, instead of running `gh pr create` I run `opat gh pr create`. opat pulls in my GH_TOKEN from 1Password for the duration of the command, the gh command is none the wiser, and I'm happy that things are more secure.
+Now, when I need to install a dependency from my private npm registry: `opat npm install @atuttle/private-package`. opat pulls in my NPM_TOKEN from 1Password for the duration of the command, the npm command is none the wiser, and I'm happy that things are more secure.
 
 ### 1Password SSH-Agent
 
@@ -167,5 +178,3 @@ Host *
 Now, when things request an SSH key, 1Password will be used, and you'll be prompted to authenticate with your fingerprint.
 
 Some parts of the future are pretty great!
-
-[^1]: Not sponsored. Just a very happy customer.
