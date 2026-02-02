@@ -29,12 +29,14 @@ Begrudgingly, I am the CISO for my company, so I know a fair amount about keepin
 
 ## Bare git repo: the secret sauce
 
-Part of what makes this system work (in the way that I'm using it) is git's bare-repo feature. Start by initializing a new git repo without a working directory, and set config in that repo to not show untracked files:
+I used to think people relied on manually creating symlinks from where the app expects a dotfile to be to a dotfiles folder they had cloned -- and I think some people still do that. But part of what makes this approach so clean/simple/awesome is git's bare-repo feature. Start by initializing a new git repo without a working directory, and set config in that repo to not show untracked files:
 
 ```bash
 git init --bare $HOME/.dotfiles
 git --git-dir=$HOME/.dotfiles/ config status.showUntrackedFiles no
 ```
+
+Instead of creating a `.git` folder somewhere, we've made `~/.dotfiles/` the git folder itself. There is no `~/.dotfiles/.git` folder, the stuff you'd expect to find there is found right in `~/.dotfiles/` instead.
 
 Then you can add files to that git repo from anywhere and they'll be tracked by git as usual, but that config setting we added means git won't prompt you to add any files, ever. You choose what to add. So now to view the status of our dotfiles repo, we run:
 
