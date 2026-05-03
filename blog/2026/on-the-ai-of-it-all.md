@@ -6,7 +6,7 @@ tags:
   - ai
   - productivity
 syndication:
-  - 
+  - https://bsky.app/profile/adamtuttle.codes/post/3mkxymlpuck2u
 ---
 
 **_Every article on this website is written without AI content generation or editorial assistance._**
