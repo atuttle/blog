@@ -4,9 +4,10 @@ html {
 }
 
 body {
-	font-family: 'Atkinson Hyperlegible', sans-serif;
+	font-family: 'Atkinson Hyperlegible Next', sans-serif;
 	font-size: 1.3rem;
 	line-height: 1.55;
+	font-weight: 100;
 
 	display: flex;
 	flex-direction: column;
@@ -65,7 +66,7 @@ h2,
 h3,
 h4,
 h5 {
-	font-family: 'Atkinson Hyperlegible', sans-serif;
+	font-family: 'Atkinson Hyperlegible Next', sans-serif;
 	margin: 2.75rem 0 1.05rem;
 	font-weight: 900;
 	line-height: 1.15;
