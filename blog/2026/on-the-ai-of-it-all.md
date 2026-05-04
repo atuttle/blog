@@ -55,6 +55,8 @@ To extend the "technical debt" metaphor from our industry, it feels like the AI 
 
 I bought my first house less than a year before the 2008 housing market crash. "Real estate always goes up!" they said. So it feels eerily familiar when we've got chatbots letting kids kill themselves and people getting sick from simply living near datacenters.
 
+My friend [Ben Nadel](https://www.bennadel.com/?site-photo=328) recently told me he had heard this phenomenon referred to as "Toxic Optimism;" the idea that the goal will solve all of our problems, so it doesn't matter what damage we do along the way.
+
 ## The right way to pursue A(G)I
 
 For the sake of argument let's assume that AI is a good thing worth pursuing. Are we going about it the right way? I think not.
@@ -72,3 +74,7 @@ To have a long career in tech, you have to change with the times. There are stil
 It advantages you to evolve with the field. AI code generation is a new tool, and when used well, can be quite powerful. Choosing to avoid it is taking a bet that the bubble will burst or the industry will revolt. It might be smart to hedge and at least maintain a minimum level of fluency.
 
 Hence my guilt, and why I feel like a hypocrite. I am starting to realize that I don't like the morals of the path we're on, but I can't justify fully detaching either.
+
+Is it a moral failing to use AI to write some of my code? No more than it's a moral failing to shop at Walmart because it's closer and their groceries are cheaper, so I can feed my family for less and have more money for my mortgage, heat, and the occasional vacation.
+
+If I have a moral obligation in this scenario, it's to use my voice to fight for better working conditions and pay for Walmart workers, for more regulation on datacenters and the numerous harms they can do, and for AI companies to pay slightly more attention to social-good and less to their position in the race for AGI than they already are.
