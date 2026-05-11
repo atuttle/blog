@@ -143,8 +143,27 @@ eleventyExcludeFromCollections: true
     .choices {
       display: grid;
       gap: 12px;
-      grid-template-columns: 1fr 1fr;
       margin-top: 30px;
+    }
+
+    .player-choice {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 14px;
+    }
+
+    .player-choice h2 {
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+      margin: 0 0 10px;
+      text-transform: uppercase;
+    }
+
+    .choice-row {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: 1fr 1fr;
     }
 
     .choice,
@@ -204,7 +223,6 @@ eleventyExcludeFromCollections: true
     .stats {
       display: grid;
       gap: 10px;
-      grid-template-columns: 1fr 1fr;
       margin-bottom: 18px;
     }
 
@@ -225,6 +243,18 @@ eleventyExcludeFromCollections: true
       color: var(--muted);
       font-size: 0.82rem;
       text-transform: uppercase;
+    }
+
+    .stat-row {
+      align-items: center;
+      display: flex;
+      gap: 12px;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .stat-row b {
+      font-size: 1.45rem;
     }
 
     .bar-wrap {
@@ -277,8 +307,7 @@ eleventyExcludeFromCollections: true
     }
 
     @media (max-width: 560px) {
-      .choices,
-      .stats { grid-template-columns: 1fr; }
+      .choice-row { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -296,14 +325,7 @@ eleventyExcludeFromCollections: true
       <article class="card" id="gameCard"></article>
 
       <aside class="scoreboard" aria-label="Score">
-        <div class="stats">
-          <div class="stat"><b id="correctCount">0</b><span>Correct</span></div>
-          <div class="stat"><b id="incorrectCount">0</b><span>Incorrect</span></div>
-        </div>
-        <div class="bar-wrap" aria-label="Correctness visualization">
-          <div class="bar-good" id="barGood" style="width: 0%"></div>
-          <div class="bar-bad" id="barBad" style="width: 0%"></div>
-        </div>
+        <div class="stats" id="scoreStats"></div>
         <p class="score-note" id="scoreNote">No guesses yet. The suspense is doing cardio.</p>
         <p class="progress-note" id="progressNote">Question 1 of 20</p>
       </aside>
@@ -311,7 +333,13 @@ eleventyExcludeFromCollections: true
   </main>
 
   <script>
-    const STORAGE_KEY = "bens-blog-or-ai-state-v1";
+    const STORAGE_KEY = "bens-blog-or-ai-state-v2";
+
+    const PLAYERS = [
+      { id: "p1", name: "Player 1" },
+      { id: "p2", name: "Player 2" },
+      { id: "p3", name: "Player 3" }
+    ];
 
     const QUOTES = [
       { id: "ben-2020-dal", answer: "blog", year: "2020", title: "Repositories And Data Access Layers Can Have As Many Methods As You Find Helpful", url: "https://www.bennadel.com/blog/3754-repositories-and-data-access-layers-can-have-as-many-methods-as-you-find-helpful.htm", quote: "My point here is that abstraction of the data access layer should do just that: abstract the data access." },
@@ -337,10 +365,7 @@ eleventyExcludeFromCollections: true
     ];
 
     const gameCard = document.getElementById("gameCard");
-    const correctCount = document.getElementById("correctCount");
-    const incorrectCount = document.getElementById("incorrectCount");
-    const barGood = document.getElementById("barGood");
-    const barBad = document.getElementById("barBad");
+    const scoreStats = document.getElementById("scoreStats");
     const scoreNote = document.getElementById("scoreNote");
     const progressNote = document.getElementById("progressNote");
     const resetButton = document.getElementById("resetButton");
@@ -403,32 +428,59 @@ eleventyExcludeFromCollections: true
       return QUOTES.find((quote) => quote.id === id);
     }
 
-    function getScore() {
-      return Object.entries(state.guesses).reduce((score, [id, guess]) => {
+    function getScores() {
+      const scores = Object.fromEntries(
+        PLAYERS.map((player) => [player.id, { correct: 0, incorrect: 0 }])
+      );
+
+      Object.entries(state.guesses).forEach(([id, guesses]) => {
         const quote = getQuoteById(id);
 
-        if (quote && quote.answer === guess) {
-          score.correct++;
-        } else {
-          score.incorrect++;
+        if (!quote || !guesses || typeof guesses !== "object") {
+          return;
         }
 
-        return score;
-      }, { correct: 0, incorrect: 0 });
+        PLAYERS.forEach((player) => {
+          const guess = guesses[player.id];
+
+          if (!guess) {
+            return;
+          }
+
+          if (guess === quote.answer) {
+            scores[player.id].correct++;
+          } else {
+            scores[player.id].incorrect++;
+          }
+        });
+      });
+
+      return scores;
     }
 
     function updateScoreboard() {
-      const score = getScore();
-      const totalAnswered = score.correct + score.incorrect;
-      const correctPercent = totalAnswered ? Math.round((score.correct / totalAnswered) * 100) : 0;
-      const incorrectPercent = totalAnswered ? 100 - correctPercent : 0;
+      const scores = getScores();
+      const totalGuesses = Object.values(scores).reduce((sum, score) => sum + score.correct + score.incorrect, 0);
 
-      correctCount.textContent = score.correct;
-      incorrectCount.textContent = score.incorrect;
-      barGood.style.width = `${correctPercent}%`;
-      barBad.style.width = `${incorrectPercent}%`;
-      scoreNote.textContent = totalAnswered
-        ? `${correctPercent}% correct after ${totalAnswered} guess${totalAnswered === 1 ? "" : "es"}.`
+      scoreStats.innerHTML = PLAYERS.map((player) => {
+        const score = scores[player.id];
+        const answered = score.correct + score.incorrect;
+        const correctPercent = answered ? Math.round((score.correct / answered) * 100) : 0;
+        const incorrectPercent = answered ? 100 - correctPercent : 0;
+
+        return `
+          <div class="stat">
+            <div class="stat-row"><span>${player.name}</span><b>${score.correct}-${score.incorrect}</b></div>
+            <div class="bar-wrap" aria-label="${player.name} correctness visualization">
+              <div class="bar-good" style="width: ${correctPercent}%"></div>
+              <div class="bar-bad" style="width: ${incorrectPercent}%"></div>
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      scoreNote.textContent = totalGuesses
+        ? `${totalGuesses} total player guess${totalGuesses === 1 ? "" : "es"} recorded.`
         : "No guesses yet. The suspense is doing cardio.";
       progressNote.textContent = state.currentIndex >= state.order.length
         ? `Complete: ${state.order.length} of ${state.order.length}`
@@ -439,11 +491,16 @@ eleventyExcludeFromCollections: true
       updateScoreboard();
 
       if (state.currentIndex >= state.order.length) {
-        const score = getScore();
+        const scores = getScores();
+        const summary = PLAYERS.map((player) => {
+          const score = scores[player.id];
+          return `${player.name}: ${score.correct} right, ${score.incorrect} wrong`;
+        }).join("<br>");
+
         gameCard.className = "card complete";
         gameCard.innerHTML = `
           <div class="kicker">Game complete</div>
-          <blockquote><p>${score.correct} right, ${score.incorrect} wrong.</p></blockquote>
+          <blockquote><p>${summary}</p></blockquote>
           <p class="subtitle">Reset to reshuffle and play again. Ben's archive remains undefeatedly weird.</p>
         `;
         return;
@@ -452,30 +509,46 @@ eleventyExcludeFromCollections: true
       gameCard.className = "card";
       const id = state.order[state.currentIndex];
       const quote = getQuoteById(id);
-      const guess = state.guesses[id];
-      const answered = Boolean(guess);
-      const correct = answered && guess === quote.answer;
+      const guesses = state.guesses[id] || {};
+      const answered = PLAYERS.every((player) => Boolean(guesses[player.id]));
       const correctLabel = quote.answer === "blog" ? "Ben's blog" : "AI";
+      const pendingCount = PLAYERS.filter((player) => !guesses[player.id]).length;
 
       gameCard.innerHTML = `
         <div class="kicker">Quote ${state.currentIndex + 1}</div>
         <blockquote><p>“${formatQuote(quote.quote)}”</p></blockquote>
         <div class="choices">
-          <button class="choice blog" type="button" data-guess="blog" ${answered ? "disabled" : ""}>Ben's blog</button>
-          <button class="choice ai" type="button" data-guess="ai" ${answered ? "disabled" : ""}>AI</button>
+          ${PLAYERS.map((player) => renderPlayerChoice(player, guesses[player.id], answered)).join("")}
         </div>
-        ${answered ? renderResult(quote, correct, correctLabel) : ""}
+        ${answered ? renderResult(quote, correctLabel, guesses) : `<p class="score-note">Waiting on ${pendingCount} player${pendingCount === 1 ? "" : "s"} before revealing the answer.</p>`}
       `;
     }
 
-    function renderResult(quote, correct, correctLabel) {
+    function renderPlayerChoice(player, guess, answered) {
+      return `
+        <section class="player-choice">
+          <h2>${player.name}${guess ? ` picked ${guess === "blog" ? "Ben's blog" : "AI"}` : ""}</h2>
+          <div class="choice-row">
+            <button class="choice blog" type="button" data-player="${player.id}" data-guess="blog" ${guess || answered ? "disabled" : ""}>Ben's blog</button>
+            <button class="choice ai" type="button" data-player="${player.id}" data-guess="ai" ${guess || answered ? "disabled" : ""}>AI</button>
+          </div>
+        </section>
+      `;
+    }
+
+    function renderResult(quote, correctLabel, guesses) {
       const blogDetails = quote.answer === "blog"
         ? `<p><strong>Year:</strong> ${escapeHtml(quote.year)}</p><p><strong>Source:</strong> <a href="${escapeHtml(quote.url)}" target="_blank" rel="noreferrer">${escapeHtml(quote.title)}</a></p>`
         : `<p>This one is fake. Generated for the quiz, not taken from Ben's archive.</p>`;
+      const playerResults = PLAYERS.map((player) => {
+        const correct = guesses[player.id] === quote.answer;
+        return `${player.name}: ${correct ? "correct" : "wrong"}`;
+      }).join(" / ");
 
       return `
-        <section class="result ${correct ? "good" : "bad"}">
-          <h2>${correct ? "Correct." : "Nope."} Answer: ${correctLabel}</h2>
+        <section class="result">
+          <h2>Answer: ${correctLabel}</h2>
+          <p>${playerResults}</p>
           ${blogDetails}
           <button class="next" type="button" id="nextButton">${state.currentIndex + 1 === state.order.length ? "Finish game" : "Next quote"}</button>
         </section>
@@ -488,7 +561,10 @@ eleventyExcludeFromCollections: true
 
       if (choice) {
         const id = state.order[state.currentIndex];
-        state.guesses[id] = choice.dataset.guess;
+        const playerId = choice.dataset.player;
+
+        state.guesses[id] ||= {};
+        state.guesses[id][playerId] = choice.dataset.guess;
         saveState();
         render();
         return;
