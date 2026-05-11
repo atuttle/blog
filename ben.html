@@ -1,0 +1,513 @@
+---
+permalink: /ben/index.html
+eleventyExcludeFromCollections: true
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ben's Blog or AI?</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #0f172a;
+      --panel: #111c33;
+      --panel-2: #17233d;
+      --ink: #f8fafc;
+      --muted: #a7b1c2;
+      --border: rgba(255, 255, 255, 0.14);
+      --green: #22c55e;
+      --red: #ef4444;
+      --gold: #f6c453;
+      --blue: #60a5fa;
+      --shadow: rgba(0, 0, 0, 0.32);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top left, rgba(96, 165, 250, 0.26), transparent 32rem),
+        radial-gradient(circle at bottom right, rgba(246, 196, 83, 0.18), transparent 28rem),
+        var(--bg);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    button { font: inherit; }
+
+    a {
+      color: var(--blue);
+      overflow-wrap: anywhere;
+    }
+
+    .shell {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 28px 18px 56px;
+    }
+
+    header {
+      align-items: end;
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 6vw, 4.8rem);
+      letter-spacing: -0.06em;
+      line-height: 0.92;
+      margin: 0;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin: 10px 0 0;
+      max-width: 620px;
+    }
+
+    .reset {
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--ink);
+      cursor: pointer;
+      padding: 10px 14px;
+      white-space: nowrap;
+    }
+
+    .reset:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .layout {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: minmax(0, 1fr) 320px;
+    }
+
+    .card,
+    .scoreboard {
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025)), var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: 0 24px 60px var(--shadow);
+    }
+
+    .card {
+      min-height: 520px;
+      padding: clamp(20px, 4vw, 38px);
+    }
+
+    .scoreboard {
+      align-self: start;
+      padding: 20px;
+      position: sticky;
+      top: 18px;
+    }
+
+    .kicker {
+      color: var(--gold);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      margin-bottom: 22px;
+      text-transform: uppercase;
+    }
+
+    blockquote {
+      border: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.5rem, 4vw, 2.65rem);
+      letter-spacing: -0.03em;
+      line-height: 1.14;
+      margin: 0 0 28px;
+      padding: 0;
+    }
+
+    code {
+      background: rgba(255,255,255,0.1);
+      border-radius: 6px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.82em;
+      padding: 0.08em 0.24em;
+    }
+
+    .choices {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 30px;
+    }
+
+    .choice,
+    .next {
+      border: 0;
+      border-radius: 18px;
+      cursor: pointer;
+      font-size: 1.05rem;
+      font-weight: 800;
+      padding: 18px 16px;
+    }
+
+    .choice.blog {
+      background: var(--gold);
+      color: #23190a;
+    }
+
+    .choice.ai {
+      background: var(--blue);
+      color: #07111f;
+    }
+
+    .choice:disabled {
+      cursor: not-allowed;
+      filter: grayscale(0.7);
+      opacity: 0.45;
+    }
+
+    .result {
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      margin-top: 26px;
+      padding: 18px;
+    }
+
+    .result.good { border-color: rgba(34, 197, 94, 0.6); }
+    .result.bad { border-color: rgba(239, 68, 68, 0.65); }
+
+    .result h2 {
+      font-size: 1.15rem;
+      margin: 0 0 8px;
+    }
+
+    .result p {
+      color: var(--muted);
+      margin: 8px 0;
+    }
+
+    .next {
+      background: var(--ink);
+      color: var(--bg);
+      margin-top: 12px;
+      width: 100%;
+    }
+
+    .stats {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 18px;
+    }
+
+    .stat {
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px;
+    }
+
+    .stat b {
+      display: block;
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+    }
+
+    .bar-wrap {
+      background: rgba(255,255,255,0.08);
+      border-radius: 999px;
+      height: 22px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bar-good,
+    .bar-bad {
+      height: 100%;
+      position: absolute;
+      top: 0;
+    }
+
+    .bar-good {
+      background: var(--green);
+      left: 0;
+    }
+
+    .bar-bad {
+      background: var(--red);
+      right: 0;
+    }
+
+    .score-note,
+    .progress-note {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin: 12px 0 0;
+    }
+
+    .complete { text-align: center; }
+    .complete blockquote { font-size: clamp(1.8rem, 5vw, 3.4rem); }
+
+    @media (max-width: 820px) {
+      header {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .layout { grid-template-columns: 1fr; }
+
+      .scoreboard {
+        order: -1;
+        position: static;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .choices,
+      .stats { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div>
+        <h1>Ben's Blog or AI?</h1>
+        <p class="subtitle">Guess whether each quote came from Ben Nadel's pre-ChatGPT blog archive or from a fake LLM-generated quote.</p>
+      </div>
+      <button class="reset" id="resetButton" type="button">Reset game</button>
+    </header>
+
+    <section class="layout">
+      <article class="card" id="gameCard"></article>
+
+      <aside class="scoreboard" aria-label="Score">
+        <div class="stats">
+          <div class="stat"><b id="correctCount">0</b><span>Correct</span></div>
+          <div class="stat"><b id="incorrectCount">0</b><span>Incorrect</span></div>
+        </div>
+        <div class="bar-wrap" aria-label="Correctness visualization">
+          <div class="bar-good" id="barGood" style="width: 0%"></div>
+          <div class="bar-bad" id="barBad" style="width: 0%"></div>
+        </div>
+        <p class="score-note" id="scoreNote">No guesses yet. The suspense is doing cardio.</p>
+        <p class="progress-note" id="progressNote">Question 1 of 20</p>
+      </aside>
+    </section>
+  </main>
+
+  <script>
+    const STORAGE_KEY = "bens-blog-or-ai-state-v1";
+
+    const QUOTES = [
+      { id: "ben-2020-dal", answer: "blog", year: "2020", title: "Repositories And Data Access Layers Can Have As Many Methods As You Find Helpful", url: "https://www.bennadel.com/blog/3754-repositories-and-data-access-layers-can-have-as-many-methods-as-you-find-helpful.htm", quote: "My point here is that abstraction of the data access layer should do just that: abstract the data access." },
+      { id: "ben-2019-http", answer: "blog", year: "2019", title: "Considering HTTP Methods PUT And PATCH Indicators Of An Anemic Domain Model And A Leaky Abstraction", url: "https://www.bennadel.com/blog/3748-considering-http-methods-put-and-patch-indicators-of-an-anemic-domain-model-and-a-leaky-abstraction.htm", quote: "If you start crafting your HTTP API surface area to reflect the processes of the business and the terms from the Ubiquitous Language, you could probably do everything you need with just `GET` and `POST`." },
+      { id: "ben-2017-ux", answer: "blog", year: "2017", title: "The User Experience (UX) Of Conversion-Driven Development", url: "https://www.bennadel.com/blog/3395-the-user-experience-ux-of-conversion-driven-development.htm", quote: "Ultimately, there's a fundamental difference between spray nozzles and users. One is an inert, 3D-printed piece of plastic; the other is a thinking, feeling, sentient being, with an evolved pattern-matching brain and a weakness for familiarity bias." },
+      { id: "ben-2017-readable", answer: "blog", year: "2017", title: "Favor Readable Code Over Idiomatic Code", url: "https://www.bennadel.com/blog/3389-favor-readable-code-over-idiomatic-code.htm", quote: "Idiomatic code builds on the wisdom of the past. Readable code believes in the beauty of the future." },
+      { id: "ben-2016-cfthread", answer: "blog", year: "2016", title: "Exploring The Possibility Of Parallelizing Queries In ColdFusion Using CFThread", url: "https://www.bennadel.com/blog/3170-exploring-the-possibility-of-parallelizing-queries-in-coldfusion-using-cfthread.htm", quote: "What I'm looking for here is not a proof-of-concept but rather, I'm looking to see if there are any immediately obvious failures-of-concept." },
+      { id: "ben-2015-bane", answer: "blog", year: "2015", title: "Bane On Task Estimation", url: "https://www.bennadel.com/blog/2971-bane-on-task-estimation.htm", quote: "You estimate tasks like a younger man - no optimism held back. Admirable. But, mistaken." },
+      { id: "ben-2012-deferred", answer: "blog", year: "2012", title: "Using jQuery Deferred To Chain Validation Rules In An Asynchronous, Non-Blocking Environment", url: "https://www.bennadel.com/blog/2322-using-jquery-deferred-to-chain-validation-rules-in-an-asynchronous-non-blocking-environment.htm", quote: "To adapt to this new, non-blocking environment, I think we have to move away from an exceptions-based validation framework and into a Deferred-based validation framework." },
+      { id: "ben-2008-huge", answer: "blog", year: "2008", title: "Project HUGE: The Imaginary Fear Of Scheduling Mundane Tasks Such As Nutritional Intake", url: "https://www.bennadel.com/blog/1442-project-huge-the-imaginary-fear-of-scheduling-mundane-tasks-such-as-nutritional-intake.htm", quote: "The more weak links that I can remove, the more likely my chain will hold steady." },
+      { id: "ben-2007-thinking-big", answer: "blog", year: "2007", title: "The Magic Of Thinking Big By David Schwartz", url: "https://www.bennadel.com/blog/1088-the-magic-of-thinking-big-by-david-schwartz-thanks-clark-valberg.htm", quote: "At the end of the day, the only thing that really keeps you from achieving greatness is yourself." },
+      { id: "ben-2006-pragmatic", answer: "blog", year: "2006", title: "The Pragmatic Programmer: From Journeyman to Master", url: "https://www.bennadel.com/blog/448-the-pragmatic-programmer-from-journeyman-to-master.htm", quote: "I would recommend it to any one who wants a swift kick-in-the-ass reminder that there are better ways of developing applications." },
+      { id: "ai-01", answer: "ai", quote: "The most durable software systems are not built from perfect abstractions, but from small decisions that remain understandable after the original excitement has faded." },
+      { id: "ai-02", answer: "ai", quote: "When a team treats every edge case as an interruption, the product slowly becomes a museum of assumptions nobody remembers making." },
+      { id: "ai-03", answer: "ai", quote: "A good interface does not merely expose functionality; it teaches the user what the system believes is important." },
+      { id: "ai-04", answer: "ai", quote: "Technical debt is rarely created in a single dramatic moment. More often, it accumulates quietly through a thousand reasonable compromises." },
+      { id: "ai-05", answer: "ai", quote: "The hardest part of refactoring is not moving code; it is preserving the confidence that the old behavior was understood in the first place." },
+      { id: "ai-06", answer: "ai", quote: "If your architecture requires every developer to remember a hidden rule, then the rule is not architecture; it is folklore." },
+      { id: "ai-07", answer: "ai", quote: "Performance work is most useful when it begins as a question about user pain rather than a celebration of clever measurement." },
+      { id: "ai-08", answer: "ai", quote: "The shape of a codebase is a record of what the organization was willing to clarify and what it preferred to leave ambiguous." },
+      { id: "ai-09", answer: "ai", quote: "A naming convention is not valuable because it is consistent; it is valuable because it makes the next correct decision easier to see." },
+      { id: "ai-10", answer: "ai", quote: "The best abstractions feel boring in hindsight because they remove the drama from the work they were designed to protect." }
+    ];
+
+    const gameCard = document.getElementById("gameCard");
+    const correctCount = document.getElementById("correctCount");
+    const incorrectCount = document.getElementById("incorrectCount");
+    const barGood = document.getElementById("barGood");
+    const barBad = document.getElementById("barBad");
+    const scoreNote = document.getElementById("scoreNote");
+    const progressNote = document.getElementById("progressNote");
+    const resetButton = document.getElementById("resetButton");
+
+    function escapeHtml(value) {
+      return value
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function formatQuote(value) {
+      return escapeHtml(value).replace(/`([^`]+)`/g, "<code>$1</code>");
+    }
+
+    function shuffleIds() {
+      const ids = QUOTES.map((quote) => quote.id);
+
+      for (let i = ids.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [ids[i], ids[j]] = [ids[j], ids[i]];
+      }
+
+      return ids;
+    }
+
+    function createFreshState() {
+      return { order: shuffleIds(), currentIndex: 0, guesses: {} };
+    }
+
+    function loadState() {
+      try {
+        const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY));
+        const validIds = new Set(QUOTES.map((quote) => quote.id));
+
+        if (
+          parsed &&
+          Array.isArray(parsed.order) &&
+          parsed.order.length === QUOTES.length &&
+          parsed.order.every((id) => validIds.has(id))
+        ) {
+          return parsed;
+        }
+      } catch (error) {
+        // Ignore malformed saved state and start clean.
+      }
+
+      return createFreshState();
+    }
+
+    let state = loadState();
+
+    function saveState() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function getQuoteById(id) {
+      return QUOTES.find((quote) => quote.id === id);
+    }
+
+    function getScore() {
+      return Object.entries(state.guesses).reduce((score, [id, guess]) => {
+        const quote = getQuoteById(id);
+
+        if (quote && quote.answer === guess) {
+          score.correct++;
+        } else {
+          score.incorrect++;
+        }
+
+        return score;
+      }, { correct: 0, incorrect: 0 });
+    }
+
+    function updateScoreboard() {
+      const score = getScore();
+      const totalAnswered = score.correct + score.incorrect;
+      const correctPercent = totalAnswered ? Math.round((score.correct / totalAnswered) * 100) : 0;
+      const incorrectPercent = totalAnswered ? 100 - correctPercent : 0;
+
+      correctCount.textContent = score.correct;
+      incorrectCount.textContent = score.incorrect;
+      barGood.style.width = `${correctPercent}%`;
+      barBad.style.width = `${incorrectPercent}%`;
+      scoreNote.textContent = totalAnswered
+        ? `${correctPercent}% correct after ${totalAnswered} guess${totalAnswered === 1 ? "" : "es"}.`
+        : "No guesses yet. The suspense is doing cardio.";
+      progressNote.textContent = state.currentIndex >= state.order.length
+        ? `Complete: ${state.order.length} of ${state.order.length}`
+        : `Question ${state.currentIndex + 1} of ${state.order.length}`;
+    }
+
+    function render() {
+      updateScoreboard();
+
+      if (state.currentIndex >= state.order.length) {
+        const score = getScore();
+        gameCard.className = "card complete";
+        gameCard.innerHTML = `
+          <div class="kicker">Game complete</div>
+          <blockquote><p>${score.correct} right, ${score.incorrect} wrong.</p></blockquote>
+          <p class="subtitle">Reset to reshuffle and play again. Ben's archive remains undefeatedly weird.</p>
+        `;
+        return;
+      }
+
+      gameCard.className = "card";
+      const id = state.order[state.currentIndex];
+      const quote = getQuoteById(id);
+      const guess = state.guesses[id];
+      const answered = Boolean(guess);
+      const correct = answered && guess === quote.answer;
+      const correctLabel = quote.answer === "blog" ? "Ben's blog" : "AI";
+
+      gameCard.innerHTML = `
+        <div class="kicker">Quote ${state.currentIndex + 1}</div>
+        <blockquote><p>“${formatQuote(quote.quote)}”</p></blockquote>
+        <div class="choices">
+          <button class="choice blog" type="button" data-guess="blog" ${answered ? "disabled" : ""}>Ben's blog</button>
+          <button class="choice ai" type="button" data-guess="ai" ${answered ? "disabled" : ""}>AI</button>
+        </div>
+        ${answered ? renderResult(quote, correct, correctLabel) : ""}
+      `;
+    }
+
+    function renderResult(quote, correct, correctLabel) {
+      const blogDetails = quote.answer === "blog"
+        ? `<p><strong>Year:</strong> ${escapeHtml(quote.year)}</p><p><strong>Source:</strong> <a href="${escapeHtml(quote.url)}" target="_blank" rel="noreferrer">${escapeHtml(quote.title)}</a></p>`
+        : `<p>This one is fake. Generated for the quiz, not taken from Ben's archive.</p>`;
+
+      return `
+        <section class="result ${correct ? "good" : "bad"}">
+          <h2>${correct ? "Correct." : "Nope."} Answer: ${correctLabel}</h2>
+          ${blogDetails}
+          <button class="next" type="button" id="nextButton">${state.currentIndex + 1 === state.order.length ? "Finish game" : "Next quote"}</button>
+        </section>
+      `;
+    }
+
+    gameCard.addEventListener("click", (event) => {
+      const choice = event.target.closest("[data-guess]");
+      const next = event.target.closest("#nextButton");
+
+      if (choice) {
+        const id = state.order[state.currentIndex];
+        state.guesses[id] = choice.dataset.guess;
+        saveState();
+        render();
+        return;
+      }
+
+      if (next) {
+        state.currentIndex++;
+        saveState();
+        render();
+      }
+    });
+
+    resetButton.addEventListener("click", () => {
+      state = createFreshState();
+      saveState();
+      render();
+    });
+
+    render();
+  </script>
+</body>
+</html>
