@@ -46,5 +46,5 @@ There won't be a section for this, so I'll just say here that I use **[Bluesky](
 ## This Site
 
 - [Eleventy](https://www.11ty.dev/) - Static site generator
-- [Atkinson Hyperlegible](https://fonts.google.com/specimen/Atkinson+Hyperlegible) - Prose font
+- [Atkinson Hyperlegible Next](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Next?preview.script=Latn) - Prose font
 - [Atkinson Hyperlegible Mono](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Mono) - Code font
