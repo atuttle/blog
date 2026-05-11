@@ -336,9 +336,9 @@ eleventyExcludeFromCollections: true
     const STORAGE_KEY = "bens-blog-or-ai-state-v2";
 
     const PLAYERS = [
-      { id: "p1", name: "Player 1" },
-      { id: "p2", name: "Player 2" },
-      { id: "p3", name: "Player 3" }
+      { id: "p1", name: "Ben" },
+      { id: "p2", name: "Carol" },
+      { id: "p3", name: "Tim" }
     ];
 
     const QUOTES = [
@@ -440,12 +440,12 @@ eleventyExcludeFromCollections: true
           return;
         }
 
+        if (!PLAYERS.every((player) => Boolean(guesses[player.id]))) {
+          return;
+        }
+
         PLAYERS.forEach((player) => {
           const guess = guesses[player.id];
-
-          if (!guess) {
-            return;
-          }
 
           if (guess === quote.answer) {
             scores[player.id].correct++;
